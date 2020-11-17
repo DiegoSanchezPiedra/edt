@@ -125,7 +125,7 @@ ADD PRIMARY KEY (id_centre,id_ciutat,pais),
 ADD FOREIGN KEY (id_ciutat) REFERENCES ciutats(id_ciutat),
 ADD FOREIGN KEY (pais) REFERENCES ciutats(pais);
 
--- EMPLEATS TITULACIO
+-- empleats titulacio
 CREATE TABLE empl_titulacio (
     "id_empl" smallint NOT NULL,
     "id_titulacio" smallint NOT NULL,
@@ -161,3 +161,27 @@ CREATE TABLE empl_ciutat (
     "id_ciutat" smallint NOT NULL,
     "data" date NOT NULL --data en la qual l'empleat va esta en aqulla ciutat (historial)
 );
+
+
+-- categories
+CREATE TABLE categories (
+    "id_categoria" serial NOT NULL,
+    "categoria" varchar(255) NOT NULL
+)
+
+--alter table categoria
+ALTER TABLE categories
+ADD PRIMARY KEY (id_categoria);
+
+-- taula historial categoria empl
+CREATE TABLE historial_categoria (
+    "id_empl" SERIAL NOT NULL,
+    "id_categoria" SERIAL NOT NULL,
+    "data_inici" date NOT NULL
+)
+
+--alter table chistorial categoria
+ALTER TABLE historial_categoria
+ADD PRIMARY KEY (id_empl,id_categoria,data_inici),
+ADD FOREIGN KEY (id_empl) REFERENCES empleats(id_empl),
+ADD FOREIGN KEY (id_categoria) REFERENCES categories(id_categoria);
