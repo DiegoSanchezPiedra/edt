@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="4.xsd">
+    <propietari>
+        <nom>Eloy Albiach Forner</nom>
+        <email>eloy.albiachgmail.com</email>
+    </propietari>
+    <contactes>
+        <contacte>
+            <nom>Anna Monsonís</nom>
+            <telefon>633124751</telefon>
+            <email>annamongmail.com</email>
+        </contacte>
+        <contacte>
+            <nom>Jordi Ventura</nom>
+            <telefon>93415223</telefon>
+            <email>jordivxtec.cat</email>
+        </contacte>
+    </contactes>
+</agenda>

@@ -1,0 +1,4 @@
+dn: cn=Pau Pou,ou=usuaris,dc=edt,dc=org
+changetype: modrdn
+newrdn: cn=Pau Maria Pou
+deleteoldrdn: 0

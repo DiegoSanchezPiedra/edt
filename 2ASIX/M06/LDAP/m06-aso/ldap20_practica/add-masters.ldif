@@ -1,0 +1,72 @@
+dn: uid=pau,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-master
+-
+add: x-famaster
+x-famaster: TRUE
+-
+add: x-nommaster
+x-nommaster: noessap
+-
+add: x-notamaster
+x-notamaster: 5
+-
+add: x-webmaster
+x-webmaster: https://www.eitb.eus/es/noticias/politica/videos/detalle/5550507/video-cifuentes-pillada-presuntamente-robando-cremas-supermercado-2011/
+-
+add: x-fotoalum
+x-fotoalum:< file:///opt/docker/foto_cara/cifuentes.jpeg
+-
+add: x-docum
+x-docum:< file:///opt/docker/pdf_alum/cifuentes.pdf
+
+dn: uid=user01,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-master
+-
+add: x-famaster
+x-famaster: FALSE
+-
+add: x-nommaster
+x-nommaster: rei juan carlos
+-
+add: x-notamaster
+x-notamaster: 10
+-
+add: x-webmaster
+x-webmaster: https://www.youtube.com/watch?v=lucshSZihQo
+-
+add: x-fotoalum
+x-fotoalum:< file:///opt/docker/foto_cara/cifuentes.jpeg
+-
+add: x-docum
+x-docum:< file:///opt/docker/pdf_alum/cifuentes.pdf
+
+dn: uid=ramon,ou=usuaris,dc=edt,dc=org
+changetype: add
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectClass: x-master
+cn: Ramon Pou
+cn: Ramonet Pou
+sn: Pou
+homephone: 555-222-2220
+mail: ramon@edt.org
+description: Watch out for this guy
+ou: Profes
+uid: ramon
+uidNumber: 5005
+gidNumber: 601
+homeDirectory: /tmp/home/ramon
+userPassword: {SSHA}RX8eJ0mLWrCH9AHzGsV4NVcKXJa8bRRD
+x-famaster: TRUE
+x-nommaster: noessap
+x-notamaster: 10
+x-webmaster: https://www.youtube.com/watch?v=lucshSZihQo
+x-fotoalum:< file:///opt/docker/foto_cara/casado.jpg
+x-docum:< file:///opt/docker/pdf_alum/casado.pdf
+
+
+

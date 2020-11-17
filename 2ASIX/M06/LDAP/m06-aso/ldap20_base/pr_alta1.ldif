@@ -1,0 +1,34 @@
+dn: cn=profe Mas,ou=usuaris,dc=edt,dc=org
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: profe m06
+cn: lo profe
+sn: profe
+homePhone: 555-222-2224
+mail: profe@edt.org
+description: Watch out for this girl
+ou: system
+ou: admin
+uid: profe
+uidNumber: 901
+gidNumber: 10
+homeDirectory: /tmp/home/profe
+userPassword:: e1NTSEF9VDVqck1ncEp3WlpndTBhemtMSVZvWWhpRzA4L0tHVXY=
+
+dn: cn=bartomeu Mas,ou=usuaris,dc=edt,dc=org
+objectClass: posixAccount
+objectClass: inetOrgPerson
+cn: bartomeu dimissio
+cn: novita
+sn: bartomeu
+homePhone: 555-222-2224
+mail: bartu@edt.org
+description: Watch out for this girl
+ou: system
+ou: admin
+uid: bartu
+uidNumber: 902
+gidNumber: 10
+homeDirectory: /tmp/home/bartu
+userPassword:: e1NTSEF9VDVqck1ncEp3WlpndTBhemtMSVZvWWhpRzA4L0tHVXY=
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<preus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="1.xsd">
+    <preu>8</preu>
+    <preu>2.6</preu>
+    <preu>4.95</preu>
+    <preu>187</preu>
+</preus>

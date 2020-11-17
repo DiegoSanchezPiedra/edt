@@ -1,0 +1,94 @@
+dn: ou=partidopopular,dc=edt,dc=org
+ou: partidopopular
+description: Container per aprendre a gestions suisses
+objectclass: organizationalunit
+
+dn: cn=fachaland,ou=grups,dc=edt,dc=org
+objectclass: posixGroup
+cn: fachaland
+gidNumber: 666
+description: newfalange
+memberUid: cifuentes
+memberUid: casado
+memberUid: almeida
+memberUid: rajoy
+
+
+dn: uid=cifuentes,ou=partidopopular,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: x-master 
+cn: Cristina
+sn: Cifuentes
+description: robaba cremes quan tenia per a pagarles CARADURA tot i el votox
+uid: cifuentes
+uidNumber: 8001
+gidNumber: 666
+homeDirectory: /tmp/home/cifuentes
+userPassword: {SSHA}gMS3GzlmktczXCvySIQ8ycX9z7DEhi91
+x-famaster: true
+x-nommaster: noessap
+x-notamaster: 5
+x-webmaser: https://www.eitb.eus/es/noticias/politica/videos/detalle/5550507/video-cifuentes-pillada-presuntamente-robando-cremas-supermercado-2011/
+x-fotoalum:< file://opt/docker/foto_cara/cifuentes.jpeg
+x-docu:< file://opt/docker/pdf_alum/cifuentes.pdf
+
+
+dn: uid=casado,ou=partidopopular,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: x-master 
+cn: Pablo
+sn: Casado
+description: es guapo pero tampoc tant com per passar per alt que es facha 
+uid: casado
+uidNumber: 8002
+gidNumber: 666
+homeDirectory: /tmp/home/casado
+userPassword: {SSHA}qGudOYk4j+04oKLvsXmwY5AMYorIkFKO
+x-famaster: true
+x-nommaster: noessap
+x-notamaster: 5
+x-webmaser: https://www.youtube.com/watch?v=lucshSZihQo
+x-fotoalum:< file://opt/docker/foto_cara/casado.jpg
+x-docu:< file://opt/docker/pdf_alum/casado.pdf
+
+
+dn: uid=almeida,ou=partidopopular,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: x-master
+cn: Jose
+sn: Almeida
+description: el Igor de Ayuso
+uid: almeida
+uidNumber: 8003
+gidNumber: 666
+homeDirectory: /tmp/home/almeida
+userPassword: {SSHA}yH1JOGngYLCRW8RyIo/JOIhz0FnuwTog
+x-famaster: true
+x-nommaster: covid
+x-notamaster: 19
+x-webmaser: https://www.youtube.com/watch?v=BmLqcKCXYs0
+x-fotoalum:< file://opt/docker/foto_cara/almeida.png
+x-docu:< file://opt/docker/pdf_alum/almeida.pdf
+
+
+dn: uid=rajoy,ou=partidopopular,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+objectclass: x-master 
+cn: Mariano
+sn: Rajoy
+description: va sobreviure a un accident en helicopter desde llavorens li costa parlar be
+uid: rajoy
+uidNumber: 8004
+gidNumber: 666
+homeDirectory: /tmp/home/rajoy
+userPassword: {SSHA}NsYrwFVtxRclWbv5RQE6Ki0xy37VFTEs
+x-famaster: true
+x-nommaster: uoctubre
+x-notamaster: 0
+x-webmaser: https://www.youtube.com/watch?v=gpWHUUqbEPI
+x-fotoalum:< file://opt/docker/foto_cara/rajoy.jpg
+x-docu:< file://opt/docker/pdf_alum/rajoy.pdf

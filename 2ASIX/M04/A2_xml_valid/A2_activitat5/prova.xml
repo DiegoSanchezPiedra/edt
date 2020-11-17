@@ -1,0 +1,26 @@
+<tienda>
+    <dades_emissor>
+        <nom>Libreria Perez</nom>
+        <CIF>44555666B</CIF>
+        <telefono>777888999</telefono>
+    </dades_emissor>
+    <dades_client>
+        <nom>Biblioteca Txantrea</nom>
+        <CIF>33111222A</CIF>
+        <telefon>333999444</telefon>
+    </dades_client>
+    <detall_factura numeroFactura="32" dataEmissio="21-10-20">
+        <Article codiArticle="AW7" tipus="Libro">
+            <descripcio>Analitica web 2.0</descripcio>
+            <quantitat>1</quantitat>
+            <oferta/>
+            <PVP>30€</PVP>
+        </Article>
+        <Article codiArticle="" tipus="">
+            <decripcio>curso de HTML</decripcio>
+            <quantitat>2</quantitat>
+            <PVP>25€</PVP>
+        </Article>
+        <import>85€</import>
+    </detall_factura>
+</tienda>

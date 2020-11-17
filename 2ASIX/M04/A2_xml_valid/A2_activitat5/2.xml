@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tenda [
+<!ELEMENT tenda (dades_emissor,dades_client,detall_factura)*>    
+    <!ELEMENT dades_emissor (nom_emissor,CIF_emissor,telefono_emissor)>
+        <!ELEMENT nom_emissor (#PCDATA)>
+        <!ELEMENT CIF_emissor (#PCDATA)>
+        <!ELEMENT telefono_emissor (#PCDATA)>
+    <!ELEMENT dades_client (nom_client,CIF_client,telefono_client)>
+        <!ELEMENT nom_client (#PCDATA)>
+        <!ELEMENT CIF_client (#PCDATA)>
+        <!ELEMENT telefono_client (#PCDATA)>
+    <!ELEMENT detall_factura (article*,import)>
+        <!ATTLIST detall_factura numeroFactura ID #REQUIRED>
+        <!ATTLIST detall_factura dataEmissio CDATA #REQUIRED>
+        <!ELEMENT article (descripcio,quantitat,oferta?,PVP)>
+            <!ATTLIST article codiArticle ID #REQUIRED>
+            <!ATTLIST article tipus CDATA #REQUIRED>          
+            <!ELEMENT descripcio (#PCDATA)>
+            <!ELEMENT quantitat (#PCDATA)>
+            <!ELEMENT oferta EMPTY>
+            <!ELEMENT PVP (#PCDATA)>
+        <!ELEMENT import (#PCDATA)>
+]>
+
+<tenda>
+    <dades_emissor>
+        <nom_emissor>Libreria Perez</nom_emissor>
+        <CIF_emissor>44555666B</CIF_emissor>
+        <telefono_emissor>777888999</telefono_emissor>
+    </dades_emissor>
+    <dades_client>
+        <nom_client>Biblioteca Txantrea</nom_client>
+        <CIF_client>33111222A</CIF_client>
+        <telefono_client>333999444</telefono_client>
+    </dades_client>
+    <detall_factura numeroFactura="A32" dataEmissio="21-10-20">
+        <article codiArticle="AW7" tipus="Libro">
+            <descripcio>Analitica web 2.0</descripcio>
+            <quantitat>1</quantitat>
+            <oferta/>
+            <PVP>30€</PVP>
+        </article>
+        <article codiArticle="CP5" tipus="DVD">
+            <descripcio>curso de HTML</descripcio>
+            <quantitat>2</quantitat>
+            <PVP>25€</PVP>
+        </article>
+        <import>85€</import>
+    </detall_factura>
+</tenda>

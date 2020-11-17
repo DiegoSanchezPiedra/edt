@@ -1,0 +1,4 @@
+dn: cn=Pau Maria Pou,ou=usuaris,dc=edt,dc=org
+changetype: modify
+delete: mail
+mail: segonmail@edt.org

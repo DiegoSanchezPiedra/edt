@@ -1,0 +1,16 @@
+CMD /usr/bin/cal  =====>
+                          docker run --rm -it prova     ---> cal
+                          docker run --rm it prova date ---> date
+                          docker run --rm -it prova /bin/bash ---> /bin/bash interactivament
+
+ENTRYPOINT /usr/bin/cal ======>
+                          docker run --rm -it prova     ---> cal
+                          docker run --rm --entrypoint date -it prova --> date
+                          docker run --rm --entrypoint /date -it prova --> /bin/bash interactiu
+
+                          docker run --rm -it prova 01 2020  ---> cal 01 2020
+                          docker run --rm -it prova 2020  ---> cal 2020
+
+    entry point és la ordre amb el pid 1, el que es posa al final de la comanda docker run són
+    arguments que es passen a la ordre de entrypoint.
+    Si volem executar una altra ordre cal usar l'opció --entrypoint

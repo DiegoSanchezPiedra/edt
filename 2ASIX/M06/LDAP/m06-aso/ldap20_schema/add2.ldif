@@ -1,0 +1,22 @@
+dn: cn=ramon ferrer,ou=usuaris,dc=edt,dc=org
+objectClass: x-Futbolista
+cn: ramon
+sn: amistoso
+x-equip: barca
+x-dorsal: 12
+x-web: www.ramon.com
+x-lesionat: FALSE
+homePhone: 12311231
+mail: ramon@barca.cat
+
+dn: cn=ferran roig,ou=usuaris,dc=edt,dc=org
+objectClass: x-Futbolista
+cn: ferran roig
+sn: ferran
+x-equip: barca
+x-dorsal: 4
+x-web: www.ferran.com
+x-lesionat: FALSE
+homePhone: 13213213
+mail: ferran@barca.cat
+

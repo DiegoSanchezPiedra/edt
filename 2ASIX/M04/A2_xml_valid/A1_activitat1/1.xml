@@ -1,0 +1,18 @@
+<biblioteca>
+    <libro cod="A0001">
+        <autor>
+            <nombre>Jonh Palmer</nombre>
+            <apellido> Brian </apellido>
+        <autor>
+    </libro>
+    <libro cod="A0002">
+        <autor>
+            <nombre>Juan Ramón</nombre>
+            <apellido>López</apellido>
+            <apellido>Prats</apellido>
+        </autor>
+        <titulo>XML en 48 horas</titulo>
+        <isbn>8-12345-09</isbn>
+        <estado prestado="Si"/>
+    </libro>
+</biblioteca>

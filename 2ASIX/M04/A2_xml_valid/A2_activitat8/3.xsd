@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="arqueologia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jaciment" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="localitzacio">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nom_pais" type="xs:string"/>
+                                        <xs:element name="nom_ciutat" type="xs:string"/>
+                                        <xs:element name="coordenades">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="longitud" type="xs:decimal"/>
+                                                    <xs:element name="latitud" type="xs:decimal"/>
+                                                    <xs:element name="orientacio">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:enumeration value="N"/>
+                                                                <xs:enumeration value="S"/>
+                                                                <xs:enumeration value="E"/>
+                                                                <xs:enumeration value="O"/>
+                                                                <xs:enumeration value="NE"/>
+                                                                <xs:enumeration value="SE"/>
+                                                                <xs:enumeration value="SO"/>
+                                                                <xs:enumeration value="NO"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="troballes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="peça" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:choice>
+                                                        <xs:element name="descripcio" type="xs:string"/>
+                                                        <xs:element name="dibuix" type="xs:string"/>
+                                                    </xs:choice>
+                                                    <xs:element name="data" type="xs:date"/>    
+                                                </xs:sequence>
+                                                <xs:attribute name="id" type="xs:ID"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="epoca" type="xs:string">
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

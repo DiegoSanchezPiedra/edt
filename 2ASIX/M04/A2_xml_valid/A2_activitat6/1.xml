@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<?xml-model href="1.xsd"?>
+<root>
+ xsi:noNamespaceSchemaLocation="prova1.xsd">
+    <ciudad>Roma</ciudad>
+    <fecha-de-nacimiento>1996-12-18</fecha-de-nacimiento>
+    <hora>18:29:45</hora>
+    <nota>7.5</nota>
+    <apto>true</apto>
+</root>

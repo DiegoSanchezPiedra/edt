@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vehicle">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TipoDeVehicle">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="vaixell"/>
+                            <xs:enumeration value="bicicleta"/>
+                            <xs:enumeration value="cotxe"/>
+                            <xs:enumeration value="tren"/>
+                        </xs:restriction>
+                    </xs:simpleType>   
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType> 
+    </xs:element>
+</xs:schema>

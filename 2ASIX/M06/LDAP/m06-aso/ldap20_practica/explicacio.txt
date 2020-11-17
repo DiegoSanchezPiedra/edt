@@ -1,0 +1,19 @@
+Explicacions de la pràctica
+----------------------------
+
+1) Onjcete master: estructural / auxiliar
+
+   estructural ---> ha de ser una entitat per si mateix
+                    ha de tenir un camp clau
+                    
+
+   **auxiliar** ---> perquè és una característica AFEGUEIX
+                     als usuaris que ja tenim
+
+2) derivat de TOP o d'un altre objecte
+ 
+    **TOP**   no deriva de ningú
+
+    derivat de un altre objecte quin?
+            (no es correcte inetOrgPerson)
+

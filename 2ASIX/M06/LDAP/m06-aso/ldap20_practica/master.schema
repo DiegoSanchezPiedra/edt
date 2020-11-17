@@ -1,0 +1,49 @@
+#schema de "x-master":
+#===================
+# 1. x-famaster
+# 2. x-nommaster
+# 3. x-notamaster
+# 4. x-webmaster
+# 5. x-fotoalum
+# 6. x-docu
+# 
+#######################
+
+attributetype ( 1.1.2.1.1 NAME 'x-famaster'
+  DESC 'true/false fa el master'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+  SINGLE-VALUE)
+
+attributetype ( 1.1.2.1.2 NAME 'x-nommaster'
+  DESC 'Nom del master'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{50}
+  SINGLE-VALUE)
+
+attributetype ( 1.1.2.1.3 NAME 'x-notamaster'
+  DESC 'nota del master'
+  EQUALITY integerMatch
+  ORDERING integerOrderingMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE)
+
+attributetype ( 1.1.2.1.4 NAME 'x-webmaster'
+  DESC 'web del master'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26)
+
+attributetype ( 1.1.2.1.5 NAME 'x-fotoalum'
+  DESC 'Foto del alumne'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.28)
+
+attributetype ( 1.1.2.1.6 NAME 'x-docum'
+  DESC 'Documentacio a presentar'
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.5)
+
+objectclass ( 1.1.2.2.1 NAME 'x-master'
+  DESC 'masters de la practica de schema'
+  SUP top
+  AUXILIARY
+  MUST ( x-nommaster $ x-famaster )
+  MAY ( x-notamaster $ x-webmaster $ x-fotoalum $ x-docum )
+  )

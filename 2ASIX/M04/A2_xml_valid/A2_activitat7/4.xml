@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fichas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="4.xsd">
+   <fitxa numero="01" letra="Z">
+      <codi>11</codi>
+      <nom>Ana Sanz Tin</nom>
+   </fitxa>
+   <fitxa numero="02">
+      <codi>12</codi>
+      <nom>Iker Rubio Mol</nom>
+   </fitxa>
+</fichas>

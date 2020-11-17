@@ -1,0 +1,46 @@
+<!DOCTYPE temps[
+<!ELEMENT temps (entitat+)>
+<!ELEMENT entitat (nom,ubicacio,prediccio+)>
+<!ATTLIST entitat id ID #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT ubicacio (ciutat,provincia)>
+<!ELEMENT ciutat (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT prediccio (precipitacio,vent)>
+<!ATTLIST prediccio data NMTOKEN #REQUIRED>
+<!ELEMENT precipitacio (#PCDATA)>
+<!ELEMENT vent (direccio,velocitat)>
+<!ELEMENT direccio (#PCDATA)>
+<!ELEMENT velocitat (#PCDATA)>
+]>
+
+<temps>
+	<entitat id="AZ000000A">
+		<nom>Agencia Santbolana de meterologia</nom>
+		<ubicacio>
+			<ciutat>Sant Boi</ciutat>
+			<provincia>Barcelona</provincia>
+		</ubicacio>
+		<prediccio data="2011-12-20">
+			<precipitacio>14</precipitacio>
+			<vent>
+				<direccio>NE</direccio>
+				<velocitat>77</velocitat>
+			</vent>
+		</prediccio>
+	</entitat>
+		<entitat id="AZ000000B">
+		<nom>Agencia Santbolana de meterologia</nom>
+		<ubicacio>
+			<ciutat>Sant Boi</ciutat>
+			<provincia>Barcelona</provincia>
+		</ubicacio>
+		<prediccio data="2011-12-20">
+			<precipitacio>14</precipitacio>
+			<vent>
+				<direccio>NE</direccio>
+				<velocitat>77</velocitat>
+			</vent>
+		</prediccio>
+	</entitat>
+</temps>

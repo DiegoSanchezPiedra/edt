@@ -1,0 +1,15 @@
+<!DOCTYPE temps[
+<!ELEMENT temps (entitat+)>
+<!ELEMENT entitat (nom,ubicacio,prediccio+)>
+<!ATTLIST entitat id ID #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT ubicacio (ciutat,provincia)>
+<!ELEMENT ciutat (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT prediccio (precipitacio,vent)>
+<!ATTLIST prediccio data NMTOKEN #REQUIRED>
+<!ELEMENT precipitacio (#PCDATA)>
+<!ELEMENT vent (direccio,velocitat)>
+<!ELEMENT direccio (#PCDATA)>
+<!ELEMENT velocitat (#PCDATA)>
+]>

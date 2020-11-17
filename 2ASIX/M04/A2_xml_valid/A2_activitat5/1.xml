@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aeroport [
+<!ELEMENT aeroport (nom,vol+,data)*>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT vol (diari?,origen,desti,hora_sortida,hora_arribada)>
+        <!ATTLIST vol codi ID #REQUIRED>
+        <!ATTLIST vol estado (C | E | R) "E">
+        <!ELEMENT hora_sortida (#PCDATA)>
+        <!ELEMENT hora_arribada (#PCDATA)>
+        <!ELEMENT diari EMPTY>
+        <!ELEMENT origen (#PCDATA)>
+        <!ELEMENT desti (#PCDATA)>
+    <!ELEMENT data (#PCDATA)>
+]>
+
+
+<aeroport>
+    <nom>Jorge Chavez</nom>
+    <vol codi="V22" estado="R">
+        <diari/>
+        <origen>New York</origen>
+        <desti>Chicago</desti>
+        <hora_sortida>10:15</hora_sortida>
+        <hora_arribada>9:30</hora_arribada>
+    </vol>
+    <vol codi="V23" estado="C">
+        <origen>New York</origen>
+        <desti>Miami</desti>
+        <hora_sortida>10:15</hora_sortida>
+        <hora_arribada>11:15</hora_arribada> 
+    </vol>
+    <data>21/10/20</data>
+</aeroport>

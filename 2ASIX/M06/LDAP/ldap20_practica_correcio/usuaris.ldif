@@ -1,0 +1,48 @@
+dn: cn=Diego Sanchez,ou=usuaris,dc=edt,dc=org
+objectClass: x-master
+cn: diego
+sn: didi
+x-master-estudiat: TRUE
+x-descripcio: watch out for this guy
+x-nota-master: 7
+x-web: www.diego.com
+x-photo:< file:///opt/docker/diego.jpg
+
+dn: cn=Carlos Sanchez,ou=usuaris,dc=edt,dc=org
+objectClass: x-master
+cn: Carlos
+sn: marcelo
+x-master-estudiat: FALSE
+
+dn: cn=Janette Piedra,ou=usuaris,dc=edt,dc=org
+objectClass: x-master
+cn: Janette
+sn: jane
+x-master-estudiat: TRUE
+x-descripcio: watch out for this girl
+x-nota-master: 10
+x-web: www.janette.org
+x-photo:< file:///opt/docker/photo1.jpeg
+x-documents:< file:///opt/docker/sample.pdf
+
+dn: cn=Jeampier Cuba,ou=usuaris,dc=edt,dc=org
+objectClass: x-master
+cn: Jeampier
+sn: jeampi
+x-master-estudiat: TRUE
+x-descripcio: watch out for this guy
+x-nota-master: 8
+x-web: www.jeampier.cat
+x-photo:
+x-documents:
+
+dn: cn=Valeria Cuba,ou=usuaris,dc=edt,dc=org
+objecClass: x-master
+cn: Valeria
+sn: vale
+x-master-estudiat: TRUE
+x-descripcio: watch out for this girl
+x-nota-master: 5
+x-web: www.valeria.es
+x-photo:
+x-documents:

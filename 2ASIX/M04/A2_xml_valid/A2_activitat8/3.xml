@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arqueologia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="3.xsd">
+    <jaciment epoca="pre-romantic">
+        <localitzacio>
+            <nom_pais>italia</nom_pais>
+            <nom_ciutat>roma</nom_ciutat>
+            <coordenades>
+                <longitud>275.3</longitud>
+                <latitud>145.6</latitud>
+                <orientacio>NE</orientacio>
+            </coordenades>
+        </localitzacio>
+        <troballes>
+            <peça id="l1">
+                <descripcio>Trident coure</descripcio>
+                <data>1990-08-25</data>
+            </peça>
+        </troballes>
+    </jaciment>
+</arqueologia>

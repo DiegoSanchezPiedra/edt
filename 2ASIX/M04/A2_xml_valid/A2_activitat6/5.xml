@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="5.xsd">
+    <persona>
+        <nom>Eva</nom>
+        <ciutat>Paris</ciutat>
+        <edat>25</edat>
+    </persona>
+    <persona>
+        <nom>Giovanni</nom>
+        <ciutat>Florencia</ciutat>
+        <edat>26</edat>
+    </persona>
+</persones>

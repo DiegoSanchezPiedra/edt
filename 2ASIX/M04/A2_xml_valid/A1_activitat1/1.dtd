@@ -1,0 +1,33 @@
+<!DOCTYPE biblioteca[
+<!ELEMENT biblioteca (libro*)>
+<!ELEMENT libro (autor+,titulo+,isbn?,estado+)>
+<!ATTLIST libro cod ID #REQUIRED>
+<!ELEMENT autor (nombre,apellido+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT estado EMPTY>
+<!ATTLIST estado prestado (Si|No) "No">
+]>
+
+<biblioteca>
+    <libro cod="A0001">
+        <autor>
+            <nombre>Jonh Palmer</nombre>
+            <apellido> Brian </apellido>
+        </autor>
+        <titulo>XML en 24 horas</titulo>
+        <estado prestado="No"/>
+    </libro>
+    <libro cod="A0002">
+        <autor>
+            <nombre>Juan Ramón</nombre>
+            <apellido>López</apellido>
+            <apellido>Prats</apellido>
+        </autor>
+        <titulo>XML en 48 horas</titulo>
+        <isbn>8-12345-09</isbn>
+        <estado prestado="Si"/>
+    </libro>
+</biblioteca>

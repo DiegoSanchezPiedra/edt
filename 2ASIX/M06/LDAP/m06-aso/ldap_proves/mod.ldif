@@ -1,0 +1,22 @@
+dn: cn=Pau Pou,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectclass
+objectClass: x-master
+-
+add: x-famaster
+x-famaster: TRUE
+-
+add: x-nommaster
+x-nommaster: informatica
+-
+add: x-notamaster
+x-notamaster: 9
+-
+add: x-webmaster
+webmaster: paru@edt.org
+-
+add: x-fotoalum
+x-fotoalum:< file:///opt/docker/photo1.jpeg 
+-
+add: x-document
+x-document:< file:///opt/docker/sample.pdf
