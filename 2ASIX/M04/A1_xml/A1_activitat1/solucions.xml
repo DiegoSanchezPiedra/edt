@@ -1,0 +1,150 @@
+Diego Alessandro Sanchez Piedra
+1.1:
+<agenda>
+	<entrada>
+		<nom>Pepe</nom>
+		<telefon>93243933</telefon>
+	</entrada>
+	<entrada>
+		<nom>Anna</nom>
+		<telefon>60924567</telefon>
+	</entrada>
+</agenda>
+
+1.2:
+<discos>
+	<disco format="CD">
+		<autor>Cold Play</autor>
+		<titul>x & y</titul>
+		<discografia></discografia>
+		<pistes>
+			<nompista durada=""></nompista>
+			<nompista durada=""></nompista>
+		</pistes>
+	</disco>
+	<disco></disco>
+	<disco></disco>
+</discos>
+
+1.3:
+<nivell>Som a nivell 1</Nivell1>
+
+- no es correcto ya que el start-tag y el end-tag no son iguales
+
+<2on>Som al nivell 2</2on>
+
+- si es correcto
+
+<segon_element pos=”2”>element 2 </segon_element>
+
+- si es correcto
+
+<persona><nom>Andreu Miralles</persona></nom>
+
+- No es correcto porque se solapan entre dos tags
+
+<Paragraf>Hola<lin_horitzontal></Paragraf>
+
+- No es correcto ya que hay un tag sin inicar o final, a parte de que se
+solapan entre dos tags
+
+1.4:
+<agenda>
+	<contacto>
+		<nombre>Javier</nombre>
+		<telefon>637059874</telefon>
+		<fecha_nacimiento>14-12-1982</fecha_nacimiento>
+		<grupo>amigos</grupo>
+	</contacto>
+</agenda>
+
+1.5:
+<mensaje>
+	<remite>
+		<nombre>Alfredo Reina</nombre>
+		<email>alfredore@gmail.com</email>
+	</remite>
+	<destinatario>
+		<nombre>Arnau Garcia</nombre>
+		<email>arnaug@gmail.com</email>
+	</destinatario>
+	<asunto>Hola Bill</asunto>
+	<texto>
+		<parrafo>¿Hola que tal?</parrafo>
+	</texto>
+</mensaje>
+
+1.6:
+<persona>
+	<nombre>Juan Pardo</nombre>
+	<nacimiento dia="10" mes="Abril" anyo="1982"></nacimiento>
+	<direccion>
+		<calle>caoba,1</calle>
+		<poblacion>Madrid</poblacion>
+		<provincia>Madrid</provincia>
+		<cpostal>28005</cpostal>
+	</direccion>
+	<varon></varon>
+</persona>
+
+1.7:
+<biblioteca>
+	<libro>
+		<titulo>La vida esta en otra parte</titulo>
+		<autor>Milan kundera</autor>
+		<fechaPublicacion año="1973"></fechaPublicacion>
+	</libro>
+	<libro>
+		<titulo>Pantaleon y las visitadoras</titulo>
+		<autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+		<fechaPublicacion año="1973"></fechaPublicacion>
+	</libro>
+	<libro>
+		<titulo>Conversacion en la catedral</titulo>
+		<autor fechaNacimiento="28/03/1936">Mario Vargas Llosa</autor>
+		<fechaPubliacion año="1969"></fechaPubliacion>
+	</libro>
+</biblioteca>
+
+1.8:
+<cancion duracion="4:47" anio="2008">
+	<titulo>Give it 2 me</titulo>
+	<compositores>
+		<compositor>
+			<nombres>Pharrell</nombres>
+			<apellidos>williams</apellidos>
+		</compositor>
+	</compositores>
+	<productores>
+		<productor>
+			<nombres>Pharrell</nombres>
+			<apellidos>Williams</apellidos>
+		</productor>
+	</productores>
+	<sello>Warner Bros. Records</sello>
+	<artista>Madonna</artista>
+</cancion>
+
+1.9:
+<poema fecha="Abril de 1915" Lugar="Granada">
+	<Titulo>Alba</Titulo>
+	<Verso>Mi corazon...</Verso>
+	<Verso>siente...</Verso>
+	<Verso>el dolor...</Verso>
+</poema>
+
+1.10:
+<documento>
+	<xml></xml>
+	<libros>
+		<libro>
+			<autor>Carson</autor>
+			<precio format="dolar">31.95</precio>
+			<pubdate>05/01/2001</pubdate>
+		</libro>
+		<pubinfo>
+			<publisher>MSPress</publisher>
+			<estado>WA</estado>
+		</pubinfo>
+	</libros>
+</documento>

@@ -1,0 +1,62 @@
+Diego Alessandro Sanchez Piedra
+1)
+<curs xmlns:participante="http://www.curs.es/dades_participant"
+	  xmlns:vehiculo="http:www.curs.es/dades_vehicle"
+	  data_inici="" 
+	  data_fi="">
+	<lloc>
+	</lloc>
+	<participants>
+		<participant dni="">
+			<nom></nom>
+			<cognoms></cognoms>
+			<participante:matricula></participante:matricula>
+			<email></email>
+			<participante:data></participante:data>
+			<vehicle num_chasis="">
+				<vehiculo:data></vehiculo:data>
+				<vehiculo:matricula></vehiculo:matricula>
+				<marca></marca>
+				<model></model>
+			</vehicle>
+		</participant>
+	</participants>
+</curs>
+ 
+2)
+<mensaje xmlns:remitente="http://www.mensaje.com/remitentes"
+		 xmlns:destinatario="http://www.mensaje.com/destinatarios">
+	<remite>
+		<remitente:nombre>Alfredo Reina</remitente:nombre>
+		<remitente:email>alfredore@gmail.com</remitente:email>
+	</remite>
+	<destinatario>
+		<destinatario:nombre>Arnau Garcia</destinatario:nombre>
+		<destinatario:email>arnaug@gmail.com</destinatario:email>
+	</destinatario>
+	<asunto>Hola Bill</asunto>
+	<texto>
+		<parrafo>¿Hola que tal?</parrafo>
+	</texto>
+</mensaje>
+
+3)
+<cancion xmlns:compositor="http://cancion.com/give_it_2_me/compositores"
+	     xmlns:productor="http://cancion.com/give_it_2_me/productores"
+         duracion="4:47" anio="2008">
+	<titulo>Give it 2 me</titulo>
+	<compositores>
+		<compositor>
+			<compositor:nombres>Pharrell</compositor:nombres>
+			<compositor:apellidos>williams</compositor:apellidos>
+		</compositor>
+	</compositores>
+	<productores>
+		<productor>
+			<productor:nombres>Pharrell</productor:nombres>
+			<productor:apellidos>Williams</productor:apellidos>
+		</productor>
+	</productores>
+	<sello>Warner Bros. Records</sello>
+	<artista>Madonna</artista>
+</cancion>

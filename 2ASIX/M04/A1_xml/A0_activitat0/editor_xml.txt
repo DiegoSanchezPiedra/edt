@@ -1,0 +1,15 @@
+XML Copy Editor: (opersource)
+Es un editor de software libre lanzado bajo la licencia de GNU General Public, está disponible en Catalán, Chino, Aleman, Inglés, Francés, Holandés, Italiano, etc.
+
+Oxygen XML Editor:(privativo)
+El Oxygen XML Editor es un editor XML multiplataforma, depurador y generador de perfiles XSLT / XQuery con soporte Unicode. Es una aplicación Java, por lo que puede ejecutarse en Windows, Mac OS X y Linux. 
+También tiene una versión que se puede ejecutar como un complemento de Eclipse.
+
+Adobe FrameMaker: (privativo)
+Es un procesador de documentos diseñado para escribir y editar documentos grandes o complejos, incluidos documentos estructurados. Originalmente fue desarrollado por Frame Technology Corporation, que fue comprada por Adobe.
+
+XMLSpy: (privativo)
+XMLSpy es un editor de XML patentado y un entorno de desarrollo integrado (IDE) desarrollado por Altova. XMLSpy permite a los desarrolladores crear aplicaciones de servicios web y basadas en XML utilizando tecnologías como XML, XBRL, XML Schema, XSLT, XPath, XQuery, WSDL y SOAP.
+
+BaseX: (oper source)
+Es un sistema de administración de bases de datos XML nativo y liviano y un procesador XQuery, desarrollado como un proyecto comunitario en GitHub. [2] Está especializado en almacenar, consultar y visualizar grandes colecciones y documentos XML. [3] BaseX es independiente de la plataforma y se distribuye bajo una licencia de software libre permisiva.
