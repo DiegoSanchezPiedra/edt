@@ -5,3 +5,5 @@ h1 {color: blue;
 p {color: red;
     font-family: coruier;
     font-size: 150%;}
+#p01 {color: blueviolet;}
+p.prova {color:yellow;}
