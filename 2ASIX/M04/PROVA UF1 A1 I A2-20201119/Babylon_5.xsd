@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="babylon5">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="classe" minOccurs="2" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:choice>
+                                <xs:element name="Earth_Alliance"/>
+                                <xs:element name="Narn"/>
+                            </xs:choice>
+                            <xs:element name="subclasses" type="xs:string"/>
+                            <xs:element name="tipus">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="destructor"/>
+                                        <xs:enumeration value="creuer pesat"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="caracteristiques">
+                                <xs:complexType>
+                                    <xs:all>
+                                            <xs:element name="longitud">
+                                              <xs:complexType mixed="true">
+                                                  <xs:attribute name="unitat" type="xs:string"/>
+                                               </xs:complexType>
+                                          </xs:element>
+                                          <xs:element name="tonelatge">
+                                              <xs:complexType mixed="true">
+                                                    <xs:attribute name="unitat" type="xs:string"/>
+                                                </xs:complexType>
+                                          </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="capacitat_humana">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tripulacio" type="xs:positiveInteger"/>
+                                        <xs:element name="tropes" type="xs:positiveInteger"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="capacitat_naus">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="caces" type="xs:integer"/>
+                                        <xs:element name="transports_tropes" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="propulsio">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="numero_de_motors_impulsio" type="xs:integer"/>
+                                        <xs:element name="motors_impulsio" type="xs:string"/>
+                                        <xs:element name="reactors">
+                                            <xs:complexType mixed="true">
+                                                <xs:attribute name="numero">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:integer">
+                                                            <xs:minInclusive value="1"/>
+                                                            <xs:maxInclusive value="6"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="potencia_standart" type="xs:integer"/>
+                                        <xs:element name="potencia_militar" type="xs:integer"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="unitat_de_mesura_potencia" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="nomNaus">
+                                                <xs:enumeration value="Terawatts"/>
+                                                <xs:enumeration value="Joules"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="abast">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="quantitat" type="xs:integer" minOccurs="0"/>
+                                        <xs:element name="unitat_de_mesura" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="dies"/>
+                                                    <xs:enumeration value="setmanes"/>
+                                                    <xs:enumeration value="mesos"/>
+                                                    <xs:enumeration value="anys"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>                             
+                                        <xs:element name="quantitat_2" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:attribute name="unitat_de_mesura">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="dies"/>
+                                                            <xs:enumeration value="setmanes"/>
+                                                            <xs:enumeration value="mesos"/>
+                                                            <xs:enumeration value="anys"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="gravetat_artificial">
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="origen" type="nomNaus"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="data_alta" type="xs:date"/>
+                            <xs:element name="noms">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nom" type="nomNaus" maxOccurs="unbounded"/>    
+                                    </xs:sequence>
+                                    <xs:attribute name="coneguts" type="xs:integer"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="classe">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[A-Z][a-z]*_[A-Za-z_]*"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="nomNaus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-zA-Z' ]*"/>
+            <xs:maxLength value="15"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

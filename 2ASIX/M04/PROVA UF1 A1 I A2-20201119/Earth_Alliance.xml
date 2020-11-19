@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE babylon5 SYSTEM "Earth_Alliance.dtd">
+<babylon5>
+	<bandol nom="Earth_Alliance">
+		<nau classe="Omega_Class_destroyer">
+			<subclasse classeMare="Omega">Omega</subclasse>
+			<tipus>destructor</tipus>
+			<longitud unitat="metres">1717,3</longitud>
+			<tonelatge unitat="milions de tonelades metriques">44,6</tonelatge>
+			<capacitat_humana>
+				<tripulacio>850</tripulacio>
+				<tropes>18000</tropes>
+			</capacitat_humana>
+			<capacitat_naus>
+				<caces>36</caces>
+				<transports_tropes>80</transports_tropes>
+			</capacitat_naus>
+			<propulsio>
+				<numero_de_motors_impulsio>4</numero_de_motors_impulsio>
+				<motors_impulsio>KD-1105 Proxima</motors_impulsio>
+				<reactors numero="4">General Fusion 650</reactors>
+				<potencia_standart>3943</potencia_standart>
+				<potencia_militar>101408</potencia_militar>
+				<unitat_de_mesura_potencia>Terawatts</unitat_de_mesura_potencia>
+			</propulsio>
+			<abast>
+				<quantitat>18</quantitat>
+				<unitat_de_mesura>mesos</unitat_de_mesura>
+			</abast>
+			<gravetat_artificial llengua="en">false</gravetat_artificial>
+			<data_alta>
+				<dia>1</dia>
+				<mes>1</mes>
+				<any>2249</any>
+			</data_alta>
+			<noms coneguts="32">
+				<nom>AES Acheron</nom>
+				<nom>AES Achilles</nom>
+				<nom>AES Agamemnon</nom>
+				<nom>AES Agrippa</nom>
+				<nom>AES Excalibur</nom>
+				<nom>AES Hermes</nom>
+				<nom>AES Juno</nom>
+				<nom>AES Nimrod</nom>
+				<nom>AES Orion</nom>
+			</noms>
+		</nau>
+		<nau classe="OmegaX_Class_destroyer">
+			<subclasse classeMare="Omega-X">Advanced</subclasse>
+			<tipus>destructor</tipus>
+			<longitud unitat="metres">1720</longitud>
+			<tonelatge unitat="milions de tonelades metriques">50</tonelatge>
+			<capacitat_humana>
+				<tripulacio>850</tripulacio>
+				<tropes>18000</tropes>
+			</capacitat_humana>
+			<capacitat_naus>
+				<caces>36</caces>
+				<transports_tropes>80</transports_tropes>
+			</capacitat_naus>
+			<propulsio>
+				<numero_de_motors_impulsio>4</numero_de_motors_impulsio>
+				<motors_impulsio>KD-1105 Proxima</motors_impulsio>
+				<reactors numero="4">General Fusion 650</reactors>
+				<potencia_standart>3943</potencia_standart>
+				<potencia_militar>101408</potencia_militar>
+				<unitat_de_mesura_potencia>Terawatts</unitat_de_mesura_potencia>
+			</propulsio>
+			<abast>
+				<quantitat>18</quantitat>
+				<unitat_de_mesura>mesos</unitat_de_mesura>
+			</abast>
+			<gravetat_artificial llengua="en">false</gravetat_artificial>
+			<data_alta>
+				<any>2261</any>
+			</data_alta>
+			<noms coneguts="0">
+			</noms>
+		</nau>
+		<nau classe="Hyperion_type_heavy_cruiser">
+			<subclasse classeMare="Hyperion">Roosevelt, Hyperion, Midwinter</subclasse>
+			<tipus>creuer pesat</tipus>
+			<longitud unitat="metres">1187,7</longitud>
+			<tonelatge unitat="milions de tonelades metriques">9,1</tonelatge>
+			<capacitat_humana>
+				<tripulacio>356</tripulacio>
+				<tropes>200</tropes>
+			</capacitat_humana>
+			<capacitat_naus>
+				<caces>6</caces>
+			</capacitat_naus>
+			<propulsio>
+				<numero_de_motors_impulsio>3</numero_de_motors_impulsio>
+				<motors_impulsio>J-64D Optimal</motors_impulsio>
+				<reactors numero="3">General Fusion 420-B</reactors>
+				<potencia_standart>325</potencia_standart>
+				<potencia_militar>5633</potencia_militar>
+				<unitat_de_mesura_potencia>Terawatts</unitat_de_mesura_potencia>
+			</propulsio>
+			<abast>
+				<quantitat_2 unitat_de_mesura="mesos">12</quantitat_2>
+			</abast>
+			<gravetat_artificial llengua="en">false</gravetat_artificial>
+			<data_alta>
+				<dia>1</dia>
+				<mes>1</mes>
+				<any>2237</any>
+			</data_alta>
+			<noms coneguts="7">
+				<nom>AES Hyperion</nom>
+				<nom>AES Lexington</nom>
+				<nom>AES Prometheus</nom>
+				<nom>AES Trafalgar</nom>
+			</noms>
+		</nau>
+	</bandol>
+</babylon5>

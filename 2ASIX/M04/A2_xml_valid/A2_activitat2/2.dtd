@@ -1,4 +1,3 @@
-<!DOCTYPE temps[
 <!ELEMENT temps (entitat+)>
 <!ELEMENT entitat (nom,ubicacio,prediccio+)>
 <!ATTLIST entitat id ID #REQUIRED>
@@ -12,4 +11,3 @@
 <!ELEMENT vent (direccio,velocitat)>
 <!ELEMENT direccio (#PCDATA)>
 <!ELEMENT velocitat (#PCDATA)>
-]>

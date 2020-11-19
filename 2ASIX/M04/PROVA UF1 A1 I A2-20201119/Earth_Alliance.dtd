@@ -1,0 +1,40 @@
+<!ELEMENT babylon5 (bandol)>
+<!ELEMENT bandol (nau+)>
+<!ATTLIST bandol nom ID #REQUIRED>
+    <!ELEMENT nau (subclasse,tipus,longitud,tonelatge,capacitat_humana,capacitat_naus,propulsio,abast,gravetat_artificial?,data_alta,noms)>
+        <!ATTLIST nau classe ID #REQUIRED>
+        <!ELEMENT subclasse (#PCDATA)>
+            <!ATTLIST subclasse classeMare CDATA #IMPLIED>
+        <!ELEMENT tipus (#PCDATA)>
+        <!ELEMENT longitud (#PCDATA)>
+            <!ATTLIST longitud unitat (metres | polsades) metres #REQUIRED>
+        <!ELEMENT tonelatge (#PCDATA)>
+            <!ATTLIST tonelatge unitat milions_de_tonelades_metriques #REQUIRED>
+        <!ELEMENT capacitat_humana (tripulacio,tropes?)>
+            <!ELEMENT tripulacio (#PCDATA)>
+            <!ELEMENT tropes (#PCDATA)>
+        <!ELEMENT capacitat_naus (caces,transports_tropes?)>
+            <!ELEMENT caces (#PCDATA)>
+            <!ELEMENT transports_tropes (#PCDATA)>
+        <!ELEMENT propulsio (numero_de_motors_impulsio,motors_impulsio,reactors+,potencia_standart,potencia_militar,unitat_de_mesura_potencia)>
+            <!ELEMENT numero_de_motors_impulsio (#PCDATA)>
+            <!ELEMENT motors_impulsio (#PCDATA)>
+            <!ELEMENT reactors (#PCDATA)>
+                <!ATTLIST reactors numero CDATA 1 #REQUIRED>
+            <!ELEMENT potencia_standart (#PCDATA)>
+            <!ELEMENT potencia_militar (#PCDATA)>
+            <!ELEMENT unitat_de_mesura_potencia (#PCDATA)>
+        <!ELEMENT abast (quantitat,unitat_de_mesura | quantitat_2)*>
+            <!ELEMENT quantitat (#PCDATA)>
+            <!ELEMENT unitat_de_mesura (#PCDATA)>
+            <!ELEMENT quantitat_2 (#PCDATA)>
+                <!ATTLIST quantitat_2 unitat_de_mesura CDATA #IMPLIED>
+        <!ELEMENT gravetat_artificial (#PCDATA)>
+            <!ATTLIST gravetat_artificial llengua (es | en | fi | sv) en #REQUIRED>
+        <!ELEMENT data_alta (dia,mes,any | any)>
+            <!ELEMENT dia (#PCDATA)>
+            <!ELEMENT mes (#PCDATA)>
+            <!ELEMENT any (#PCDATA)>
+        <!ELEMENT noms (nom*)>
+            <!ATTLIST noms coneguts CDATA #REQUIRED>
+            <!ELEMENT nom (#PCDATA)>
