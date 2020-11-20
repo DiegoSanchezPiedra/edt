@@ -1,0 +1,144 @@
+DCHP 
+
+ - estàtic
+ - dinàmic
+
+ configuracio de xarxa:
+	IP/Mask --> IP , xarxa
+	192.168.0.10/24 IP identitat   ip a a 192.168.1.34/24 dev eth0
+	192.168.1.0     xarxa dins de la xarxa local
+	gateway 	(default rute)  ip r a default via A.B.C.D
+	Servei de DNS per poder usar noms de domini
+
+	Identitat (IP), pertanyer a una xarx (MASK), accedir a fora (gateway),
+	accedir per nom (DNS)
+
+ordinador client:
+  IP, MASK, GATEWAY, DNS
+
+casos:
+  si posem manualment les ips --> configuracó estàtica
+  si rep la ip per DHCP --< configuració dinàmica
+			                 dinàmica de rang (rebrà ips diferents en connexions diferents)
+					 dinàmica fixa (el dhcpd ens dona sempre la mateixa ip)
+- conf. estàtica:
+  L'administrador posa de maner manual la ip a tots els hosts de la xarxa
+
+  /etc/sysconfig/network-scripts/ifcfg-enp0s31f6 (fitxer de configuració)
+
+    BOOTPROTO=dhcp --> configuració dinàmica
+    
+    BOOTPROTO=none --> configuració estàtica
+
+sistema dinàmic: dhcp
+  servidor -----  clients,   clients,  etc
+    DHCP          dhclient,  dhclient, etc
+		 
+		  #dhclient -r (interface)
+		  #dhclient -v (interface)
+  concedeix
+  lease   -----> rep una lesases
+		 (són per un temps finit i cal renegociar)
+		 /var/lib/dhclient/dhclient.leases
+
+
+  dchp-server (dhcpd)
+   configuracio de les xarxes de concessió
+   ip/mask, gateway, dns
+   la durada de la concessió
+   concessió per rang (pool)
+   concessiói fixe (estàtica fixa)
+
+============================================================
+
+Laboratori de Màquines Virtuals
+  virt-manager // libvirtd // kvm // qemu 
+
+  +--------------+
+  | dhcpd server |
+  | fedora:27	 |
+  |         eth0 <-- libvirtd (es la que ens permetrà accés a internet)
+  |              |			 		+--------------+
+  |         eth1 <-- interficie de xarxa local -------- |client lleuger|
+  +--------------+   laboratori				|dhclient      |
+							+--------------+
+						tenir dos clients un per conf estàtica i altre amb dinàmica
+						50M / 500M
+						DSL Damn Small Linux
+						(alpine)
+
+  es pot instal·lar el fedora amb una minimal o la de server
+	minima  //  server
+   	500M        2GB
+
+============================================================
+
+opcions -Globals
+        -de un host fixe
+* poder posar opcions globals però també podem especificar ocpcions per hosts especifics
+
+/etc/dhcp/dhcpd.conf
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+  option routers 192.168.1.1;
+  option subnet-mask 255.255.255.0;
+  option domain-name "domain.org";
+  option domain-name-servers 192.168.1.1;
+
+  default-lease-time 21600;
+  max-lease-time 43200;
+  range dynamic-bootp 192.168.1.128 192.168.1.254;
+  
+
+  host pc1 {
+    hardware ethernet 12:32:56:78:AB:CD;
+    fixer-address 192.168.1.20;
+  }
+  
+  group {
+    default-lease-time 10000;
+    option domain-name-servers "8.8.8.8";
+    
+    host ns1 {
+      hardware ethernet 12:32:56:78:AB:CD;
+      fixer-address 192.168.1.20;
+    }
+    ...
+  
+    host ns10 {
+      hardware ethernet 12:32:56:78:AB:CD;
+      fixer-address 192.168.1.20;
+    }
+  }
+  if option user-class = "esquerra" {
+         max-lease-time 17600;
+         option domain-name "accounting.example.org";
+         option domain-name-servers ns1.accounting.example.org, ns2.accounting.example.org;
+
+  subnet 192.168.100.0 netmask 255.255.255.0 {
+  pool {
+    allow members of "esquerra";
+    range 192.168.100.100 192.168.100.150;
+  }
+  pool {
+    allow members of "dreta";
+    option domain-name "arriba";
+    range 192.168.100.100 192.168.100.150;
+  }
+}
+
+
+------------------------client-----------------------
+/etc/dhcp/dhclient.conf
+
+dhcp-lease-time 1800;
+also request tftp-server-name, bootfile-name;
+require tftp-serer,name;
+#send dhcp-client-identifier "xRASRAS";
+#send host-name "xpepito";
+send user-class "esquerra";
+#send vendor-class-identifier "xvenedor";
+------------------------------------------------
+
+
+AQUESTA INFO I MES A man dhclient.conf

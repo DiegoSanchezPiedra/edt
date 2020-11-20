@@ -1,0 +1,38 @@
+TYPE:
+  auth:
+   --> autentica (hi ha una persona que diu es el pere, doncs s'ha de mirar que sigui el pere)
+
+  account:
+   --> un cop autenticat/ada mira si el seu compte 
+       li ha expirat? 
+       son hores en les que es pot connectar?
+       ...etc
+
+  password:
+    --> per establir regles per canviar el password
+
+  session:
+    --> coses a fer just 'abans' d'iniciar la sessio
+        coses a fer just 'després' en tancar la sessio
+	Exemple del pam_mount (quan es col·loca al session ja sabrà quan s'haurà de muntar i desmuntar)
+
+
+CONTROL
+
+  sufficient:
+    --> si es SUCCESS plega, i torna ok si els REQUIRED anteriors eren ok
+        si es FAIL s'ignora (continua evaluant)
+	
+	required "tenir pastar" 
+	sufficient "ser simpatic"
+
+  requisite:
+    --> si es FAIL plega retornant error
+	si es SUCCESS (+1) continua, significa que aquest requisite el cumplim pero falten els seguents
+
+  required:
+    --> si és FAIL acabarà tornant ERROR, però continua avaluant per "disimular"
+	si és SUCCESS (+1) continua
+
+  optional:
+    --> s'ignora a no ser que sigui l'únic mòdul
