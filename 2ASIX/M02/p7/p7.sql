@@ -105,7 +105,7 @@ CREATE TABLE clients(
     "adreça" varchar(255) NOT NULL,
     "nom_client" varchar(255) NOT NULL,
     "cognom_client" varchar(255) NOT NULL,
-    "codi_postal" int NOT NULL,
+    "codi_postal" varchar(20) NOT NULL,
     "id_ciutat" serial NOT NULL,
     "id_provincia" serial NOT NULL
 );
@@ -138,7 +138,7 @@ CREATE TABLE linia_comanda(
 );
 
 ALTER TABLE linia_comanda
-ADD PRIMARY KEY (id_comanda,id_venedor,id_producte,quantitat,data_linia_comanda),
+ADD PRIMARY KEY (id_comanda,id_venedor,id_producte,quantitat),
 ADD FOREIGN KEY (id_comanda,id_client,data_comanda) REFERENCES comandes(id_comanda,id_client,data_comanda),
 ADD FOREIGN KEY (id_venedor) REFERENCES venedors(id_venedor),
 ADD FOREIGN KEY (id_producte) REFERENCES productes(id_producte);
