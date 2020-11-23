@@ -138,7 +138,8 @@ CREATE TABLE linia_comanda(
 );
 
 ALTER TABLE linia_comanda
-ADD PRIMARY KEY (id_comanda,id_venedor,id_producte,quantitat),
+ADD PRIMARY KEY (id_comanda,id_venedor,id_client,id_producte,quantitat,data_comanda),
 ADD FOREIGN KEY (id_comanda,id_client,data_comanda) REFERENCES comandes(id_comanda,id_client,data_comanda),
 ADD FOREIGN KEY (id_venedor) REFERENCES venedors(id_venedor),
-ADD FOREIGN KEY (id_producte) REFERENCES productes(id_producte);
+ADD FOREIGN KEY (id_producte) REFERENCES productes(id_producte),
+ADD UNIQUE (id_comanda,id_client,id_producte);

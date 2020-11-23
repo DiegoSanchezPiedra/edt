@@ -89,9 +89,21 @@ values
 (1,'evarist-arnus 45','evarist-arnus 45','Diego','Sanchez','08014',5,1),
 (2,'diagonal 404','muntaner 500','Lucas','Zendrera','08020',7,3),
 (3,'diputacio 20','diputacio 20','Jordi','Vilaro','08050',3,2),
-(4,'gracia 50','via augusta 10','Samantha','Sancho',4,1);
+(4,'gracia 50','via augusta 10','Samantha','Sancho','08090',4,1);
 
 --taula comandes i linia_comanda
 insert into comandes
 values
-(1,2,'2020-06-20',true)
+(1,2,'2020-06-20',true),
+(2,1,'2020-01-20',true),
+(3,4,'2020-10-20',false);
+
+insert into linia_comanda
+values
+(1,1,2,'2020-06-20',11,10,'2020-05-01'),
+(1,1,2,'2020-06-20',1,10,'2020-04-01'),
+(2,3,1,'2020-01-20',5,30,'2019-12-25'),
+(2,3,1,'2020-01-20',6,30,'2019-12-25'),
+(3,4,4,'2020-10-20',7,40,'2020-09-20'),
+(3,4,4,'2020-10-20',8,40,'2020-11-01'),
+(3,4,4,'2020-10-20',9,40,'2020-09-20');
