@@ -39,6 +39,19 @@ values
 --DETAIL:  Key (id_produte_mare)=(13) is not present in table "productes".
 
 
+--taula productes_magatzems:
+--el producte introduit no es troba a la taula productes
+insert into productes_magatzems
+values
+(13,2);
+
+
+--el magatzem introduit no es troba a la taula magatzems
+insert into productes_magatzems
+values
+(5,20);
+
+
 --la ciutat introduida a la taula venedors no es troba a la taula ciutats
 insert into venedors
 values
