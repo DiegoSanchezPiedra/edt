@@ -36,3 +36,107 @@ CONTROL
 
   optional:
     --> s'ignora a no ser que sigui l'únic mòdul
+   
+------------------------------------------------------------------------------------
+==================================
+Fabricar el nostre pam_mount.so
+----------------------------------
+Unitats de RAMDISK
+  disc virutal de memoria
+su -
+mount -t tmpfs
+mount -t tmpfs -o size=100M tmpfs /mnt
+mount -t tmpfs
+[root@localhost ~]# df -h -t tmpfs
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           7.8G   46M  7.8G   1% /dev/shm
+tmpfs           7.8G  2.0M  7.8G   1% /run
+tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+tmpfs           7.8G   12K  7.8G   1% /tmp
+tmpfs           1.6G  108K  1.6G   1% /run/user/1000
+tmpfs           100M     0  100M   0% /mnt
+[root@localhost ~]# umount /mnt
+
+- Exporta / importar per NFS:
+----------------------------
+
+dnf -y install nfs-utils
+[root@localhost ~]# systemctl start nfs-utils
+[root@localhost ~]# systemctl status nfs-utils
+[root@localhost ~]# systemctl start nfs-server
+[root@localhost ~]# systemctl status nfs-server
+
+--Com exportar
+1. 
+  editar el fitxer /etc/exports
+    /usr/share/man *(rw,sync)
+    /usr/share/doc *(ro,sync)
+    /var/tmp       192.168.0.*(rw,sync)
+    /tmp           *.informatica.escoladeltreball.org(rw,sync)
+
+[root@localhost ~]# exportfs -a
+
+[root@localhost ~]# exportfs
+/tmp          	*.informatica.escoladeltreball.org
+/var/tmp      	192.168.0.*
+/usr/share/man	<world>
+/usr/share/doc	<world>
+
+[root@localhost ~]# exportfs -v
+/tmp          	*.informatica.escoladeltreball.org(sync,wdelay,hide,no_subtree_check,sec=sys,rw,secure,root_squash,no_all_squash)
+/var/tmp      	192.168.0.*(sync,wdelay,hide,no_subtree_check,sec=sys,rw,secure,root_squash,no_all_squash)
+/usr/share/man	<world>(sync,wdelay,hide,no_subtree_check,sec=sys,rw,secure,root_squash,no_all_squash)
+/usr/share/doc	<world>(sync,wdelay,hide,no_subtree_check,sec=sys,ro,secure,root_squash,no_all_squash)
+
+mount -t nfs <dev> <mountpoint
+[root@localhost ~]# mount -t nfs localhost:/usr/share/man /mnt
+
+[root@localhost ~]# mount -t nfs4
+localhost:/usr/share/man on /mnt type nfs4 (rw,relatime,vers=4.2,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp6,timeo=600,retrans=2,sec=sys,clientaddr=::1,local_lock=none,addr=::1)
+
+atencio: localhost --> ipv6
+	 127.0.0.1 --> 127.0.0.1 (ipv6)
+  tcp6 --> clientaddr=::1 --> addr::1 --> ipv6
+  
+  en el servidor --> exportfs
+  el el client   --> showmount
+  port NFS => 2049
+
+
+[root@localhost ~]# docker run --rm --name pam.edt.org -h pam.edt.org --net hisx2 --privileged -it isx2031424/ldap20:base
+
+amb --privileged estic donant permis al container a fer coses que abans no podia
+
+[root@pam docker]# mount -t nfs 172.18.0.1:/usr/share/doc /mnt
+
+#la xarxa 172.18.0.1 es la xarxa que hi ha assiganada per el docker
+
+1)Editar el fitxer system-auth de pam.d:
+
+auth        required      pam_env.so
+auth        optional      pam_mount.so
+
+...
+
+-session     optional      pam_systemd.so
+session     [success=2 default=ignore] pam_succeed_if.so service in crond quiet use_uid
+session     optional      pam_mount.so
+
+2)Editar el /etc/security/pam_mount.conf.xml que és on va a mirar el pam_mount.so
+
+Vull que a dins del directori de l'usuari un recurs de ramdisk que ocupi 100M
+
+enable="1" cearà el directori quan l'usuari el logueixi
+remove="1" que l'esborarrà quan es delogeixi
+               
+                <!-- Volume definitions -->
+
+        <volume 
+                user="*" 
+                fstype="tmpfs" 
+                mountpoint="~/tmp" 
+                ptions="size=100M"
+        />
+
+* si vull que algo es monti per cada usuari el poso al pam
+* si vull que algo es monti per tot el sistema el poso a fstab
