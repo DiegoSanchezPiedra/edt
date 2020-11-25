@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(218, 194, 206);
+}
+
+h1 {
+    font-family: sans-serif;
+    color: black;
+    border: red solid;
+    border-style: solid none;
+    background-color: white;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: sans-serif;
+    color: red;
+    border: red solid;
+    background-color: white;
+}

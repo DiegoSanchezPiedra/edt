@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(198, 217, 238);
+  }
+    
+  h1 {
+    font-family: sans-serif;
+    color: black;
+    text-align: right;
+  }
+  
+  span.hred{
+    font-family: sans-serif;
+    color: red;
+    text-align: right;
+  }
+
+  h2 {
+    font-family: monospace;
+    color: black;
+    text-align: left;
+    margin-block-end: 55px;
+    margin-block-start: 55px;
+  }
+
+  span.orange{
+    font-family:sans-serif;
+    color: chocolate;
+    font-weight: bold;
+  }
+  span.yellow{
+    font-family: sans-serif;
+    color:rgb(250,147,18);
+  }
+  span.blanco-verde{
+    background-color: white;
+    color: green;
+    font-style: italic;
+  }
+  p {
+    font-family: sans-serif;
+    color: black;
+  }

@@ -7,9 +7,9 @@
             <!ATTLIST subclasse classeMare CDATA #IMPLIED>
         <!ELEMENT tipus (#PCDATA)>
         <!ELEMENT longitud (#PCDATA)>
-            <!ATTLIST longitud unitat (metres | polsades) metres #REQUIRED>
+            <!ATTLIST longitud unitat (metres | polsades) "metres">
         <!ELEMENT tonelatge (#PCDATA)>
-            <!ATTLIST tonelatge unitat milions_de_tonelades_metriques #REQUIRED>
+            <!ATTLIST tonelatge unitat CDATA #FIXED milions_de_tonelades_metriques>
         <!ELEMENT capacitat_humana (tripulacio,tropes?)>
             <!ELEMENT tripulacio (#PCDATA)>
             <!ELEMENT tropes (#PCDATA)>
