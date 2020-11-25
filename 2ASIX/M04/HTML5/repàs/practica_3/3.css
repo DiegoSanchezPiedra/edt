@@ -11,9 +11,13 @@ h1 {
     font-weight: bold;
 }
 
-h2 {
+p.opcions {
     font-family: sans-serif;
     color: red;
     border: red solid;
     background-color: white;
+    margin-right: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
 }
