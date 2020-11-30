@@ -2,22 +2,124 @@ body {
     background-color: rgb(218, 194, 206);
 }
 
-h1 {
-    font-family: sans-serif;
-    color: black;
-    border: red solid;
-    border-style: solid none;
-    background-color: white;
-    font-weight: bold;
+#header {
+    background-color: #ffffff;
+    border: 2px #990033 solid;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 0;
 }
 
-p.opcions {
-    font-family: sans-serif;
-    color: red;
-    border: red solid;
+#opcions{
+    float: left;
+    margin-right:20px ;
+}
+
+#content{
+    float: left;
     background-color: white;
-    margin-right: 93%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 100%;
+    width: 86%;
+    margin-top: 5px;
+    padding-bottom: 30%;
+    margin-bottom: 50%;
+}
+
+#headercontent{
+    color: white;
+    background-color: #990033;
+    margin: 0px;
+    padding: 5px;
+}
+
+a:visited{
+    background-color: #ffffff;
+    color: #990033;
+    border: #990033 2px solid;
     text-align: center;
+    padding: 5px 18px 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.header{
+    background-color:white;
+    margin: 0px;
+    padding: 1px;
+}
+
+.opcions{
+    background-color: #ffffff;
+    color: #990033;
+    border: #990033 2px solid;
+    text-align: center;
+    padding: 5px 18px 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+span.bold-italic{
+    font-weight: bold;
+    font-style: italic;
+}
+
+span.bold{
+    font-weight: bold;
+    font-size: 120%;
+}
+
+span.big-red{
+    color:#990033;
+    font-size: 25px;
+}
+
+table {
+    border: 1px solid black;
+    border-top: 1px solid #dddedd;
+    border-left: 1px solid #dddedd;
+    margin-right: auto;
+    margin-left: auto;
+    width: 30%;
+  }
+
+tr {
+    border: 1px solid black;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    width: 25%;
+    text-align: right;
+    padding-right: 10px;
+    
+  }
+
+th {
+    border: 1px solid black;
+    border-bottom: 1px solid #dac2ce;
+    border-right: 1px solid  #dac2ce;
+    font-weight: bold;
+    color: #990033;
+    text-align: left;
+  }
+
+th.segon {
+    border: 1px solid black;
+    border-bottom: 1px solid #dac2ce;
+    border-right: 1px solid  #dac2ce;
+    color: black;
+    font-weight: lighter;
+    text-align: right;
+}
+
+img{
+    display: block;
+    border-top: #990033 solid 2px;
+    border-bottom: #990033 solid 2px;
+    padding: 5px;
+    margin: 0 auto;
 }
