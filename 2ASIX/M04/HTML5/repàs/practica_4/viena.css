@@ -1,0 +1,19 @@
+body{
+ background-color:#eee96f;   
+}
+
+header h1{
+    background-color: #727272; 
+    border: 2px white solid;
+    text-align: center;   
+    letter-spacing: 50px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin: -6px;
+    font-size: 45px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
