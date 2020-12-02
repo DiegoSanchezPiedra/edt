@@ -1,0 +1,127 @@
+body{
+    background-color:#eee96f;
+}
+
+header h1{
+    background-color: #727272; 
+    border: 2px white solid;
+    text-align: center;   
+    letter-spacing: 50px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin: -6px;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.text{
+        font-family: 'Courier New', Courier, monospace;
+}
+.nav1{
+    background-color: #fab650;
+    float: left;
+    padding: 20px 5px 20px;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+.nav2{
+    background-color: #b2bdac;
+    float: left;
+    padding: 20px 5px 20px;
+    margin-right: 80px;
+}
+.nav3{
+    background-color: #6dba73;
+    float: left;
+    padding: 20px 5px 20px;
+    margin-right: 10px;
+}
+
+a.opcions{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    margin-right: 175px;
+    text-decoration: none;
+    color: black;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.back-palacio{
+    background-color: #fab650;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.subtitle-palacio{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    margin-left: 1610px;
+    margin-right: 29px;
+    color: black;
+    font-size: larger;
+}
+
+.palacio{
+    margin-left: 20px;
+    float: left;
+}
+
+.contingut-palacio{
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 240px;
+    padding-right: 2%;
+    text-align: justify;
+}
+.back-musica{
+    background-color: #b2bdac;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.subtitle-musica{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+    margin-left: 1585px;
+    margin-right: 29px;
+    color: black;
+    font-size: larger;
+}
+
+.musica{
+    float: right;
+    margin-right: 20px;
+}
+
+.contingut-musica{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    margin-left: 1%;
+    margin-right: 14%;
+}
+
+.back-arte{
+    background-color: #6dba73;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.contingut-arte{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    margin-right: 2%;
+    margin-left: 11%;
+}
