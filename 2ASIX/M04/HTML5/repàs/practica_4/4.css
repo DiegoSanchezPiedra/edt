@@ -63,8 +63,8 @@ section:after {
 .subtitle-palacio{
     border-top: black 2px solid;
     border-bottom: black 2px solid;
-    margin-left: 1610px;
-    margin-right: 29px;
+    margin-left: 1100px;
+    margin-right: 25px;
     color: black;
     font-size: larger;
 }
@@ -92,8 +92,8 @@ section:after {
 .subtitle-musica{
     border-top: black 2px solid;
     border-bottom: black 2px solid;
-    margin-left: 1585px;
-    margin-right: 29px;
+    margin-left: 1050px;
+    margin-right: 50px;
     color: black;
     font-size: larger;
 }
@@ -107,7 +107,7 @@ section:after {
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
     margin-left: 1%;
-    margin-right: 14%;
+    margin-right: 250px;
 }
 
 .back-arte{
@@ -123,5 +123,5 @@ section:after {
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
     margin-right: 2%;
-    margin-left: 11%;
+    margin-left: 200px;
 }

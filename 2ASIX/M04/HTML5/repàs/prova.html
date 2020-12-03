@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="action_page.php" method="get"> 
+            First name: <input type="text" name="firstname"><br>
+            Last name: <input type="text" name="lastname"><br>
+        </form> 
+        <br>
+        <form action="action_page.php" method="get">
+            <input type="radio" name="sexe" value="male" checked> Male<br>
+            <input type="radio" name="sexe" value="female"> Female<br>
+            <input type="radio" name="sexe" value="other"> Other
+        </form> 
+        <br>
+        <form action="action_page.php" method="get">
+            <input type="date" name="fecha"><br>
+        </form>
+        <br>
+        <form action="action_page.php" method="post">
+            <input type="checkbox" name="cicle formatiu" value="CFGM" checked> CFGM<br>
+            <input type="checkbox" name="cicle formatiu" value="CFGS"> CFGS<br>
+        </form>
+        <br>
+        <br>
+        <form action="action_page.php" method="get"> 
+            Nom cicle: <input type="text" name="nom cicle"><br>
+        </form>
+        <br>
+        
+        <form action="action_page.php" method="get"> 
+            <label for="animes">Elige un anime:</label>
+            <select name="animes">
+                <option value="shingeki no kyogin">Shingeki no kyojin</option>
+                <option value="Another">Another</option>
+                <option value="Elfen Lied">ELfen Lied</option>
+                <option value="Kiemtsu no Yaiba">Kimetsu no Yaiba</option>
+            </select>
+        </form> 
+    </body>
+</html>

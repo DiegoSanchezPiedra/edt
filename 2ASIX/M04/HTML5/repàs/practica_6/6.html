@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="action_page.php" method="get"> 
+            First name: <input type="text" name="firstname">
+            Last name: <input type="text" name="lastname">
+            Password: <input type="password" name="password">
+            <br><br><br>
+            <input type="radio" name="sexe" value="male"> Male<br>
+            <input type="radio" name="sexe" value="female"> Female<br>
+            <br>            
+            <input type="checkbox" name="bike" value="bike"> I have a bike<br>
+            <input type="checkbox" name="car" value="car"> I have a car<br>
+            <br><br><br>
+            <label for="animes">Llistes desplegables:</label>
+            <select name="cotxes">
+                <option value="volvo">volvo</option>
+                <option value="saab">saab</option>
+                <option value="lada" selected>lada</option>
+                <option value="opel">opel</option>
+            </select>
+            <select name="cotxes">
+                <option value="volvo">volvo</option>
+                <option value="saab">saab</option>
+                <option value="lada">lada</option>
+                <option value="opel">opel</option>
+            </select>
+            <button type="button" onclick="alert('hola')">Click Me!</button>
+            <br><br><br>
+            <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+        </form>
+    </body>
+</html>
