@@ -28,10 +28,8 @@ access to *
 	by dn.eactc="cn=Jordi Mas,ou=usuaris,dc=edt,dc=org" write
 	by * read
 	
-20.
+20 i 21.
 attributetype (1.1.2.1.1 NAME 'idcat'
-	EQUEALITY integetMatch
-	ORDERING integerOrderingMatch
 	SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
 	SINGLE-VALUE)
 
@@ -54,6 +52,51 @@ attributetype (1.1.2.1.4 NAME 'expedient'
 objectclass (1.1.2.2.1) NAME 'happyOrgPerson'
 	DESC 'perona feliç'
 	SUP inetOrgPerson
-	AUXILIARY
+	STRUCTURAL
 	MUST id_cat
 	MAY ( associacio $ detingut $ expedient )
+	
+22. 
+dn: cn=Alex Garcia,ou=happys,dc=edt,dc=org
+changetype: add
+objectclass: happyOrgPerson
+cn: alex
+sn: alex
+idcat: 123
+
+23.
+ldapmodify -x -D 'cn=Manager,dc=edt,dc=org' -w secret -f mod1.ldif
+
+24. Escriu el codi per crear l'objectClass motxillaRussa
+25. Ecriu el fitxer ldif per permetre inserir un nou happy (tot sencer) amb una motxillaRussa
+26. Escriu el fitxer ldif que permet afegir una motxilla russa a l'usuari Pere Pou (probre pere!). Atenció a que ara és un usuari.
+
+-----------------------------------------------
+
+dn: cn=Eduard Canet,ou=happy,dc=edt,dc=org
+objectclass: happyOrgPerson
+objectclass: motxillaRussa
+cn: Eduard
+sn: Ecanet
+id_cat: 12
+soldats: 20
+saldar_deficit: true
+
+-----------------------------------------------
+
+dn: cn=Pere Pou,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectclass
+objectclass: motxillaRussa
+-
+add: soldats
+solats: 20
+-
+add: saldar_deficit
+saldar_deficit: false
+
+------------------------------------------------
+ldapadd -x -D "cn=manager,dc=edt,dc=org" -w secret -f add1.ldif
+ldapmodify -x -D "cn=manager,dc=edt,dc=org" -w secret -f mod2.ldif
+
+

@@ -1,0 +1,12 @@
+
+
+
+
+
+client -------------------> servidor SSH 
+SSH				keys de host (id_rsa/id_rsa.pun...)	
+				són les claus de HOST(demostren que el servidor 
+				és que diu ser)
+
+client ------------------->
+         <----------------- fingerprint
