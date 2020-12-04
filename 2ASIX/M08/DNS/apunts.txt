@@ -106,3 +106,16 @@ un HOST (client) de l'aula pregunta per xixarro.ara.cat
 
 -------------------------------------------------------
 $host -t ns . #mostra els 13 servidors del mon
+
+
+
+
+
+---------------------------------
+practiques:
+	1) mnuntar un servidor nomes chache
+	2) munteu una zona hisx2.edt.org
+	3) fer una delegació de zona
+		hisx2.edt.org
+		girona.hisx2.org
+-----------------------------------
