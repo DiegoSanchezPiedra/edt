@@ -1,0 +1,41 @@
+; exemple de fitxer de zona directa
+; edt.org   (172.16.0.0/24)
+; -------------------------------------------
+
+$TTL 3D
+@ IN SOA edt.org. adm.edt.org. 1 3H 15M 1W 1D
+    NS ns
+    MX 10 mailhost
+
+ns	A 192.168.0.31
+mailhost A 172.16.0.2
+
+pc01 	A 172.16.0.11
+pc02 	A 172.16.0.12
+pc03 	A 172.16.0.13
+hpbw	A 172.16.0.3
+hpcolor A 172.16.0.4
+server  A 172.16.0.10
+
+www	CNAME server
+ftp	CNAME server
+router	CNAME server
+kaka	CNAME server
+correu  CNAME mailhost
+
+pc01.n2i.edt.org. A 172.16.0.101
+pc02.n2i.edt.org. A 172.16.0.102
+pc03.n2i.edt.org. A 172.16.0.103
+
+pc01.n2j	A 172.16.0.111
+pc02.n2j        A 172.16.0.112
+pc03.n2j        A 172.16.0.113
+
+; glue record for zone informatica.edt.org
+informatica.edt.org. NS ns.informatica.edt.org.
+ns.informatica.edt.org. A 192.168.2.31
+
+
+
+
+

@@ -1,0 +1,33 @@
+============================
+SERVEI DNS: Guió de treball
+============================
+
+Repassar els concptes globals de funcionament de DNS:
+ - Sistemes de noms plans i jaràrquics.
+ - Conceptes clau dns: domini, zona, subdomini, autoritatiu, 
+   no autoritatiu. Primari, secundari.
+ - Resolució: iteratiu, recursiu.
+ - Consultes amb host, dig, nslookup.
+
+Instal·lació / Exemple de funcionament DNS:
+ - instal·lar i observar funcionament DNS: servei, logs, fitxers.
+ - Consultes amb host i dig: provar la resolució: noms de host, 
+   domini i FQDN.
+ - Crear un domini pròpi directe “edt.org”.
+
+Practicar Modes de funcionament: **Captura wireshark cada exemple**
+ - Resolució directa i inversa. Amb host verificar la resolució.
+ - Analisis dels modes de funcionament: només local, només caché, 
+   recursió, forwarding.
+ - zona + zona inversa
+ - caché / no caché
+ - recursió / no recursió
+ - forward / forward only
+
+Servidors Master/Slave:
+ - Transferència de zona (master - slave)
+ - Captura del tràfic entre master/slave.
+
+Delagació de zones: Subdominis
+ - Crear subdominis virtuals (metall i fusta) i verificar-los.
+

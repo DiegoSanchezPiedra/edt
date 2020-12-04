@@ -1,0 +1,23 @@
+; Fitxer de resolució inversa
+; 172.16.0.0/24 edt.org.
+
+$TTL 3D
+@ IN SOA ns.edt.org. root.edt.org. (1 8H 2H 4W 1D)
+     NS ns.edt.org.
+
+1	PTR ns.edt.org.
+2	PTR mailbox.edt.org.
+3	PTR hpbw.edt.org.
+4	PTR hpcolor.edt.org.
+10	PTR server.edt.org.
+11	PTR pc01.edt.org.
+12 	PTR pc02.edt.org.
+13	PTR pc03.edt.org.
+101	PTR pc01.n2i.edt.org.
+102     PTR pc02.n2i.edt.org.
+103     PTR pc03.n2i.edt.org.
+111	PTR pc01.n2j.edt.org.
+112     PTR pc02.n2j.edt.org.
+113     PTR pc03.n2j.edt.org.
+
+
