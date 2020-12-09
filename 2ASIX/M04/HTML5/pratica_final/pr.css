@@ -1,0 +1,19 @@
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+a.cap {
+    text-decoration: none;
+    text-align: center;
+}
+
+.cap{
+    text-align: center;
+    font-size: larger;
+}
+
+img.pc{
+    display: block;
+    margin: auto;
+    width: 10%;
+}
