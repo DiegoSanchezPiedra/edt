@@ -8,10 +8,11 @@ useradd unix03
 echo "unix03" | passwd --stdin unix03
 
 #fer la configuració dels usuaris LDAP
-cp ldap.conf /etc/openldap/ldap.conf
-cp nslcd.conf /etc/nslcd.conf
-cp nsswitch.conf /etc/nsswitch.conf
-cp system-auth /etc/pam.d/system-auth
+cp opt/docker/ldap.conf /etc/openldap/ldap.conf
+cp /opt/docker/nslcd.conf /etc/nslcd.conf
+cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
+cp /opt/docker/system-auth /etc/pam.d/system-auth
+cp /opt/docker/system-auth /etc/pam.d/password-auth
 
 #engegar els dimonos nscd i nslcd
 /sbin/nscd
