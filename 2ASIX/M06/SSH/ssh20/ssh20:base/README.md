@@ -7,5 +7,5 @@ L'autenticació es configura al *sustem-auth*
 -----------------------------------------------------------
 docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d isx2031424/ldap20:latest
 ----------------------------------------------------------
-docker run --rm --name pam.edt.org -h pam.edt.org --net 2hisix -p 22:22 -d isx2031424/ssh20:base
+docker run --rm --name ssh.edt.org -h ssh.edt.org --net 2hisix -p 2022:22 -d isx2031424/ssh20:base
 -------------------------------------------------------------
