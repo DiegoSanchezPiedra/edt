@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	function initialize() 
+	{
+	  	var mapProp = {
+		    	center:new google.maps.LatLng(51.508742,-0.120850),
+			zoom:4,
+	    		mapTypeId:google.maps.MapTypeId.ROADMAP
+	  	};
+	  	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+	  	var mapPropMoscu = {
+		    	center:new google.maps.LatLng(55.792075,37.620727),
+			zoom:11,
+	    		mapTypeId:google.maps.MapTypeId.SATELLITE
+	  	};
+	  	var map=new google.maps.Map(document.getElementById("googleMapMoscu"),mapPropMoscu);
+
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+
+<body>
+	<div id="googleMap" style="width:450px;height:342px;"></div>
+	<br>
+	<br>
+	<a href="pag_web_amb_google_maps_i_rss.rss">
+		<img src="btn_rss.png" width="54" height="21">
+	</a><br>
+Liferea --> new subcription --> btn Advanced --> Sourcer type = Local file --> btn Select File --> sel·leccionem el fitxer pag_web_amb_google_maps_i_rss.rss
+	<br>
+	<br>
+	El video té resolució nativa de 1280x720 (720p) però he posat que es vegi a 640x360 <br>
+	(s'ha de tenir instalat el codec de mp4)
+	<video width="640" height="360" autoplay>
+  		<source src="Extreme Low Flyover of Sukhoi SU-24 Fencer in Ukraine - YouTube [720p].mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video> 
+	<br>
+	<br>
+	<table border="1">
+		<tr>
+			<td>
+				Coordenadas GMS (Grados, Minutos, Segundos): <br>
+				55°47'31.47"N <br>
+				37°37'14.62"E 
+			</td>
+			<td>
+				Coordenadas GD (Grados Decimales): <br>
+				55.792075 <br>
+				37.62072777777778
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+				<div id="googleMapMoscu" style="width:650px;height:494px;"></div>
+			</td>
+		</tr>
+</body>
+</html> 
+
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+<rss version="2.0">
+    <channel>
+        <title>Noticias sobre animes, mangas y  demás</title>
+        <link>https://somoskudasai.com/</link>
+        <description>noticias sobre animes, mangas, reseñas videojuegos, cine y musica</description>
+        <item>
+            <title>Noticias sobre anime</title>
+            <link>https://somoskudasai.com/categoria/noticias/anime/</link>
+            <description>ultimas noticias sobre los animes mas famosos</description>
+        </item>
+        <item>
+            <title>Noticias sobre mangas</title>
+            <link>https://somoskudasai.com/categoria/noticias/manga/</link>
+            <description>ultimas noticias sobre los mangas mas famosos</description>
+        </item>
+        <item>
+            <title>Reseñas</title>
+            <link>https://somoskudasai.com/categoria/resenas/</link>
+            <description>mini resumentes y opiniones sobre animes y mangas</description>
+        </item>
+        <item>
+            <title>Videojuegos</title>
+            <link>https://somoskudasai.com/categoria/noticias/videojuegos/</link>
+            <description>noticias sobre los los videojuegos de la actaulidad</description>
+        </item>
+        <item>
+            <title>Cine</title>
+            <link>https://somoskudasai.com/categoria/noticias/cine/</link>
+            <description>ultimas noticias sobre el cine animado japones</description>
+        </item>
+        <item>
+            <title>Música</title>
+            <link>https://somoskudasai.com/categoria/noticias/musica/</link>
+            <description>ultimas noticias sobre la musica en japon y la cultura otaku</description>
+        </item>
+    </channel>
+</rss>
+

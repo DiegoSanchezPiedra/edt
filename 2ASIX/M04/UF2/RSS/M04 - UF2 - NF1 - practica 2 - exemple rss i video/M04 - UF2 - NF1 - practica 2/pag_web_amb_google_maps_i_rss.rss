@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<rss version="2.0"> 
+
+<channel> 
+	<title>Titol: pàg web amb google maps</title> 
+ 	<link>http://www.google.com</link> 
+	<description>pàg web de google</description> 
+	<item> 
+		<title>mapa Anglaterra</title> 
+		<link>http://www.reino-unido.net/mapa-politico.htm</link> 
+		<description>Mapa Anglaterra, és un sexemple per defecte</description> 
+	</item> 
+	<item> 
+		<title>mapa Russia</title> 
+		<link>http://espanol.mapsofworld.com/continentes/europa/mapa-de-la-federacion-de-rusia.html</link> 
+		<description>Mapa Russia, és el nostre propi exercici</description> 
+	</item>
+	<item> 
+		<title>Mi página web</title> 
+		<link>http://papagallo.esy.es/pag_web_amb_google_maps_i_rss.html</link> 
+		<description>Mi página web otra vez por poner algo y con un video</description> 
+	</item>
+	<item> 
+		<title>Mi página web otra vez 2</title> 
+		<link>http://papagallo.esy.es/pag_web_amb_google_maps_i_rss.html</link> 
+		<description>
+			<![CDATA[
+				<div>
+					Quina imatge més bonica! <img src="file:///home/users/inf/inf/gmartinez/gmartinez/M04%20-%20LLenguatge%20de%20marques%20(XML)/M04%20-%20UF2%20(Ambits%20d'aplicaci%C3%B3%20de%20l'XML)/M04%20-%20UF2%20-%20NF1%20(Sindicaci%C3%B3%20RSS)/M04%20-%20UF2%20-%20NF1%20-%20practica%202/036fbd8d293f43844e7484601ba07839.png">
+				</div>
+			]]>
+		</description> 
+	</item>
+	<item> 
+		<title>Mi página web otra vez 1</title> 
+		<link>file:///home/users/inf/inf/gmartinez/gmartinez/M04%20-%20LLenguatge%20de%20marques%20(XML)/M04%20-%20UF2%20(Ambits%20d'aplicaci%C3%B3%20de%20l'XML)/M04%20-%20UF2%20-%20NF1%20(Sindicaci%C3%B3%20RSS)/M04%20-%20UF2%20-%20NF1%20-%20practica%202/pag_web_amb_google_maps_i_rss.html</link> 
+		<description>
+			<![CDATA[
+				<div>
+					Quina imatge més bonica! <img src="036fbd8d293f43844e7484601ba07839.png">
+				</div>
+			]]>
+		</description> 
+	</item>        
+</channel> 
+</rss> 
