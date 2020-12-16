@@ -1,0 +1,23 @@
+rss{
+    background-image: url("anime_bg.png");
+    display: block;
+    font-family: Verdana, arial;
+    text-align: center;
+    font-size: 150%;
+}
+title{
+    display: block;
+    margin: 5px;
+    padding: 2px;
+    color: grey;
+    border-bottom: 1px solid silver;
+}
+link{
+    display: block;
+    font-size: small;
+    padding-left: 10px;
+}
+item{
+    display: block;
+    padding: 2px 30px 2px 30px;
+}
