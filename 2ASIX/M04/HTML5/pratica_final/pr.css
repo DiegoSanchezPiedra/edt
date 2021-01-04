@@ -2,18 +2,50 @@ body{
     background-image: url("background.jpg");
     background-size: cover;
 }
-a.cap {
-    text-decoration: none;
-    text-align: center;
-}
-
-.cap{
-    text-align: center;
-    font-size: larger;
-}
 
 img.pc{
     display: block;
     margin: auto;
     width: 10%;
+}
+.header1{
+    text-align: center;
+    font-size: 1cm;
+    color: silver;
+    border: 2px white dashed;
+    font-style: italic;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-image: url("bg_2.png");
+}
+.nav1{
+    background-color: #18181a;
+    float: left;
+    padding: 20px 5px 20px;
+    margin-right: 80px;
+    margin-left: 80px;
+    margin-bottom: 100px;
+    color: silver;
+}
+
+.nav1_1{
+    background-color: #18181a;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.back-contenido{
+    background-color: #6dba73;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.contenido{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    color: silver;
+    float: left;
 }
