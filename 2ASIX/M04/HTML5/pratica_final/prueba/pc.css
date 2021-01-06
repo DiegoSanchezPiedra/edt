@@ -20,10 +20,11 @@ header h1{
 .text{
         font-family: 'Courier New', Courier, monospace;
 }
+
 .nav1{
     background-color: #fab650;
     float: left;
-    padding: 20px 5px 20px;
+    padding: 20px 5px 28px;
     margin-right: 80px;
     margin-left: 80px;
 }
@@ -59,8 +60,7 @@ section:after {
     content: "";
     display: table;
     clear: both;
-  }
-
+}
 
 .subtitle{
     border-top: black 2px solid;
@@ -68,22 +68,6 @@ section:after {
     text-align: center;
     color: black;
     font-size: larger;
-}
-
-
-.contingut-palacio{
-    font-family: 'Courier New', Courier, monospace;
-    padding-left: 240px;
-    padding-right: 2%;
-    text-align: justify;
-}
-.back-musica{
-    background-color: #b2bdac;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 0px;
-    padding-top: 20px;
-    padding-bottom: 50px;
 }
 
 .contingut1{
@@ -102,8 +86,45 @@ section:after {
     padding-bottom: 50px;
 }
 
+.back2{
+    background-color: #fab650;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.back3{
+    background-color: #b2bdac;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.back4{
+    background-color: #6dba73;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
 img.pc{
     display: block;
     margin: auto;
     width: 10%;
+}
+
+img.transition{
+    transition: width 2s, height 2s;
+    width: 2%;
+    margin-left: 200px;
+}
+
+img.transition:hover{
+    width: 300px;
+    height: 300px;
 }
