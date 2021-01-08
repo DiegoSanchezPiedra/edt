@@ -2,51 +2,23 @@
 <?xml-stylesheet type="text/css" href="estilsmeus.css"?>
 <rss version="2.0">
     <channel>
-        <title>Noticias sobre animes, mangas y  demás</title>
-        <link>https://somoskudasai.com/</link>
+        <title>Noticias sobre el mundo de la tecnología</title>
+        <link>https://www.geeknetic.es/noticias/</link>
         <description>
-            noticias sobre animes, mangas, reseñas videojuegos, cine y musica
+            Noticias y novedades sobre hardware y tecnología
         </description>
         <item>
-            <title>Noticias sobre anime</title>
-            <link>https://somoskudasai.com/categoria/noticias/anime/</link>
+            <title>Noticias sobre tarjetas gráficas</title>
+            <link>https://hardzone.es/noticias/tarjetas-graficas/</link>
             <description>
-                ultimas noticias sobre los animes mas famosos
+                Mantente al día de la actualidad relacionada con tarjetas gráficas. Consulta las noticias relativas a marcas como NVIDIA, AMD, GYGABYTE, ASUS y más
             </description>
         </item>
         <item>
-            <title>Noticias sobre mangas</title>
-            <link>https://somoskudasai.com/categoria/noticias/manga/</link>
+            <title>Noticias sobre procesadores</title>
+            <link>https://www.geeknetic.es/procesadores/noticias/</link>
             <description>
-                ultimas noticias sobre los mangas mas famosos
-            </description>
-        </item>
-        <item>
-            <title>Reseñas</title>
-            <link>https://somoskudasai.com/categoria/resenas/</link>
-            <description>
-                mini resumentes y opiniones sobre animes y mangas
-            </description>
-        </item>
-        <item>
-            <title>Videojuegos</title>
-            <link>https://somoskudasai.com/categoria/noticias/videojuegos/</link>
-            <description>
-                noticias sobre los los videojuegos de la actaulidad
-            </description>
-        </item>
-        <item>
-            <title>Cine</title>
-            <link>https://somoskudasai.com/categoria/noticias/cine/</link>
-            <description>
-                ultimas noticias sobre el cine animado japones
-            </description>
-        </item>
-        <item>
-            <title>Música</title>
-            <link>https://somoskudasai.com/categoria/noticias/musica/</link>
-            <description>
-                ultimas noticias sobre la musica en japon y la cultura otaku
+                ultimas noticias sobre el mundo de los microprocesadores
             </description>
         </item>
     </channel>

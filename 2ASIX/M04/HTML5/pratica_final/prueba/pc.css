@@ -31,13 +31,13 @@ header h1{
 .nav2{
     background-color: #b2bdac;
     float: left;
-    padding: 20px 5px 20px;
+    padding: 20px 5px 28px;
     margin-right: 80px;
 }
 .nav3{
     background-color: #6dba73;
     float: left;
-    padding: 20px 5px 20px;
+    padding: 20px 5px 28px;
     margin-right: 10px;
 }
 
@@ -48,6 +48,7 @@ header h1{
     margin-right: 10px;
     margin-left: 200px;
 }
+
 
 a.opcions{
     margin-right: 175px;
