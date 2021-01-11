@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background-image: url(anime_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header {
+    color: #f1f1f1;
+    font-style: italic;
+    padding: 30px;
+    text-align: center;
+    background-image: url(bg_titulo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 5px black ridge;
+    letter-spacing: 50px;
+    font-size: larger;
+    margin-bottom: 20px;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-image: url(bg_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  img.rss{
+      width: 20px;
+      height: 20px;
+      float: left;
+}
+
+img.pc{
+    margin-left: auto;
+    margin-right: auto;
+    width: 17%;
+    display: block;
+}
+
+img.transition{
+    width: 9%;
+    margin-left: 200px;
+}
+
+.leftcolumn {   
+    float: left;
+    width: 75%;
+    color: white;
+  }
+  
+
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  
+
+  .content {
+    width: 100%;
+    padding: 20px;
+  }
+
+.card {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+  }
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  table, th, td {
+    border: 2px solid white;
+    color: white;
+    width: 35%;
+  }
+    .footer {
+        background-image: url(background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px
+      }
+    
+    .socials{
+        float: left;
+        color: white;
+    }
+
+    .contacto{
+        float: right;
+        color: white;
+    }
+    .footer:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn {   
+          width: 100%;
+          padding: 0;
+        }
+      }
+      
+      /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+      @media screen and (max-width: 400px) {
+        .topnav a {
+          float: none;
+          width: 100%;
+        }
+      }
