@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<?xml-stylesheet type="text/xsl" href="cdcatalog.xsl"?>
+<catalog>
+    <cd>
+        <title>Empire Burlesque 1</title>
+        <artist>Bob Dylan</artist>
+        <country>USA</country>
+        <company>Columbia</company>
+        <price>10.90</price>
+        <year>1985</year>
+    </cd>
+    <cd>
+        <title>Empire Burlesque 2</title>
+        <artist>Bob Dylan 2</artist>
+        <country>USA 2</country>
+        <company>Columbia 2</company>
+        <price>10.90</price>
+        <year>1985</year>
+    </cd>
+    <cd>
+        <title>Empire Burlesque 3</title>
+        <artist>Bob Dylan</artist>
+        <country>USA</country>
+        <company>Columbia</company>
+        <price>10.90</price>
+        <year>1981</year>
+    </cd>
+    <cd>
+        <title>Empire Burlesque 4</title>
+        <artist>Bob Dylan</artist>
+        <country>USA</country>
+        <company>Columbia</company>
+        <price>10.90</price>
+        <year>1986</year>
+    </cd>
+    <cd>
+        <title>Empire Burlesque 5</title>
+        <artist>Bob Dylan</artist>
+        <country>USA</country>
+        <company>Columbia</company>
+        <price>10.90</price>
+        <year>1984</year>
+    </cd>
+</catalog>

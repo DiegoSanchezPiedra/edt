@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<?xml-stylesheet type="text/xsl" href="1.xsl" ?> 
+<programes> 
+    <editors_XML> 
+        <programa> 
+            <nom>XML Copy Editor</nom> 
+            <plataforma>Linux, Windows</plataforma> 
+            <llicencia>GPL</llicencia> 
+        </programa> 
+        <programa> 
+            <nom>Oxygen XML Editor</nom> 
+            <plataforma>Linux, Windows, MacOSX</plataforma> 
+            <llicencia>Comercial</llicencia> 
+        </programa> 
+        <programa> 
+            <nom>XML Notepad</nom> 
+            <plataforma>Windows</plataforma> 
+            <llicencia>Gratis</llicencia> 
+        </programa> 
+        <programa> 
+            <nom>firstobject XML Editor</nom> 
+            <plataforma>Windows</plataforma> 
+            <llicencia>Gratis</llicencia> 
+        </programa> 
+    </editors_XML> 
+</programes> 

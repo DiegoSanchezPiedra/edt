@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<?xml-stylesheet type="text/xsl" href="2.xsl" ?> 
+<Pedido> 
+    <Destino> 
+        <Nombre>Alicia Abad</Nombre> 
+        <Direccion>Plaza de la Duquesa 12</Direccion> 
+        <Ciudad>Albacete</Ciudad> 
+        <CodPostal>05020</CodPostal> 
+    </Destino> 
+    <Ordenante> 
+        <Nombre>Roberto Movilla</Nombre> 
+        <Direccion>General Ricardos 56</Direccion> 
+        <Ciudad>Madrid</Ciudad> 
+        <CodPostal>28055</CodPostal> 
+    </Ordenante> 
+    <Observaciones>Es urgente, el césped está muy alto</Observaciones> 
+    <Contenido> 
+        <Producto codigo="872-AA"> 
+            <Nombre>Cortadora de cesped</Nombre> 
+            <Cantidad>1</Cantidad> 
+            <Precio>148.95</Precio> 
+            <Observaciones>Confirmar que es eléctrica</Observaciones> 
+        </Producto> 
+        <Producto codigo="926-FH"> 
+            <Nombre>Podadora</Nombre> 
+            <Cantidad>3</Cantidad> 
+            <Precio>7.98</Precio> 
+        </Producto> 
+        <Producto codigo="952-EF"> 
+            <Nombre>Ventilador Hojas</Nombre> 
+            <Cantidad>2</Cantidad> 
+            <Precio>47.98</Precio> 
+        </Producto> 
+    </Contenido> 
+</Pedido> 
