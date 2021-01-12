@@ -18,15 +18,11 @@
     <td align="center"><xsl:value-of select="CodPostal"/></td>
 </tr>
 </xsl:for-each>
-<xsl:for-each select="Pedido/Ordenante">
-<tr>
-    <td align="center"><xsl:value-of select="Nombre"/></td>
-    <td align="center"><xsl:value-of select="Direccion"/></td>
-    <td align="center"><xsl:value-of select="Ciudad"/></td>
-    <td align="center"><xsl:value-of select="CodPostal"/></td>
+
+<tr style="height: 23px !important;">
+<td colspan="4"></td>
 </tr>
-</xsl:for-each>
-<td colspan="4" align="center"><xsl:value-of select="Pedido/Observaciones"/></td>
+<td colspan="4" align="center">Llista amb "Precio &gt; 25" i "Precio &lt;= 100"</td>
 <th colspan="2">Producte</th>
 <th>Preu</th>
 <th>Quantitat</th>
@@ -34,9 +30,23 @@
 <xsl:for-each select="Pedido/Contenido/Producto">
 <xsl:sort select="Nombre"/>
 <tr>
-    <td colspan="2"><xsl:value-of select="Nombre" /></td>
-    <td><xsl:value-of select="Precio" /></td>
-    <td><xsl:value-of select="Cantidad" /></td>
+    <xsl:choose>
+        <xsl:when test="Precio &gt; 25 and Precio &lt; 50">
+            <td colspan="2"><xsl:value-of select="Nombre" /></td>
+            <td align="center"><xsl:value-of select="Precio" /></td>
+            <td bgcolor="yellow" align="center"><xsl:value-of select="Cantidad" /></td>
+        </xsl:when>
+        <xsl:when test="Precio &gt; 50 and Precio &lt;75">
+            <td colspan="2"><xsl:value-of select="Nombre" /></td>
+            <td align="center"><xsl:value-of select="Precio" /></td>
+            <td bgcolor="green" align="center"><xsl:value-of select="Cantidad" /></td>
+        </xsl:when>
+        <xsl:when test="Precio &gt; 75 and Precio &lt;= 100">
+            <td colspan="2"><xsl:value-of select="Nombre" /></td>
+            <td align="center"><xsl:value-of select="Precio" /></td>
+            <td bgcolor="red" align="center"><xsl:value-of select="Cantidad" /></td>
+        </xsl:when>
+    </xsl:choose>
 </tr>
 </xsl:for-each>
 

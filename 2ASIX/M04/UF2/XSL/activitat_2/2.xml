@@ -31,5 +31,15 @@
             <Cantidad>2</Cantidad> 
             <Precio>47.98</Precio> 
         </Producto> 
+        <Producto codigo="953-EF"> 
+            <Nombre>AMD rx6900xt</Nombre> 
+            <Cantidad>2</Cantidad> 
+            <Precio>60.01</Precio> 
+        </Producto>
+        <Producto codigo="954-EF"> 
+            <Nombre>RTX 3090</Nombre> 
+            <Cantidad>2</Cantidad> 
+            <Precio>80.50</Precio> 
+        </Producto>
     </Contenido> 
 </Pedido> 
