@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="taula1.xsl"?>
+<the_expanse>
+	<dades>
+		<titol>the Expanse</titol>
+		<pag_web>https://expanse.fandom.com/wiki/The_Expanse_Wiki</pag_web>
+		<logo>TheExpanseWiki-S4-title.png</logo>
+	</dades>
+	<Martian_Congressional_Republic_Navy>
+		<nau>
+			<classe>Donnager-class</classe>
+			<tipus>Cuirasat</tipus>
+			<caracteristiques>
+				<longitud unitat="metres">475.5</longitud>
+				<amplada unitat="metres"></amplada>
+				<tonelatge unitat="tonelades metriques">250000</tonelatge>
+			</caracteristiques>
+			<propulsio>
+				<numero_de_motors_impulsio>4</numero_de_motors_impulsio>
+				<motors_impulsio>RT-10 Kaminari</motors_impulsio>
+			</propulsio>
+			<armament>
+				<canons_de_riel quantitat="2" tipus="pesats">VX-12 Foehammer Tured Ultra-Heavy</canons_de_riel>
+				<llança_torpedes_davanters quantitat="6" tipus="pesats"></llança_torpedes_davanters>
+				<llança_torpedes_posteriors quantitat="8" tipus="pesats"></llança_torpedes_posteriors>
+				<canons_de_defensa_de_punt quantitat="49">Nariman Dynamics 40mm</canons_de_defensa_de_punt>
+				<ampliacions>2 x VX-12 Foehammer Tured Ultra-Heavy</ampliacions>
+			</armament>
+			<capacitat_naus>
+				<corbetes>6</corbetes>
+				<tipus_corbetes>Corvette</tipus_corbetes>
+				<destructors_de_patrulla>12</destructors_de_patrulla>
+				<tipus_destructors_de_patrulla>Morrigan</tipus_destructors_de_patrulla>
+			</capacitat_naus>
+			<capacitat_humana>
+				<tripulacio>2086</tripulacio>
+				<tropes enPorta="Si" quantitat="550">Martian Marine Corps</tropes>
+			</capacitat_humana>
+			<imatge>Donnager.png</imatge>
+			<logo>MCRN_logo.png</logo>
+			<web>https://expanse.fandom.com/wiki/Donnager-class</web>
+			<designacions conegudes="300">
+				<nom>MCRN Donnager</nom>
+				<nom>MCRN Bellaire</nom>
+				<nom>MCRN Hotspur</nom>
+				<nom>MCRN Icara Planum</nom>
+				<nom>MCRN Harman Dae-Jung</nom>
+				<nom>MCRN Firebrand</nom>
+				<nom>MCRN Barkeith</nom>
+				<nom>MCRN Schiaparelli</nom>
+				<nom>MCRN Carcassonne</nom>
+				<nom>MCRN Armstrong</nom>
+				<nom>MCRN Bellerophon</nom>
+			</designacions>
+		</nau>
+		<nau>
+			<classe>Scirocco-class</classe>
+			<tipus>Creuer d'asalt</tipus>
+			<caracteristiques>
+				<longitud unitat="metres">200</longitud>
+				<amplada unitat="metres">72</amplada>
+				<tonelatge unitat="tonelades metriques"></tonelatge>
+			</caracteristiques>
+			<propulsio>
+				<numero_de_motors_impulsio>4</numero_de_motors_impulsio>
+				<motors_impulsio>RTF-B</motors_impulsio>
+			</propulsio>
+			<armament>
+				<canons_de_riel quantitat="1" tipus="lleugers">V-14 Stiletto</canons_de_riel>
+				<llança_torpedes_davanters quantitat="5" tipus="lleugers"></llança_torpedes_davanters>
+				<llança_torpedes_posteriors quantitat="5" tipus="lleugers"></llança_torpedes_posteriors>
+				<canons_de_defensa_de_punt quantitat="12">Nariman Dynamics 40mm</canons_de_defensa_de_punt>
+				<ampliacions>Cap</ampliacions>
+			</armament>
+			<capacitat_naus>
+				<corbetes>0</corbetes>
+				<tipus_corbetes></tipus_corbetes>
+				<destructors_de_patrulla>0</destructors_de_patrulla>
+				<tipus_destructors_de_patrulla></tipus_destructors_de_patrulla>
+			</capacitat_naus>
+			<capacitat_humana>
+				<tripulacio>430</tripulacio>
+				<tropes enPorta="Si" quantitat="120">Martian Marine Corps</tropes>
+			</capacitat_humana>
+			<imatge>Sciroccoclassconceptart.jpg</imatge>
+			<logo>MCRN_logo.png</logo>
+			<web>https://expanse.fandom.com/wiki/Scirocco-class</web>
+			<designacions conegudes="0">
+				<nom>MCRN Scirocco</nom>
+				<nom>MCRN Valkyrie</nom>
+				<nom>MCRN Hammurabi</nom>
+				<nom>MCRN Xuesen</nom>
+			</designacions>
+		</nau>
+		<nau>
+			<classe>Corvette-class</classe>
+			<tipus>Fragata lleugera</tipus>
+			<caracteristiques>
+				<longitud unitat="metres">46</longitud>
+				<amplada unitat="metres">8</amplada>
+				<tonelatge unitat="tonelades metriques"></tonelatge>
+			</caracteristiques>
+			<propulsio>
+				<numero_de_motors_impulsio>1</numero_de_motors_impulsio>
+				<motors_impulsio></motors_impulsio>
+			</propulsio>
+			<armament>
+				<canons_de_riel quantitat="0" tipus=""></canons_de_riel>
+				<llança_torpedes_davanters quantitat="2" tipus="lleugers"></llança_torpedes_davanters>
+				<llança_torpedes_posteriors quantitat="0" tipus=""></llança_torpedes_posteriors>
+				<canons_de_defensa_de_punt quantitat="6">Nariman Dynamics 40mm</canons_de_defensa_de_punt>
+				<ampliacions>Cap</ampliacions>
+			</armament>
+			<capacitat_naus>
+				<corbetes>0</corbetes>
+				<tipus_corbetes></tipus_corbetes>
+				<destructors_de_patrulla>0</destructors_de_patrulla>
+				<tipus_destructors_de_patrulla></tipus_destructors_de_patrulla>
+			</capacitat_naus>
+			<capacitat_humana>
+				<tripulacio>30</tripulacio>
+				<tropes enPorta="Si" quantitat="8">Martian Marine Corps</tropes>
+			</capacitat_humana>
+			<imatge>Mcrncorvetteclassconceptart.png</imatge>
+			<logo>MCRN_logo.png</logo>
+			<web>https://expanse.fandom.com/wiki/Corvette-class</web>
+			<designacions conegudes="0">
+				<nom>MCRN Tachi</nom>
+				<nom>MCRN McCabe</nom>
+				<nom>MCRN Valenza</nom>
+				<nom>MCRN Tsuchi</nom>
+				<nom>MCRN Karakum</nom>
+				<nom>MCRN Pella</nom>
+				<nom>MCRN Connaught</nom>
+				<nom>MCRN Shinakuto</nom>
+				<nom>MCRN Koto</nom>
+				<nom>MCRN Solano</nom>
+				<nom>MCRN Panshin</nom>
+				<nom>MCRN Serrio Mal</nom>
+				<nom>MCRN Witch of Endor</nom>
+				<nom>MCRN Ando</nom>
+				<nom>MCRN Dagny Taggart</nom>
+			</designacions>
+		</nau>
+		<nau>
+			<classe>Morrigan-class</classe>
+			<tipus>Destructor de patrulla</tipus>
+			<caracteristiques>
+				<longitud unitat="metres">31</longitud>
+				<amplada unitat="metres">9</amplada>
+				<tonelatge unitat="tonelades metriques"></tonelatge>
+			</caracteristiques>
+			<propulsio>
+				<numero_de_motors_impulsio>1</numero_de_motors_impulsio>
+				<motors_impulsio>RT6-B</motors_impulsio>
+			</propulsio>
+			<armament>
+				<canons_de_riel quantitat="0" tipus=""></canons_de_riel>
+				<llança_torpedes_davanters quantitat="2" tipus="lleugers"></llança_torpedes_davanters>
+				<llança_torpedes_posteriors quantitat="0" tipus=""></llança_torpedes_posteriors>
+				<canons_de_defensa_de_punt quantitat="2">Nariman Dynamics 40mm</canons_de_defensa_de_punt>
+				<ampliacions>Cap</ampliacions>
+			</armament>
+			<capacitat_naus>
+				<corbetes>0</corbetes>
+				<tipus_corbetes></tipus_corbetes>
+				<destructors_de_patrulla>0</destructors_de_patrulla>
+				<tipus_destructors_de_patrulla></tipus_destructors_de_patrulla>
+			</capacitat_naus>
+			<capacitat_humana>
+				<tripulacio>8</tripulacio>
+				<tropes enPorta="No" quantitat="0"></tropes>
+			</capacitat_humana>
+			<imatge>Morriganclassdestroyer1.png</imatge>
+			<logo>MCRN_logo.png</logo>
+			<web>https://expanse.fandom.com/wiki/Morrigan-Class</web>
+			<designacions conegudes="0">
+				<nom>MCRN Ambedkar</nom>
+				<nom>MCRN Avalanche</nom>
+				<nom>MCRN Cú Chulainn</nom>
+				<nom>MCRN Damascus</nom>
+				<nom>MCRN Hamill-Stewart</nom>
+				<nom>MCRN Iceni</nom>
+				<nom>MCRN Kittur Chennamma</nom>
+				<nom>MCRN Morrigan</nom>
+				<nom>MCRN Scipio Africanus</nom>
+				<nom>MCRN Shandian</nom>
+			</designacions>
+		</nau>
+	</Martian_Congressional_Republic_Navy>
+	<United_Nations_Navy>
+		<nau>
+			<classe>Truman-class</classe>
+			<tipus>Cuirasat</tipus>
+			<caracteristiques>
+				<longitud unitat="metres">376</longitud>
+				<amplada unitat="metres">110</amplada>
+				<tonelatge unitat="tonelades metriques"></tonelatge>
+			</caracteristiques>
+			<propulsio>
+				<numero_de_motors_impulsio>6</numero_de_motors_impulsio>
+				<motors_impulsio>S-400</motors_impulsio>
+			</propulsio>
+			<armament>
+				<canons_de_riel quantitat="2" tipus="pesats">Farren-Pattern Heavy</canons_de_riel>
+				<llança_torpedes_davanters quantitat="4" tipus="pesats"></llança_torpedes_davanters>
+				<llança_torpedes_posteriors quantitat="5" tipus="pesats"></llança_torpedes_posteriors>
+				<canons_de_defensa_de_punt quantitat="42">Redfield Ballistics 40mm</canons_de_defensa_de_punt>
+				<ampliacions>6 x llança torpedes + 4 x Redfield Ballistics 40mm</ampliacions>
+			</armament>
+			<capacitat_naus>
+				<corbetes>0</corbetes>
+				<tipus_corbetes></tipus_corbetes>
+				<destructors_de_patrulla>0</destructors_de_patrulla>
+				<tipus_destructors_de_patrulla></tipus_destructors_de_patrulla>
+			</capacitat_naus>
+			<capacitat_humana>
+				<tripulacio>1400</tripulacio>
+				<tropes enPorta="Si" quantitat="360">UN Marines</tropes>
+			</capacitat_humana>
+			<imatge>Truman_NorthFront.png</imatge>
+			<logo>UN_logo.png</logo>
+			<web>https://expanse.fandom.com/wiki/Truman-class</web>
+			<designacions conegudes="600">
+				<nom>UNN Agatha King</nom>
+				<nom>UNN Okimbo</nom>
+				<nom>UNN Thomas Prince</nom>
+				<nom>UNN Tripoli</nom>
+			</designacions>
+		</nau>
+		<nau>
+			<classe>Leonidas-class</classe>
+			<tipus>Cuirasat</tipus>
+			<caracteristiques>
+				<longitud unitat="metres">270</longitud>
+				<amplada unitat="metres"></amplada>
+				<tonelatge unitat="tonelades metriques"></tonelatge>
+			</caracteristiques>
+			<propulsio>
+				<numero_de_motors_impulsio>5</numero_de_motors_impulsio>
+				<motors_impulsio>S-250</motors_impulsio>
+			</propulsio>
+			<armament>
+				<canons_de_riel quantitat="2" tipus="mitja">Dawson-Pattern Medium</canons_de_riel>
+				<llança_torpedes_davanters quantitat="16" tipus="pesats"></llança_torpedes_davanters>
+				<llança_torpedes_posteriors quantitat="16" tipus="pesats"></llança_torpedes_posteriors>
+				<canons_de_defensa_de_punt quantitat="25">Redfield Ballistics 40mm</canons_de_defensa_de_punt>
+				<ampliacions>Cap</ampliacions>
+			</armament>
+			<capacitat_naus>
+				<corbetes>0</corbetes>
+				<tipus_corbetes></tipus_corbetes>
+				<destructors_de_patrulla>0</destructors_de_patrulla>
+				<tipus_destructors_de_patrulla></tipus_destructors_de_patrulla>
+			</capacitat_naus>
+			<capacitat_humana>
+				<tripulacio>920</tripulacio>
+				<tropes enPorta="Si" quantitat="240">UN Marines</tropes>
+			</capacitat_humana>
+			<imatge>Conceptartleonidasclass2.jpg</imatge>
+			<logo>UN_logo.png</logo>
+			<web>https://expanse.fandom.com/wiki/Leonidas-class</web>
+			<designacions conegudes="300">
+				<nom>UNN Nathan Hale</nom>
+				<nom>UNN Raskolnikov</nom>
+			</designacions>
+		</nau>
+	</United_Nations_Navy>
+</the_expanse>

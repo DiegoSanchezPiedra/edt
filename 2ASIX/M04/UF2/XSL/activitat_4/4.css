@@ -1,0 +1,25 @@
+header {
+    text-align:center;
+}
+h1 {
+    background-color:grey;
+    margin-left:10px;
+    margin-right:10px;
+    font-size:25px;
+}
+table{
+    border:1px solid;
+    align:center;
+}
+a {
+    color:blue;
+}
+.blue_font{
+    color:blue;
+}
+.blue_bg{
+    background-color:blue;
+}
+.yellow_bg{
+    background-color:yellow;
+}
