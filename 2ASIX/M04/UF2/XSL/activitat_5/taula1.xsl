@@ -16,15 +16,35 @@
             <th width="240px">Noms Coneguts</th>
             <xsl:for-each select="the_expanse/Martian_Congressional_Republic_Navy/nau">
                 <tr>
-                    <td>
-                        <img id="esquinarImagen">
+                    <td class="normal">
+                        <img  width="320px">
                             <xsl:attribute name="src">M04 - UF2 - NF3 - practica 5/imatges/<xsl:value-of select="imatge/."/></xsl:attribute>
                         </img>
+                        <a>
+                            <xsl:attribute name="href"><xsl:value-of select="web/."/></xsl:attribute>
+                            <xsl:value-of select="classe/."/>
+                        </a>
                     </td>
-                    <td>
-                        <img id="esquinarImagen">
+                    <td class="normal">
+                        <img width="320px">
                             <xsl:attribute name="src">M04 - UF2 - NF3 - practica 5/logos/<xsl:value-of select="logo/."/></xsl:attribute>
                         </img>
+                    </td>
+                    <td class="normal">
+                        Tipus de nau: <xsl:value-of select="tipus/."/><br/>
+                        Tonelatge: <xsl:value-of select="caracteristiques/tonelatge/."/> de <xsl:value-of select="caracteristiques/tonelatge/@unitat"/><br/>
+                        Longitud: <xsl:value-of select="caracteristiques/longitud/."/> <xsl:value-of select="caracteristiques/longitud/@unitat"/><br/>
+                        Tripulació: <xsl:value-of select="capacitat_humana/tripulacio/."/><br/>
+                        <xsl:if test="capacitat_humana/tropes/@quantitat &gt; 0">
+                            <b>Tropes: <xsl:value-of  select="capacitat_humana/tropes/@quantitat"/> de <xsl:value-of select="capacitat_humana/tropes/."/></b><br/>
+                        </xsl:if>
+                        Propulsió: <xsl:value-of select="propulsio/numero_de_motors_impulsio/."/> <xsl:value-of select="propulsio/motors_impulsio/."/>
+                    </td>
+                    <td class="normal">
+                        <xsl:for-each select="designacions/nom">
+                            <xsl:value-of select="."/><br/><br/>
+                        </xsl:for-each>
+                        (Nº de noms = <xsl:value-of select="count(designacions/nom)"/>)<br/><br/>
                     </td>
                 </tr>
             </xsl:for-each>
