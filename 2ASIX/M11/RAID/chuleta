@@ -1,0 +1,82 @@
+dd if=/dev/zero of=disk01 bs=1k count=500k
+dd if=/dev/zero of=disk02 bs=1k count=500k
+
+losetup /dev/loop1 disk01
+losetup /dev/loop2 disk02
+
+mdadm --create /dev/md/raid1 --level=1 --raid-devices=2 /dev/loop1 /dev/loop2
+
+pvcreate /dev/md/raid1
+
+vgcreate diskedt /dev/md/raid1
+
+vgdisplay diskedt
+
+lvcreate -L 200M -n sistema /dev/diskedt
+
+mkfs -t ext4 /dev/diskedt/sistema
+mkfs -t ext4 /dev/diskedt/dades
+
+mount /dev/diskedt/sistema /mnt/sistema
+mount /dev/diskedt/dades /mnt/dades
+
+e2label /dev/diskedt/sistema sistema
+e2label /dev/diskedt/dades dades
+
+mdadm /dev/md/raid1 --fail /dev/loop1
+
+mdadm /dev/md/raid1 --remove /dev/loop1
+
+
+#fer creixer el vg amb dos raids diferents:
+-------------------------------------------
+
+dd if=/dev/zero of=disk03 bs=1k count=700k
+dd if=/dev/zero of=disk04 bs=1k count=700k
+
+losetup /dev/loop3 disk03
+losetup /dev/loop4 disk04
+
+mdadm --create /dev/md/raid2 --level=1 --raid-devices=2 /dev/loop3 /dev/loop4
+
+pvcreate /dev/md/raid2
+
+vgextend diskedt /dev/md/raid2
+
+pvmove /dev/md/raid1
+#como només tenim un altre block (raid2) no cal posar a on moura'l ja que el mourà directament a /dev/md/raid2
+
+vgreduce diskedt /dev/md/raid1
+#per eliminar el primer volum vg (/dev/md/raid1) (no fer servir vgremove perquè esborra tot la vg, es a dir, raid1 i rad2)
+
+
+#desmuntar-ho tot per ordre
+---------------------------
+
+#desmuntar les particions logiques
+umount  /mnt/sistema
+umount  /mnt/dades
+
+#eliminar les particions logiques
+lvremove /dev/diskedt/sistema
+lvremove /dev/diskedt/dades
+
+#eliminar el volume group
+vgremove diskedt
+
+#elimiar les marques de physical volume
+pvremove /dev/md/raid1
+pvremove /dev/md/raid2
+
+#parem els raids
+mdadm --stop /dev/md/raid1
+mdadm --stop /dev/md/raid2
+
+#eliminem les marques de raid
+mdadm --zero-superblock /dev/loop1
+mdadm --zero-superblock /dev/loop2
+mdadm --zero-superblock /dev/loop3
+mdadm --zero-superblock /dev/loop4
+
+#desmuntem els loops
+losetup -d /dev/loop{1..4}
