@@ -27,6 +27,8 @@ mdadm /dev/md/raid1 --fail /dev/loop1
 
 mdadm /dev/md/raid1 --remove /dev/loop1
 
+#per que pogui muntar-se directament necessitem posar el mdadm.conf a /etc
+mdadm --examine --scan > /etc/mdadm.conf
 
 #fer creixer el vg amb dos raids diferents:
 -------------------------------------------
@@ -77,6 +79,8 @@ mdadm --zero-superblock /dev/loop1
 mdadm --zero-superblock /dev/loop2
 mdadm --zero-superblock /dev/loop3
 mdadm --zero-superblock /dev/loop4
+
+rm /etc/mdadm.conf
 
 #desmuntem els loops
 losetup -d /dev/loop{1..4}
