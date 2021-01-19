@@ -17,11 +17,11 @@ lvcreate -L 200M -n sistema /dev/diskedt
 mkfs -t ext4 /dev/diskedt/sistema
 mkfs -t ext4 /dev/diskedt/dades
 
-mount /dev/diskedt/sistema /mnt/sistema
-mount /dev/diskedt/dades /mnt/dades
-
 e2label /dev/diskedt/sistema sistema
 e2label /dev/diskedt/dades dades
+
+mount /dev/diskedt/sistema /mnt/sistema
+mount /dev/diskedt/dades /mnt/dades
 
 mdadm /dev/md/raid1 --fail /dev/loop1
 
