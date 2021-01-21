@@ -18,21 +18,21 @@ CREATE TABLE pacients (
   num_cat varchar(20) ,
   nie varchar(20),
   passaport varchar(20) 
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 CREATE TABLE doctors (
   iddoctor serial PRIMARY KEY,
   nom varchar(15) NOT NULL,
   cognoms varchar(30) NOT NULL,
   especialitat varchar(30) NOT NULL
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;;
 
 CREATE TABLE analitiques (
   idanalitica serial PRIMARY KEY,
   iddoctor bigint ,
   idpacient bigint ,
   dataanalitica timestamp NOT NULL 
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;;
 
 CREATE TABLE catalegproves (
   idprova int  PRIMARY KEY,
@@ -40,7 +40,7 @@ CREATE TABLE catalegproves (
   descripcio varchar(100) NOT NULL,
   acronim varchar (15),
   info_autoritats boolean NOT NULL DEFAULT false
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;;
 
 CREATE TABLE provestecnica (
   idprovatecnica serial PRIMARY KEY,
@@ -52,7 +52,7 @@ CREATE TABLE provestecnica (
   maxpat float NOT NULL,
   minpan float NOT NULL,
   maxpan float NOT NULL
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;;
 
 CREATE TABLE resultats (
   idresultat serial PRIMARY KEY,
@@ -61,7 +61,7 @@ CREATE TABLE resultats (
   resultats varchar(10) NOT NULL,
   dataresultat timestamp NOT NULL,
   UNIQUE(idanalitica,idprovatecnica) 
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;;
 
 CREATE TABLE alarmes (
   idalarma serial PRIMARY KEY,
@@ -69,7 +69,7 @@ CREATE TABLE alarmes (
   nivellalama smallint NOT NULL,
   validat bool NOT NULL,
   missatge varchar(100) NOT NULL
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;;
 
 /* ALTERS*/
 

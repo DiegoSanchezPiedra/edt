@@ -23,7 +23,8 @@ create table adreçes(
 );
 
 alter table adreçes
-add primary key (id_adreça);
+add primary key (id_adreça)
+add unique (adreça);
 
 --taula adreçes grups
 create table adreçes_grups(
