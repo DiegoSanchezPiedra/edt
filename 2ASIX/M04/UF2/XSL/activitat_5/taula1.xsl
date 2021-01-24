@@ -7,8 +7,9 @@
     </head>
     <xsl:for-each select="the_expanse/dades">
         <table border="0" align="center">
-            <img style="display:block;margin-left:auto;margin-right:auto;" src="M04 - UF2 - NF3 - practica 5/logos/TheExpanseWiki-S4-title.png">
+            <img style="display:block;margin-left:auto;margin-right:auto;">
                 <xsl:attribute name="src">M04 - UF2 - NF3 - practica 5/logos/<xsl:value-of select="logo/."/></xsl:attribute>
+                <xsl:attribute name="tag"><xsl:value-of select="titol/."></xsl:value-of></xsl:attribute>
             </img>
         </table>
     </xsl:for-each>
