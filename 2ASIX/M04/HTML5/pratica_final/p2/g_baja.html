@@ -27,10 +27,20 @@
                 <div class="card">
                     <h2>PC gama baja 300€</h2>
                     <h5>Empezamos con el presupuesto de pc de gama baja, está es la gama más básica que permitirá jugar a la mayoria de los títulos, eso si, no a ultra ni mucho menos.</h5>
-                    <div class="content" style="height:4200px;">
+                    <nav class="topnav">
+                        <a href="#pb">Placa Base</a>
+                        <a href="#procesador">Procesador</a>
+                        <a href="#ram">Memoria Ram</a>
+                        <a href="#disco1">Disco 1</a>
+                        <a href="#disco2">Disco 2</a>
+                        <a href="#torre">Torre</a>
+                        <a href="#fuente">Fuente de Alimentación</a>
+                        <a href="#benchmarks">Benchmarks</a>
+                    </nav>
+                    <div class="content" style="height:3800px;">
                         <div style="float: left;">
                         
-                            <li>placa base: Asrock A320M-HDV</li>
+                            <li id="pb">placa base: Asrock A320M-HDV</li>
                             
                             <a href="https://www.pccomponentes.com/asrock-a320m-hdv-r40" target="_blank"><img class="transition" src="pbase_gbaja.png" alt="placa base"></a>
                             
@@ -46,7 +56,7 @@
                                 <br/>
                             </ul>
                             
-                            <li>Procesador con gráfica incorporado y disipador: Ryzen 3 3200G</li>
+                            <li id="procesador">Procesador con gráfica incorporado y disipador: Ryzen 3 3200G</li>
                             
                             <a href="https://www.pccomponentes.com/amd-ryzen-3-3200g-36-ghz-bulk" target="_blank"><img class="transition" src="procesador_gbaja.png" alt="procesador"></a>
                             
@@ -67,7 +77,8 @@
                                 <li>Temp. máx.: 95 °C</li>
                                 <br>
                             </ul>
-                            <li>memoria RAM: Adata Premier DDR4 2666MHz 8GB CL19</li>
+
+                            <li id="ram">memoria RAM: Adata Premier DDR4 2666MHz 8GB CL19</li>
     
                             <a href="https://www.pccomponentes.com/adata-premier-ddr4-2666mhz-8gb-cl19" target="_blank"><img class="transition" src="ram_gbaja.png" alt="ram"></a>
                             
@@ -88,7 +99,7 @@
 
                             <li>discos duros:</li>
                                 <ul>
-                                    <li style="margin-left: 25px;"> Adata SU650 SSD 120GB SATA3</li>
+                                    <li id="disco1" style="margin-left: 25px;"> Adata SU650 SSD 120GB SATA3</li>
                                     <a style="margin-left: 10px;" href="https://www.pccomponentes.com/adata-su650-ssd-120gb-sata3" target="_blank"><img class="transition" src="ssd_gbaja.png" alt="ssd"></a>
                                         <ul>    
                                             <li>Factor de forma de disco SSD: 2.5"</li>
@@ -106,7 +117,7 @@
                                         </ul>
                                 </ul>
                                 <ul>
-                                    <li style="margin-left: 25px;"> Western Digital Blue HDD 1TB 7200rpm SATA3</li>
+                                    <li id="disco2" style="margin-left: 25px;"> Western Digital Blue HDD 1TB 7200rpm SATA3</li>
                                     <a style="margin-left: 10px;" href="https://www.pccomponentes.com/western-digital-blue-hdd-1tb-7200rpm-sata3" target="_blank"><img class="transition" src="hdd_gbaja.png" alt="hdd"></a>
                                     <ul>
                                         <li>Tamaño del HDD: 3.5"</li>
@@ -122,7 +133,7 @@
                                         <li>Acorde RoHS: Si</li>
                                     </ul>
                                 </ul>
-                            <li>Torre: Tempest Spectra RGB USB 3.0 con Ventana</li>
+                            <li id="torre">Torre: Tempest Spectra RGB USB 3.0 con Ventana</li>
                             <a href="https://www.pccomponentes.com/tempest-spectra-rgb-usb-30-con-ventana" target="_blank"><img class="transition" src="torre_gbaja.png" alt="torre"></a>
                             <ul>
                                 <li>Color: negro</li>
@@ -138,7 +149,7 @@
                                 <li>Trasero: Ventilador de 120mm * 1</li>
                                 <li>Panel frontal: Tira de Led de color</li>
                             </ul>
-                            <li>Fuente de Alimentación: Cooler Master Elite 500 V4 500W 80 Plus</li>
+                            <li id="fuente">Fuente de Alimentación: Cooler Master Elite 500 V4 500W 80 Plus</li>
                             <a href="https://www.pccomponentes.com/cooler-master-elite-500-v4-500w-80-plus" target="_blank"><img class="transition" src="fuente_gbaja.png" alt="fuente"></a>
                             <ul>
                                 <li>Potencia total: 500 W</li>
@@ -155,33 +166,32 @@
                                 <li>Conector de potencia ATX (24 pines): Si</li>
                                 <li>Tipo de cableado: No modular</li>
                             </ul>
+
+                            <table id="benchmarks">
+                                <caption>Rendimiento calidad ultra 1920*1080</caption>
+                                <tr>
+                                    <th>juego</th>
+                                    <th>fps</th>
+                                </tr>
+                                <tr>
+                                    <td>Shadow of the Tomb Rider</td>
+                                    <td>30fps</td>
+                                </tr>
+                                <tr>
+                                    <td>Fortnite</td>
+                                    <td>100fps</td>
+                                </tr>
+                                <tr>
+                                    <td>Minecraft</td>
+                                    <td>120fps</td>
+                                </tr>
+                                <tr>
+                                    <td>Counter Strike: Global Offensive</td>
+                                    <td>140fps</td>
+                                </tr>
+                            </table>
                         </ul>
                         </div>
-                        <div>
-                            <table style="width: 20%;">
-                            <caption>Rendimiento calidad ultra 1920*1080</caption>
-                            <tr>
-                                <th>juego</th>
-                                <th>fps</th>
-                            </tr>
-                            <tr>
-                                <td>Shadow of the Tomb Rider</td>
-                                <td>30fps</td>
-                            </tr>
-                            <tr>
-                                <td>Fortnite</td>
-                                <td>100fps</td>
-                            </tr>
-                            <tr>
-                                <td>Minecraft</td>
-                                <td>120fps</td>
-                            </tr>
-                            <tr>
-                                <td>Counter Strike: Global Offensive</td>
-                                <td>140fps</td>
-                            </tr>
-                        </table>
-                    </div>
                     </div>
                 </div>
           
