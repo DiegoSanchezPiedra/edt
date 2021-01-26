@@ -1,0 +1,39 @@
+<tenda>
+    <vehicles>
+        <vehicle>
+            <marca_model>AUDI A3 / Spor. 1.4TFSI Ambiente </marca_model>
+            <any>2010 </any>
+            <kms>13170</kms>
+            <color>Negre</color>
+            <preu>21500</preu>
+        </vehicle>
+        <vehicle>
+            <marca_model>VOLVO C30 / 2.0 D </marca_model>
+            <any>2010 </any>
+            <kms>25000</kms>
+            <color>Negre</color>
+            <preu>17800</preu>
+        </vehicle>
+        <vehicle>
+            <marca_model>OPEL Astra / 1.7CDTI Sport </marca_model>
+            <any>2011 </any>
+            <kms>5000</kms>
+            <color>Blanc</color>
+            <preu>17800</preu>
+        </vehicle>
+        <vehicle>
+            <marca_model>VOLKSWAGEN Golf / 1.6TDI CR Sport 105</marca_model>
+            <any>2010</any>
+            <kms>13990</kms>
+            <color>Vermell</color>
+            <preu>18900</preu>
+        </vehicle>
+        <vehicle>
+            <marca_model>OPEL Astra / 1.7CDTi Enjoy </marca_model>
+            <any>2008</any>
+            <kms>84903</kms>
+            <color>Gris plata</color>
+            <preu>9500</preu>
+        </vehicle>
+    </vehicles>
+</tenda>

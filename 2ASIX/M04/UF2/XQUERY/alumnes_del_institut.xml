@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<institut>
+ <alumnes>
+ <alumne>
+ <nom>Joan</nom>
+ <cognoms>Sala Pons</cognoms>
+ <edat>21</edat>
+ </alumne>
+ <alumne>
+ <nom>Angel</nom>
+ <cognoms>Peris Soler</cognoms>
+ <edat>19</edat>
+ </alumne>
+ <alumne>
+ <nom>Anna</nom>
+ <cognoms>Verddecho Valls</cognoms>
+ <edat>30</edat>
+ </alumne>
+ </alumnes>
+</institut>
