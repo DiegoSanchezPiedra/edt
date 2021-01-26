@@ -2,51 +2,37 @@
 <?xml-stylesheet type="text/css" href="estilsmeus.css"?>
 <rss version="2.0">
     <channel>
-        <title>Noticias sobre animes, mangas y  demás</title>
-        <link>https://somoskudasai.com/</link>
+        <title>Noticias sobre Tecnologia</title>
+        <link>https://elchapuzasinformatico.com/</link>
         <description>
-            noticias sobre animes, mangas, reseñas videojuegos, cine y musica
+            Noticias sobre lo último en tecnologías y demás
         </description>
         <item>
-            <title>Noticias sobre anime</title>
-            <link>https://somoskudasai.com/categoria/noticias/anime/</link>
+            <title>Noticias sobre informática</title>
+            <link>https://elchapuzasinformatico.com/informatica/</link>
             <description>
-                ultimas noticias sobre los animes mas famosos
+                Ultimas noticias sobre el mundo de la informática
             </description>
         </item>
         <item>
-            <title>Noticias sobre mangas</title>
-            <link>https://somoskudasai.com/categoria/noticias/manga/</link>
+            <title>Noticias sobre ADS-MOVIL</title>
+            <link>https://elchapuzasinformatico.com/adsl-telefonia/</link>
             <description>
-                ultimas noticias sobre los mangas mas famosos
+                ultimas noticias sobre las conexiones más rapias y el famoso 5G
             </description>
         </item>
         <item>
-            <title>Reseñas</title>
-            <link>https://somoskudasai.com/categoria/resenas/</link>
+            <title>Consolas</title>
+            <link>https://elchapuzasinformatico.com/consolas/</link>
             <description>
-                mini resumentes y opiniones sobre animes y mangas
+                Noticias sobre las últimas consolas del mercado
             </description>
         </item>
         <item>
-            <title>Videojuegos</title>
-            <link>https://somoskudasai.com/categoria/noticias/videojuegos/</link>
+            <title>Reviews</title>
+            <link>https://elchapuzasinformatico.com/reviews/</link>
             <description>
-                noticias sobre los los videojuegos de la actaulidad
-            </description>
-        </item>
-        <item>
-            <title>Cine</title>
-            <link>https://somoskudasai.com/categoria/noticias/cine/</link>
-            <description>
-                ultimas noticias sobre el cine animado japones
-            </description>
-        </item>
-        <item>
-            <title>Música</title>
-            <link>https://somoskudasai.com/categoria/noticias/musica/</link>
-            <description>
-                ultimas noticias sobre la musica en japon y la cultura otaku
+                Reviews sobre los dispositivos que vamos probando
             </description>
         </item>
     </channel>

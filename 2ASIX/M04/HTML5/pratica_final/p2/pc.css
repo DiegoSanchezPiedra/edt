@@ -76,7 +76,10 @@ img.transition{
   .rightcolumn {
     float: left;
     width: 25%;
-    background-color: #f1f1f1;
+    background-image: url(anime_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding-left: 20px;
   }
   
@@ -147,3 +150,20 @@ img.transition{
           width: 100%;
         }
       }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 500px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: rgb(21, 27, 110);
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 100px;
+      }
+      

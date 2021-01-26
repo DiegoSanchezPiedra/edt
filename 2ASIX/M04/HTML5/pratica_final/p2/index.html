@@ -26,6 +26,7 @@
         <div class="row">
             <article class="leftcolumn">
                 <div class="card">
+                    <button onclick="topFunction()" id="myBtn" title="Ir arriba del todo"><i class="material-icons" style="font-size:36px">file_upload</i></button>
                     <h2>Inicio </h2>
                     <h5>En está página mostraré algunos ejemplos sobre 3 presuspuestos 
                     de pc para videojuegos y otras funciones</h5>
@@ -65,6 +66,29 @@
                 <div class="contacto"><a href="https://www.google.es/maps/place/Carrer+d'Evarist+Arn%C3%BAs,+45,+08014+Barcelona/@41.3831023,2.1319371,17z/data=!3m1!4b1!4m5!3m4!1s0x12a49862c2335c4f:0x22830a1eded0e615!8m2!3d41.3830983!4d2.1341258" alt="location" target="_blank"><i class="material-icons">location_city</i></a> c/Evarist-Arnus 45</div><br><br>
                 <div class="socials"><a href="mailto:sanchezpiedradiego@gmail.com "><i class='fas fa-at' style='font-size:24px'></i></a> sanchezpiedradiego gmail.com</div>
                 <div class="contacto"><a href="https://www.google.es/maps/place/Barcelona/@41.3948976,2.0787283,12z/data=!3m1!4b1!4m5!3m4!1s0x12a49816718e30e5:0x44b0fb3d4f47660a!8m2!3d41.3850639!4d2.1734035" alt="barna" target="_blank"><i class="material-icons">location_on</i></a> Barcelona</div>
+                <p style="color: white;">&copy; 2021 Diego Sanchez</p>
             </footer>
+
+            <script>
+                //Get the button
+                var mybutton = document.getElementById("myBtn");
+                
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+                </script>
     </body>
 </html>
