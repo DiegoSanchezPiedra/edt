@@ -167,3 +167,7 @@ img.transition{
         border-radius: 100px;
       }
       
+      #myBtn:hover {
+        background-color: white; /* Add a dark-grey background on hover */
+        color: black;
+      }
