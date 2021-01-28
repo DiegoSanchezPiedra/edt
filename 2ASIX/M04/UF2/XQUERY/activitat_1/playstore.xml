@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<playstore> 
+	<jocs> 
+		<joc> 
+			<nom>Dungeon Siege III</nom> 
+			<companyia>Square Enix</companyia> 
+			<edat>16</edat> 
+			<plataforma>PC</plataforma> 
+			<plataforma>PS3</plataforma> 
+			<plataforma>Xbox 360</plataforma> 
+			<preu>55.95</preu> 
+		</joc> 
+		<joc> 
+			<nom>Hunted: The Demon’s Forge</nom> 
+			<companyia>Bethesda</companyia> 
+			<edat>18</edat> 
+			<plataforma>PC</plataforma> 
+			<plataforma>PS3</plataforma> 
+			<plataforma>Xbox 360</plataforma> 
+			<preu>49.95</preu> 
+		</joc> 
+		<joc> 
+			<nom>Moto GP 10/11</nom> 
+			<companyia>Capcom</companyia> 
+			<edat>3</edat> 
+			<plataforma>PS3</plataforma> 
+			<preu>40.99</preu> 
+		</joc> 
+		<joc> 
+			<nom>Call of Duty. Black OPS</nom> 
+			<companyia>Activision</companyia> 
+			<edat>17</edat> 
+			<plataforma>PC</plataforma> 
+			<plataforma>PS3</plataforma> 
+			<plataforma>Xbox 360</plataforma> 
+			<plataforma>Wii </plataforma> 
+			<preu>49.99</preu> 
+		</joc> 
+		<joc> 
+			<nom>Red Faction: Armageddon</nom> 
+			<companyia>THQ</companyia> 
+			<edat>18</edat> 
+			<plataforma>PC</plataforma> 
+			<plataforma>PS3</plataforma> 
+			<plataforma>Xbox 360</plataforma> 
+			<preu>70.99</preu> 
+		</joc> 
+	</jocs> 
+</playstore>
