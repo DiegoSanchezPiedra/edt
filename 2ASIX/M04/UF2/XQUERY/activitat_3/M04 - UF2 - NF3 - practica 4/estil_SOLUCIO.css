@@ -1,0 +1,60 @@
+#esquinarImagen {
+    border-radius: 15px;
+	height: auto; 
+	width: 100%;  
+
+}
+
+
+
+table#t01 th {
+	color: black;
+	background-color: #DF013A;
+} 
+
+
+td.normal {
+	color: black;
+	background-color: #FFFFFF;
+	text-align: left;
+	font-size: 45%;
+}
+
+
+td.centrado {
+	color: black;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 75%;
+}
+
+
+td.achatado {
+	color: black;
+	background-color: #FFFFFF;
+	text-align: center;
+	height: 50%
+}
+
+
+td.verd {
+	color: black;
+	background-color: #55FF55;
+	text-align: center;
+}
+
+
+td.blau {
+	color: black;
+	background-color: #5555FF;
+	text-align: center;
+}
+
+
+body {
+	font-size: 1.5em;
+}
+
+#responsive-image {  width: 100%;  height: auto; } 
+
+

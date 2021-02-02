@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href=""?>
+<submarinos>
+	<titulo any="1986">Submaris de la guerra freda</titulo>
+	<web>https://es.wikipedia.org/wiki/Guerra_Fría</web>
+	<logo>URSS vs USA_300.jpg</logo>
+	<submarino nom="Alfa">
+		<bando>URSS</bando>
+		<nombre>Alfa</nombre>
+		<unidades_construidas>7</unidades_construidas>
+		<unidades_planeadas>8</unidades_planeadas>
+		<caracteristicas_generales>
+			<tripulacion>31</tripulacion>
+			<longitud>81.4 m</longitud>
+			<diametro>9.5 m</diametro>
+			<calado>7.6 m</calado>
+			<desplazamiento_en_superficie>2300 tons</desplazamiento_en_superficie>
+			<desplazamiento_en_inmersion>3200 tons</desplazamiento_en_inmersion>
+			<propulsion>1 x OK-550 o 1 x BM-40A</propulsion>
+			<potencia_watios>155 MWt</potencia_watios>
+			<potencia_caballos>40000 cv</potencia_caballos>
+			<num_helices>1</num_helices>
+		</caracteristicas_generales>
+		<rendimiento>
+			<velocidad_maxima>
+				<en_superficie>22.22 km/h</en_superficie>
+				<en_inmersion>76 km/h</en_inmersion>
+			</velocidad_maxima>
+			<duracion_patrulla> días</duracion_patrulla>
+			<profundidad>350</profundidad>
+		</rendimiento>
+		<armamento>
+			<tubos>
+				<numero>6</numero>
+				<calibre medida="mm">533</calibre>
+				<numero_de_armas>18-20</numero_de_armas>
+			</tubos>
+			<armas>
+				<torpedos>
+					<torpedo_identificador>
+						<nombre cantidad="18">Type 53</nombre>
+						<velocidad>83 km/h</velocidad>
+						<alcance>22 km</alcance>
+						<peso>2300 kg</peso>
+					</torpedo_identificador>
+					<torpedo_identificador>
+						<nombre cantidad="20">VA-111 Shkval</nombre>
+						<velocidad>370 km/h</velocidad>
+						<alcance>15 km</alcance>
+						<peso>2700 kg</peso>
+					</torpedo_identificador>
+				</torpedos>
+				<minas>24</minas>
+				<misiles>
+					<misil_identificador>
+						<nombre cantidad="18">SS-N-15 Starfish</nombre>
+						<velocidad>1080 km/h</velocidad>
+						<alcance>45 km</alcance>
+						<peso>2445 kg</peso>
+					</misil_identificador>
+				</misiles>
+			</armas>
+		</armamento>
+		<imatges>
+			<bandera>bandera URSS.jpg</bandera>
+			<foto>Alfa_class_submarine_2.jpg</foto>
+		</imatges>
+		<pag_web>https://en.wikipedia.org/wiki/Alfa-class_submarine</pag_web>
+	</submarino>
+	<submarino nom="Oscar II">
+		<bando>URSS</bando>
+		<nombre>Oscar II</nombre>
+		<unidades_construidas>13</unidades_construidas>
+		<unidades_planeadas>20</unidades_planeadas>
+		<caracteristicas_generales>
+			<tripulacion>107</tripulacion>
+			<longitud>155 m</longitud>
+			<diametro>18.2 m</diametro>
+			<calado>9 m</calado>
+			<desplazamiento_en_superficie>12500 tons</desplazamiento_en_superficie>
+			<desplazamiento_en_inmersion>14700 tons</desplazamiento_en_inmersion>
+			<propulsion>2 x OK-650</propulsion>
+			<potencia_watios>2 x 190 MWt</potencia_watios>
+			<potencia_caballos>98000 cv</potencia_caballos>
+			<num_helices>2</num_helices>
+		</caracteristicas_generales>
+		<rendimiento>
+			<velocidad_maxima>
+				<en_superficie>28 km/h</en_superficie>
+				<en_inmersion>59 km/h</en_inmersion>
+			</velocidad_maxima>
+			<duracion_patrulla>120 días</duracion_patrulla>
+			<profundidad></profundidad>
+		</rendimiento>
+		<armamento>
+			<tubos>
+				<numero>6</numero>
+				<calibre medida="mm" cantidad="4">533</calibre>
+				<calibre medida="mm" cantidad="2">650</calibre>
+				<numero_de_armas>52</numero_de_armas>
+			</tubos>
+			<armas>
+				<torpedos>
+					<torpedo_identificador>
+						<nombre cantidad="28">Type 53</nombre>
+						<velocidad>83 km/h</velocidad>
+						<alcance>22 km</alcance>
+						<peso>2300 kg</peso>
+					</torpedo_identificador>
+					<torpedo_identificador>
+						<nombre cantidad="28">Type 65</nombre>
+						<velocidad>93 km/h</velocidad>
+						<alcance>50 km</alcance>
+						<peso>4500 kg</peso>
+					</torpedo_identificador>
+					<torpedo_identificador>
+						<nombre cantidad="28">VA-111 Shkval</nombre>
+						<velocidad>370 km/h</velocidad>
+						<alcance>15 km</alcance>
+						<peso>2700 kg</peso>
+					</torpedo_identificador>
+				</torpedos>
+				<minas></minas>
+				<misiles>
+					<misil_identificador>
+						<nombre cantidad="28">SS-N-15 Starfish</nombre>
+						<velocidad>1080 km/h</velocidad>
+						<alcance>45 km</alcance>
+						<peso>2445 kg</peso>
+					</misil_identificador>
+					<misil_identificador>
+						<nombre cantidad="28">SS-N-16 Stallion</nombre>
+						<velocidad> km/h</velocidad>
+						<alcance>100 km</alcance>
+						<peso> kg</peso>
+					</misil_identificador>
+					<misil_identificador>
+						<nombre cantidad="24">P-700 Granit</nombre>
+						<velocidad>2400 km/h</velocidad>
+						<alcance>400 km</alcance>
+						<peso>7000 kg</peso>
+					</misil_identificador>
+				</misiles>
+			</armas>
+		</armamento>
+		<imatges>
+			<bandera>bandera URSS.jpg</bandera>
+			<foto>Oscar_class_submarine.jpg</foto>
+		</imatges>
+		<pag_web>https://en.wikipedia.org/wiki/Oscar-class_submarine</pag_web>
+	</submarino>
+	<submarino nom="Typhoon">
+		<bando>URSS</bando>
+		<nombre>Typhoon</nombre>
+		<unidades_construidas>7</unidades_construidas>
+		<unidades_planeadas>6</unidades_planeadas>
+		<caracteristicas_generales>
+			<tripulacion>160</tripulacion>
+			<longitud>175 m</longitud>
+			<diametro>23 m</diametro>
+			<calado>12 m</calado>
+			<desplazamiento_en_superficie>23200 tons</desplazamiento_en_superficie>
+			<desplazamiento_en_inmersion>33800 tons</desplazamiento_en_inmersion>
+			<propulsion>2 x OK-650</propulsion>
+			<potencia_watios>2 x 190 MWt</potencia_watios>
+			<potencia_caballos>99200 cv</potencia_caballos>
+			<num_helices>2</num_helices>
+		</caracteristicas_generales>
+		<rendimiento>
+			<velocidad_maxima>
+				<en_superficie>41 km/h</en_superficie>
+				<en_inmersion>50 km/h</en_inmersion>
+			</velocidad_maxima>
+			<duracion_patrulla>120 días</duracion_patrulla>
+			<profundidad>400</profundidad>
+		</rendimiento>
+		<armamento>
+			<tubos>
+				<numero>6</numero>
+				<calibre medida="mm" cantidad="6">533</calibre>
+				<calibre medida="mm" cantidad="0">650</calibre>
+				<numero_de_armas></numero_de_armas>
+			</tubos>
+			<armas>
+				<torpedos>
+					<torpedo_identificador>
+						<nombre cantidad="28">Type 53</nombre>
+						<velocidad>83 km/h</velocidad>
+						<alcance>22 km</alcance>
+						<peso>2300 kg</peso>
+					</torpedo_identificador>
+					<torpedo_identificador>
+						<nombre cantidad="28">VA-111 Shkval</nombre>
+						<velocidad>370 km/h</velocidad>
+						<alcance>15 km</alcance>
+						<peso>2700 kg</peso>
+					</torpedo_identificador>
+				</torpedos>
+				<minas></minas>
+				<misiles>
+					<misil_identificador>
+						<nombre cantidad="28">SS-N-15 Starfish</nombre>
+						<velocidad>1080 km/h</velocidad>
+						<alcance>45 km</alcance>
+						<peso>2445 kg</peso>
+					</misil_identificador>
+					<misil_identificador>
+						<nombre cantidad="28">SS-N-16 Stallion</nombre>
+						<velocidad> km/h</velocidad>
+						<alcance>100 km</alcance>
+						<peso> kg</peso>
+					</misil_identificador>
+					<misil_identificador>
+						<nombre cantidad="20">SS-N-20 Sturgeon</nombre>
+						<velocidad>25000 km/h</velocidad>
+						<alcance>8300 km</alcance>
+						<peso>40000 kg</peso>
+					</misil_identificador>
+				</misiles>
+			</armas>
+		</armamento>
+		<imatges>
+			<bandera>bandera URSS.jpg</bandera>
+			<foto>Typhoon_class_submarine.jpg</foto>
+		</imatges>
+		<pag_web>https://en.wikipedia.org/wiki/Typhoon-class_submarine</pag_web>
+	</submarino>
+</submarinos>
