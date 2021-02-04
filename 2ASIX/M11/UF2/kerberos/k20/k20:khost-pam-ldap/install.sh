@@ -3,6 +3,10 @@
 #edt asix m11 SAD curs 2020 - 2021
 
 cp /opt/docker/krb5.conf /etc/krb5.conf
+bash /opt/docker/auth.sh
+cp /opt/docker/nslcd.conf /etc/nslcd.conf
+cp /opt/docker/ldap.conf /etc/openldap/ldap.conf
+cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
 
 #crear usuaris local01..03 (IP + AP)
 for user in local{01..03}

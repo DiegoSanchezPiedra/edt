@@ -19,7 +19,7 @@
 		<propulsio unitat_de_mesura_potencia="Terawatts">
 			<numero_de_motors_impulsio>4</numero_de_motors_impulsio>
 			<motors_impulsio>KD-1105 Proxima</motors_impulsio>
-			<reactors numero="4">General Fusion 650</reactors>
+			<reactors numero="4"></reactors>
 			<potencia_standart>3943</potencia_standart>
 			<potencia_militar>101408</potencia_militar>
 		</propulsio>
