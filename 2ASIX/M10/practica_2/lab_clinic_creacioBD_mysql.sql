@@ -1,8 +1,9 @@
-use lab_clinic;
+DROP DATABASE lab_clinic;
+CREATE DATABASE lab_clinic;
+\c lab_clinic;
 
-DROP TABLE if EXISTS pacients;
 CREATE TABLE pacients (
-  idpacient bigint unsigned not null auto_increment PRIMARY KEY,
+  idpacient serial PRIMARY KEY,
   nom varchar(15) NOT NULL,
   cognoms varchar(30) NOT NULL,
   dni varchar(9),
@@ -17,80 +18,70 @@ CREATE TABLE pacients (
   num_cat varchar(20) ,
   nie varchar(20),
   passaport varchar(20) 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
-DROP TABLE if EXISTS doctors;
 CREATE TABLE doctors (
-  iddoctor bigint unsigned not null auto_increment PRIMARY KEY,
+  iddoctor serial PRIMARY KEY,
   nom varchar(15) NOT NULL,
   cognoms varchar(30) NOT NULL,
   especialitat varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
-DROP TABLE if EXISTS analitiques;
 CREATE TABLE analitiques (
-  idanalitica bigint unsigned not null auto_increment PRIMARY KEY,
-  iddoctor bigint unsigned,
-  idpacient bigint unsigned,
+  idanalitica serial PRIMARY KEY,
+  iddoctor bigint ,
+  idpacient bigint ,
   dataanalitica timestamp NOT NULL 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
-DROP TABLE if EXISTS catalegproves;
 CREATE TABLE catalegproves (
-  idprova bigint unsigned not null auto_increment  PRIMARY KEY,
+  idprova int  PRIMARY KEY,
   nom_prova varchar(15) NOT NULL,
   descripcio varchar(100) NOT NULL,
   acronim varchar (15),
-  info_autoritats tinyint NOT NULL DEFAULT false
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  info_autoritats boolean NOT NULL DEFAULT false
+);
 
-DROP TABLE if EXISTS provestecnica;
 CREATE TABLE provestecnica (
-  idprovatecnica bigint unsigned not null auto_increment PRIMARY KEY,
-  idprova bigint unsigned ,
+  idprovatecnica serial PRIMARY KEY,
+  idprova int ,
   sexe varchar(1) NOT NULL,
   dataprova timestamp NOT NULL ,
-  resultat_numeric tinyint NOT NULL DEFAULT true,
+  resultat_numeric boolean NOT NULL DEFAULT true,
   minpat float NOT NULL,
   maxpat float NOT NULL,
   minpan float NOT NULL,
   maxpan float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
-DROP TABLE if EXISTS resultats;
 CREATE TABLE resultats (
-  idresultat bigint unsigned not null auto_increment PRIMARY KEY,
-  idanalitica bigint unsigned,
-  idprovatecnica bigint unsigned,
+  idresultat serial PRIMARY KEY,
+  idanalitica bigint ,
+  idprovatecnica bigint ,
   resultats varchar(10) NOT NULL,
   dataresultat timestamp NOT NULL,
   UNIQUE(idanalitica,idprovatecnica) 
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
-DROP TABLE if EXISTS alarmes;
 CREATE TABLE alarmes (
-  idalarma bigint unsigned not null auto_increment PRIMARY KEY,
-  idresultat bigint unsigned,
-  nivellalama tinyint NOT NULL,
-  validat tinyint NOT NULL,
+  idalarma serial PRIMARY KEY,
+  idresultat bigint ,
+  nivellalama smallint NOT NULL,
+  validat bool NOT NULL,
   missatge varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+);
 
 /* ALTERS*/
 
 
 /*analitiques*/
 ALTER TABLE analitiques
-  ADD CONSTRAINT `fk_idpacient` FOREIGN KEY (idpacient) REFERENCES pacients (idpacient) 
-  ON UPDATE CASCADE,
-
-  ADD CONSTRAINT `fk_iddoctor` FOREIGN KEY (iddoctor) REFERENCES doctors (iddoctor) 
-  ON UPDATE CASCADE;
+  ADD CONSTRAINT fk_idpacient FOREIGN KEY (idpacient) REFERENCES pacients (idpacient) ON UPDATE CASCADE,
+  ADD CONSTRAINT fk_iddoctor FOREIGN KEY (iddoctor) REFERENCES doctors (iddoctor) ON UPDATE CASCADE;
   
 /* provestecnica*/
 ALTER TABLE provestecnica
-  ADD CONSTRAINT `fk_idprova` FOREIGN KEY (idprova) REFERENCES catalegproves (idprova) 
-  ON UPDATE CASCADE;
+  ADD CONSTRAINT fk_idprova FOREIGN KEY (idprova) REFERENCES catalegproves (idprova) ON UPDATE CASCADE;
 /* provestecnica amb sexe i edats
 CREATE TABLE provestecnica (
   idprovatecnica serial,
@@ -112,16 +103,12 @@ ALTER TABLE provestecnica
 */
 /*resultas*/
 ALTER TABLE resultats
-  ADD CONSTRAINT `fk_idanalitica` FOREIGN KEY (idanalitica) REFERENCES analitiques (idanalitica) 
-  ON UPDATE CASCADE,
-
-  ADD CONSTRAINT `fk_idprovatecnica` FOREIGN KEY (idprovatecnica) REFERENCES provestecnica (idprovatecnica)
-  ON UPDATE CASCADE;
+  ADD CONSTRAINT fk_idanalitica FOREIGN KEY (idanalitica) REFERENCES analitiques (idanalitica) ON UPDATE CASCADE,
+  ADD CONSTRAINT fk_idprovatecnica FOREIGN KEY (idprovatecnica) REFERENCES provestecnica (idprovatecnica) ON UPDATE CASCADE;
   
 /* alarmes*/ 
 ALTER TABLE alarmes
-  ADD CONSTRAINT `fk_idresultat` FOREIGN KEY (idresultat) REFERENCES resultats (idresultat) 
-  ON UPDATE CASCADE;
+  ADD CONSTRAINT fk_idresultat FOREIGN KEY (idresultat) REFERENCES resultats (idresultat) ON UPDATE CASCADE;
 
 /* INSERTS*/
 INSERT INTO pacients (idpacient, nom, cognoms, dni, data_naix, sexe, adreca, ciutat, c_postal, telefon, email, num_ss, num_cat, nie, passaport) VALUES (default, 'jose', 'remar silva', '4811111M', '1996-07-12', 'M', 'veciana 8 2 2', 'barcelona', '08023', '989856565', 'jose@mail.com', NULL, NULL, NULL, NULL);
