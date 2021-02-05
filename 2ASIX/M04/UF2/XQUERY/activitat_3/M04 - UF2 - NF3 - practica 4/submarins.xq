@@ -7,7 +7,7 @@ return
     <body>
         <table align="center">
             <tr>
-                <th style="text-align: center;">{$submarinos/titulo}</th>
+                <th style="text-align: center;">{data($submarinos/titulo)}</th>
             </tr>
             <tr>
                 <td>
@@ -33,21 +33,36 @@ return
                
                <br></br>
                
-               <a href="submarino/pag_webpag_web/{data($submarino/pag_web)}">{$submarino/nombre}</a>
+               <a href="submarino/pag_webpag_web/{data($submarino/pag_web)}">{data($submarino/nombre)}</a>
                </td>
                
                <td align="right">
-                 {$submarino/caracteristicas_generales/propulsion} de {$submarino/caracteristicas_generales/potencia_watios}
+                 {data($submarino/caracteristicas_generales/propulsion)} de {data($submarino/caracteristicas_generales/potencia_watios)} ({data($submarino/caracteristicas_generales/potencia_caballos)})
                  </td>
-                 <td>
+                 <td align="right">
                 {
                 for $torpedo in $submarino/armamento/armas/torpedos/torpedo_identificador
                 return
-                <p>{data($torpedo/nombre/@cantidad),'del tipus',data($torpedo/nombre)}</p>
+                (data($torpedo/nombre/@cantidad),'del tipus',data($torpedo/nombre),<br/>)
               }   
-              </td>     
+              </td>   
+              <td align="right">
+              {
+                for $misil in $submarino/armamento/armas/misiles/misil_identificador
+                return
+                (data($misil/nombre/@cantidad),'del tipus',data($misil/nombre),<br/>)
+              }
+              </td>  
              </tr>
-           }             
+           }      
+           <tr>
+           <td colspan="2" align="left">
+           <p><b>Unitats totals plantejades:</b>{sum($submarinos/submarino/unidades_planeadas)}</p>
+           </td>
+           <td colspan="2" align="right">
+           <p><b>Unitats totals construides:</b>{sum($submarinos/submarino/unidades_construidas)}</p>
+           </td>
+           </tr>       
         </table>
     </body>
 </html>
