@@ -1,5 +1,7 @@
 #! /bin/bash
 # @edt ASIX-M06
+# isx2031424
+# diego sanchez
 # -----------------
 
 authconfig  --enableshadow --enablelocauthorize --enableldap \

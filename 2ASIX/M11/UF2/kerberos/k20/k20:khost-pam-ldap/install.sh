@@ -4,9 +4,11 @@
 
 cp /opt/docker/krb5.conf /etc/krb5.conf
 bash /opt/docker/auth.sh
-cp /opt/docker/nslcd.conf /etc/nslcd.conf
-cp /opt/docker/ldap.conf /etc/openldap/ldap.conf
-cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
+#cp /opt/docker/nslcd.conf /etc/nslcd.conf
+#cp /opt/docker/ldap.conf /etc/openldap/ldap.conf
+#cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
+
+#cp /opt/docker/system-auth /etc/pam.d/system-auth
 
 #crear usuaris local01..03 (IP + AP)
 for user in local{01..03}
@@ -22,4 +24,3 @@ do
 done
 
 #posar el system auth amb el pam_krb5.so
-cp /opt/docker/system-auth /etc/pam.d/system-auth

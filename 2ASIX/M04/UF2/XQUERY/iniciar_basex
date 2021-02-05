@@ -1,0 +1,2 @@
+iniciar basex: (en casa)
+java -cp BaseX946.jar org.basex.BaseXGUI
