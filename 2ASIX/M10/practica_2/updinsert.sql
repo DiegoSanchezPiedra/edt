@@ -19,11 +19,11 @@ BEGIN
             raise notice '% - % - update',pacient_nou,count_existe;
             EXECUTE 'update pacients 
 			set 
-            idpacient = (select idpacient from nous_pacients where idpacient=' || pacient_nou ||'),
-			nom = (select nom from nous_pacients where idpacient=' || pacient_nou ||'),
-			cognoms = (select cognoms from nous_pacients where idpacient=' || pacient_nou ||'),
-			dni = (select dni from nous_pacients where idpacient=' || pacient_nou ||'),
-			data_naix = (select data_naix from nous_pacients where idpacient='  || pacient_nou ||'),
+            pacients.idpacient = (select idpacient from nous_pacients where idpacient=' || pacient_nou ||'),
+			pacients.nom = (select nom from nous_pacients where idpacient=' || pacient_nou ||'),
+			pacients.cognoms = (select cognoms from nous_pacients where idpacient=' || pacient_nou ||'),
+			pacients.dni = (select dni from nous_pacients where idpacient=' || pacient_nou ||'),
+			pacients.data_naix = (select data_naix from nous_pacients where idpacient='  || pacient_nou ||'),
 			sexe = (select sexe from nous_pacients where idpacient=' || pacient_nou ||'),
 			adreca = (select adreca from nous_pacients where idpacient=' || pacient_nou || '),
 			ciutat = (select ciutat from nous_pacients where idpacient=' || pacient_nou || '),
