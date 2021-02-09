@@ -13,6 +13,7 @@ do
   kadmin.local -q "addprinc -pw k$user $user"
 done
 
+kadmin.local -q "addprinc -pw kadmin admin"
 kadmin.local -q "addprinc -pw kmarta marta/admin"
 kadmin.local -q "addprinc -pw kpere pere/admin"
 kadmin.local -q "addprinc -pw kpau pau/admin"
@@ -24,3 +25,5 @@ do
         kadmin.local -q "addprinc -pw $user $user"
 done
 
+#crear el principal per el servei sshd	
+kadmin.local -q "addprinc -randkey host/sshd.edt.org"

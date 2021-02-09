@@ -33,3 +33,9 @@ docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d e
 '''
 docker run --rm --name kserver.edt.org -h kserver.edt.org -p 88:88 -p 464:464 -p 749:749 --net 2hisix -d isx2031424/k20:kserver
 '''
+
+* **isx2031424/k20:sshd** server ssh que fa servir l'auntenticació per kerberos, aquest cop es farà servir authconfig
+
+'''
+docker run --rm --name kserver.edt.org -h kserver.edt.org -p 88:88 -p 464:464 -p 749:749 --net 2hisix -d isx2031424/k20:kserver
+'''
