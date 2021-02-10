@@ -20,7 +20,7 @@
 * afegir en el /etc/hosts del client la ip de aws i el domanin name: **A.B.C.D kserver.edt.org kserver**
 
 '''
-docker run --rm --name kserver.edt.org -h kserver.edt.org -p 88:88 -p 464:464 -p 749:749 --net 2hisix -d isx2031424/k20:kserver
+docker run --rm --name khost-pam-ldap -h khost-pam-ldap --net 2hisix -d isx2031424/k20:khost-pam-ldap
 '''
 
 * **isx2031424/k20:khost-pam-ldap** host client de keberos i ldap
@@ -37,5 +37,5 @@ docker run --rm --name kserver.edt.org -h kserver.edt.org -p 88:88 -p 464:464 -p
 * **isx2031424/k20:sshd** server ssh que fa servir l'auntenticació per kerberos, aquest cop es farà servir authconfig
 
 '''
-docker run --rm --name kserver.edt.org -h kserver.edt.org -p 88:88 -p 464:464 -p 749:749 --net 2hisix -d isx2031424/k20:kserver
+docker run --rm --name sshd.edt.org -h sshd.edt.org --net 2hisix -p 22:22 -d isx2031424/k20:sshd
 '''
