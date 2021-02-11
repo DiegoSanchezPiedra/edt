@@ -20,7 +20,7 @@
 * afegir en el /etc/hosts del client la ip de aws i el domanin name: **A.B.C.D kserver.edt.org kserver**
 
 '''
-docker run --rm --name khost-pam-ldap -h khost-pam-ldap --net 2hisix -d isx2031424/k20:khost-pam-ldap
+docker run --rm --name khost-pam-ldap -h khost-pam-ldap --net 2hisix -it isx2031424/k20:khost-pam-ldap
 '''
 
 * **isx2031424/k20:khost-pam-ldap** host client de keberos i ldap

@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Escribe algo aqui"></textarea>
 
-    <input type="hidden" id="destinatari" name="destinatari" value="destinatari">
-    <input type="hidden" id="SMTP" name="SMTP" value="SMTP">
+    <form action="procesar.php" method="POST">
+        <textarea rows="4" cols="50" name="mensaje" placeholder="Escribe algo aqui"></textarea>
+
+        <input type="hidden" name="destinatari" value="destinatari">
+        <input type="hidden" name="SMTP" value="SMTP">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
 </body>
 </html>
