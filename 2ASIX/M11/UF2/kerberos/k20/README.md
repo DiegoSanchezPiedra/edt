@@ -39,3 +39,17 @@ docker run --rm --name kserver.edt.org -h kserver.edt.org -p 88:88 -p 464:464 -p
 '''
 docker run --rm --name sshd.edt.org -h sshd.edt.org --net 2hisix -p 22:22 -d isx2031424/k20:sshd
 '''
+
+* **command per fer que els containers inicialitzin al encendre la ami de amazon**
+
+'''
+docker run --restart=unless-stopped --name sshd.edt.org -h sshd.edt.org --net 2hisix -p 22:22 -d isx2031424/k20:sshd
+'''
+
+'''
+docker run --restart=unless-stopped --name kserver.edt.org -h kserver.edt.org -p 88:88 -p 464:464 -p 749:749 --net 2hisix -d isx2031424/k20:kserver
+'''
+
+'''
+docker run --restart=unless-stopped --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d edtasixm06/ldap20:latest
+'''
