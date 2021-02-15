@@ -10,9 +10,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <th>Title</th>
         <th>Artist</th>
       </tr>
-      <xsl:for-each select="catalog/cd[artist='Bob Dylan']">
-      <xsl:sort select="year"/>
-      <xsl:if test="year >= 1985">
+        <xsl:for-each select="catalog/cd[artist='Bob Dylan']">
+        <xsl:sort select="year"/>
+        <xsl:if test="year >= 1985">
       <tr>
         <td><xsl:value-of select="title" /></td>
         <td><xsl:value-of select="artist" /></td>
@@ -24,4 +24,3 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   </html>
 </xsl:template>
 </xsl:stylesheet>
-
