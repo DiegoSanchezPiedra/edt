@@ -1,0 +1,23 @@
+version: "3"
+services:
+  ldap:
+    image: edtasixm06/ldapserver:18group
+    container_name: ldap.edt.org
+    hostname: ldap.edt.org
+    ports: 
+      - "389:389"
+    networks:
+      - mynet
+ visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - mynet 
+networks:
+  mynet:

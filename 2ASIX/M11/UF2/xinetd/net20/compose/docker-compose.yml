@@ -1,0 +1,19 @@
+version: "2"
+services:
+  ldap:
+    image: edtasixm11/net18:nethost
+    container_name: nethost
+    hostname: nethost
+    networks:
+      - mynet
+  portainer:
+    image: portainer/portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - mynet
+networks:
+  mynet:
+

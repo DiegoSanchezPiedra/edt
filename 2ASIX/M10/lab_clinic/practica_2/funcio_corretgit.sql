@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION prova()
+CREATE OR REPLACE FUNCTION update()
 RETURNS text AS
 $$
 declare 
@@ -83,7 +83,7 @@ sql4 := 'update pacients set
 
 -----------------------------------------------EXEMPLE AMB QUOTE_NULLABLE()-------------------------------------------------
 
-CREATE OR REPLACE FUNCTION prova()
+CREATE OR REPLACE FUNCTION update()
 RETURNS text AS
 $$
 declare 
