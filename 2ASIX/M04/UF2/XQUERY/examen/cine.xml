@@ -1,0 +1,60 @@
+<collection shelf="New Arrivals">
+<movie title="La bestia de la guerra">
+   <type>War, Thriller</type>
+   <format>DVD</format>
+   <year>1988</year>
+   <rating>PG</rating>
+   <stars>10</stars>
+   <description>La guerra es un infierno</description>
+</movie>
+<movie title="2010 Odisea dos">
+   <type>Science Fiction, Comedy</type>
+   <format>Bluray</format>
+   <year>1984</year>
+   <rating>PG</rating>
+   <stars>10</stars>
+   <description>Salvemos a las ballenas</description>
+</movie>
+<movie title="Los violentos de Kelly">
+   <type>War, Action, Comedy</type>
+   <format>DVD</format>
+   <year>1970</year>
+   <episodes>1</episodes>
+   <rating>PG</rating>
+   <stars>10</stars>
+   <description>Viva la guerra y el oro</description>
+</movie>
+<movie title="James Bond">
+   <type>Action</type>
+   <format>DVD</format>
+   <episodes>23</episodes>
+   <rating>PG</rating>
+   <stars>9</stars>
+   <description>Soy un tio bueno, tengo pasta y licencia para matar, mejor imposible</description>
+</movie>
+<movie title="Dune">
+   <type>Science Fiction</type>
+   <format>Bluray</format>
+   <year>1984</year>
+   <rating>PG</rating>
+   <stars>10</stars>
+   <description>Otro universo</description>
+</movie>
+<movie title="Star Trek II">
+   <type>Science Fiction</type>
+   <format>Bluray</format>
+   <year>1982</year>
+   <rating>PG</rating>
+   <stars>10</stars>
+   <description>La venganza es un plato que es mejor servir frio</description>
+</movie>
+<movie title="Star Trek IV">
+   <type>Science Fiction, Comedy</type>
+   <format>Bluray</format>
+   <year>1986</year>
+   <rating>PG</rating>
+   <stars>10</stars>
+   <description>Salvemos a las ballenas</description>
+</movie>
+
+</collection>

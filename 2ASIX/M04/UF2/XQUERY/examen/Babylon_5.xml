@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Babylon_5.xsl"?>
+<babylon5>
+	<dades_generals>
+		<titol>Babylon 5</titol>
+		<web>https://en.wikipedia.org/wiki/Babylon_5</web>
+		<logo>B5_Title.jpg</logo>
+	</dades_generals>
+	<nau>
+		<origen>Earth_Alliance</origen>
+		<classe classe="Omega_Class_destroyer"/>
+		<subclasses>Omega</subclasses>
+		<tipus>destructor</tipus>
+		<caracteristiques>
+			<longitud unitat="metres">1717,3</longitud>
+			<tonelatge unitat="milions de tonelades metriques">44.6</tonelatge>
+		</caracteristiques>
+		<capacitat_humana>
+			<tripulacio>850</tripulacio>
+			<tropes>18000</tropes>
+		</capacitat_humana>
+		<capacitat_naus>
+			<caces>36</caces>
+			<transports_tropes>80</transports_tropes>
+		</capacitat_naus>
+		<propulsio>
+			<numero_de_motors_impulsio>4</numero_de_motors_impulsio>
+			<motors_impulsio>KD-1105 Proxima</motors_impulsio>
+			<reactors numero="4">General Fusion 650</reactors>
+			<potencia_standart>3943</potencia_standart>
+			<potencia_militar>101408</potencia_militar>
+			<unitat_de_mesura_potencia>Terawatts</unitat_de_mesura_potencia>
+		</propulsio>
+		<abast>
+			<quantitat>18</quantitat>
+			<unitat_de_mesura>mesos</unitat_de_mesura>
+		</abast>
+		<gravetat_artificial llengua="en">false</gravetat_artificial>
+		<data_alta>2249-02-14</data_alta>
+		<imatge>omega_02.jpg</imatge>
+		<logo>Earth_Alliance.png</logo>
+		<pag_web>https://www.b5tech.org/earthalliance/earthallianceshipsandvessels/earthcapships/omega/omega.html</pag_web>
+		<noms coneguts="32">
+			<nom>AES Acheron</nom>
+			<nom>AES Achilles</nom>
+			<nom>AES Agamemnon</nom>
+			<nom>AES Agrippa</nom>
+			<nom>AES Excalibur</nom>
+			<nom>AES Hermes</nom>
+			<nom>AES Juno</nom>
+			<nom>AES Nimrod</nom>
+			<nom>AES Orion</nom>
+		</noms>
+	</nau>
+	<nau>
+		<origen>Earth_Alliance</origen>
+		<classe classe="Hyperion_type_heavy_cruiser"/>
+		<subclasses>Roosevelt, Hyperion, Midwinter</subclasses>
+		<tipus>creuer pesat</tipus>
+		<caracteristiques>
+			<longitud unitat="metres">1187,7</longitud>
+			<tonelatge unitat="milions de tonelades metriques">9.1</tonelatge>
+		</caracteristiques>
+		<capacitat_humana>
+			<tripulacio>356</tripulacio>
+			<tropes>200</tropes>
+		</capacitat_humana>
+		<capacitat_naus>
+			<caces>6</caces>
+		</capacitat_naus>
+		<propulsio>
+			<numero_de_motors_impulsio>3</numero_de_motors_impulsio>
+			<motors_impulsio>J-64D Optimal</motors_impulsio>
+			<reactors numero="3">General Fusion 420-B</reactors>
+			<potencia_standart>325</potencia_standart>
+			<potencia_militar>5633</potencia_militar>
+			<unitat_de_mesura_potencia>Terawatts</unitat_de_mesura_potencia>
+		</propulsio>
+		<abast>
+			<quantitat>12</quantitat>
+			<unitat_de_mesura>mesos</unitat_de_mesura>
+		</abast>
+		<gravetat_artificial llengua="en">false</gravetat_artificial>
+		<data_alta>2237-06-29</data_alta>
+		<imatge>Hyperion_01.jpg</imatge>
+		<logo>Earth_Alliance.png</logo>
+		<pag_web>https://www.b5tech.org/earthalliance/earthallianceshipsandvessels/earthcapships/hyperion/hyperion.html</pag_web>
+		<noms coneguts="7">
+			<nom>AES Hyperion</nom>
+			<nom>AES Lexington</nom>
+			<nom>AES Prometheus</nom>
+			<nom>AES Trafalgar</nom>
+		</noms>
+	</nau>
+	<nau>
+		<origen>Narn</origen>
+		<classe classe="G_Quan"/>
+		<subclasses></subclasses>
+		<tipus>creuer pesat</tipus>
+		<caracteristiques>
+			<tonelatge unitat="milions de tonelades metriques">18.6</tonelatge>
+			<longitud unitat="metres">1400</longitud>
+		</caracteristiques>
+		<capacitat_humana>
+			<tripulacio>250</tripulacio>
+			<tropes>800</tropes>
+		</capacitat_humana>
+		<capacitat_naus>
+			<caces>12</caces>
+		</capacitat_naus>
+		<propulsio>
+			<numero_de_motors_impulsio>3</numero_de_motors_impulsio>
+			<motors_impulsio></motors_impulsio>
+			<reactors numero="3"></reactors>
+			<potencia_standart>3037</potencia_standart>
+			<potencia_militar>39055</potencia_militar>
+			<unitat_de_mesura_potencia>Terawatts</unitat_de_mesura_potencia>
+		</propulsio>
+		<abast>
+			<quantitat>9</quantitat>
+			<unitat_de_mesura>mesos</unitat_de_mesura>
+		</abast>
+		<gravetat_artificial llengua="en">false</gravetat_artificial>
+		<data_alta>2244-01-25</data_alta>
+		<imatge>G-Quan_01.jpg</imatge>
+		<logo>Narn.png</logo>
+		<pag_web>https://www.b5tech.org/narn/narnships/narncapships/gquan.html</pag_web>
+		<noms coneguts="5">
+			<nom>G'Tok</nom>
+		</noms>
+	</nau>
+	<nau>
+		<origen>Earth_Alliance</origen>
+		<classe classe="Advanced_Omega_Class_destroyer">Omega-X</classe>
+		<subclasses>Omega</subclasses>
+		<tipus>destructor</tipus>
+		<caracteristiques>
+			<longitud unitat="metres">1720</longitud>
+			<tonelatge unitat="milions de tonelades metriques">50</tonelatge>
+		</caracteristiques>
+		<capacitat_humana>
+			<tripulacio>850</tripulacio>
+			<tropes>18000</tropes>
+		</capacitat_humana>
+		<capacitat_naus>
+			<caces>36</caces>
+			<transports_tropes>80</transports_tropes>
+		</capacitat_naus>
+		<propulsio>
+			<numero_de_motors_impulsio>4</numero_de_motors_impulsio>
+			<motors_impulsio>KD-1105 Proxima</motors_impulsio>
+			<reactors numero="4">General Fusion 650</reactors>
+			<potencia_standart>3943</potencia_standart>
+			<potencia_militar>101408</potencia_militar>
+			<unitat_de_mesura_potencia>Terawatts</unitat_de_mesura_potencia>
+		</propulsio>
+		<abast>
+			<quantitat>18</quantitat>
+			<unitat_de_mesura>mesos</unitat_de_mesura>
+		</abast>
+		<gravetat_artificial llengua="en">false</gravetat_artificial>
+		<data_alta>2261-01-01</data_alta>
+		<imatge>OmegaX_02.jpg</imatge>
+		<logo>Earth_Alliance.png</logo>
+		<pag_web>https://www.b5tech.org/earthalliance/earthallianceshipsandvessels/earthcapships/omegax/omegax.html</pag_web>
+		<noms coneguts="0">
+		</noms>
+	</nau>
+</babylon5>
