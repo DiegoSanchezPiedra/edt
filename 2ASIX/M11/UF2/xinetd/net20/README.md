@@ -21,12 +21,12 @@ Repositori per a generar hosts amb serveis de xarxaserveis
 Sense mapejar els ports
 ```
 docker netweork create mynet
-docker run --rm --name nethost -h nethost --net mynet -d edtasixm11/net18:nethost
+docker run --rm --name nethost.edt.org -h nethost.edt.org --net 2hisix -d isx2031424/net20:nethost
 ```
 
 Amb ports mapejats
 ```
 docker netweork create mynet
-docker run --rm --name nethost -h nethost --net mynet -p 7:7 -p 13:13 -p 80:80 -d edtasixm11/net18:nethost
+docker run --rm --name nethost.edt.org -h nethost.edt.org --net 2hisix -p 7:7 -p 13:13 -p 80:80 -d isx2031424/net20:nethost
 ```
 
