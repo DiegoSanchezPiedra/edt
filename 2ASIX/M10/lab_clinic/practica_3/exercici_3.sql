@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION resultats(idresultat varchar)
+CREATE OR REPLACE FUNCTION resultats(idresultat int)
 RETURNS text AS
 $$
 DECLARE
@@ -16,7 +16,7 @@ BEGIN
         resultat := reg_1.resultats;
     END LOOP;
 
-    sql1 := 'SELECT * from pacients where idpacient = (SELECT idpacient from analitiques where idanalitica = (SELECT idanalitica from resultats where idresultat =' || idresultat || '))';
+    sql1 := 'SELECT idpacient from analitiques where idanalitica = (SELECT idanalitica from resultats where idresultat =' || idresultat || ')';
     FOR reg_1 in EXECUTE(sql1)
     LOOP
         pacient := reg_1.idpacient;
