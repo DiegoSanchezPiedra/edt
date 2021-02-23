@@ -22,9 +22,9 @@ BEGIN
         pacient := reg_1.idpacient;
     END LOOP;
 
-    raise notice '% idprovatecnica',provatecnica;
-    raise notice '% pacient',pacient;
-    raise notice '% resultat',resultat;
+    --raise notice '% idprovatecnica',provatecnica;
+    --raise notice '% pacient',pacient;
+    --raise notice '% resultat',resultat;
     res := grau_perill(provatecnica::int,pacient::int,resultat);
     return res;
 END;

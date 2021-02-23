@@ -25,7 +25,6 @@ DECLARE
     resultat_cadena text := '';
     registres record;
     res text := '1';
-    res_cadena text := 'n';
 BEGIN
     sql1 := 'select * from provestecnica where idprovatecnica=' || idprovatecnica;
 
@@ -40,7 +39,7 @@ BEGIN
 
     IF isnumeric(resultat) = FALSE
     THEN
-        IF resultat_cadena != res_cadena
+        IF resultat_cadena != resultat
         THEN
             res := '2';
         END IF;
