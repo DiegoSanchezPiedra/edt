@@ -16,7 +16,7 @@ BEGIN
         resultat := reg_1.resultats;
     END LOOP;
 
-    sql1 := 'SELECT idpacient from analitiques where idanalitica = (SELECT idanalitica from resultats where idresultat =' || idresultat || ')';
+    sql1 := 'SELECT * from analitiques where idanalitica = (SELECT idanalitica from resultats where idresultat =' || idresultat || ')';
     FOR reg_1 in EXECUTE(sql1)
     LOOP
         pacient := reg_1.idpacient;
