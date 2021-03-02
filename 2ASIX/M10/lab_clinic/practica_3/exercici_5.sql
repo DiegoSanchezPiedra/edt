@@ -1,4 +1,5 @@
-CREATE OR REPLACE FUNCTION resultats_analitica(id_pacient INT,id_analitica INT DEFAULT NULL)
+--Diego Sanchez
+CREATE OR REPLACE FUNCTION historial_analitiques(id_pacient INT,id_analitica INT DEFAULT NULL)
 RETURNS text AS
 $$
 DECLARE

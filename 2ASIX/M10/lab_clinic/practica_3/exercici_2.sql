@@ -1,3 +1,4 @@
+--Diego Sanchez
 CREATE OR REPLACE FUNCTION isnumeric(cadena text) 
 RETURNS BOOLEAN AS 
 $$

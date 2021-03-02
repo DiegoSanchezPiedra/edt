@@ -1,3 +1,4 @@
+--Diego Sanchez
 CREATE OR REPLACE FUNCTION resultats(idresultat int)
 RETURNS text AS
 $$
