@@ -17,3 +17,11 @@ insert into provestecnica values (DEFAULT,202,'F',current_date,'t',100,129,50,19
 insert into analitiques values (DEFAULT,2,1,current_date);
 
 insert into resultats values (DEFAULT,4,6,195,current_date);
+
+insert into resultats values 
+(DEFAULT,4,6,180,current_date)
+(DEFAULT,4,6,160,current_date)
+(DEFAULT,4,6,140,current_date)
+(DEFAULT,4,6,120,current_date)
+(DEFAULT,4,6,90,current_date)
+;
