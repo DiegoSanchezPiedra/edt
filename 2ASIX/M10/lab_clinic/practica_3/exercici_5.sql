@@ -4,6 +4,7 @@ RETURNS text AS
 $$
 DECLARE
     selected_row record;
+    selected_row_2 record;
     sql1 text := '';
     registres_1 record;
     sql2 text := '';
@@ -12,6 +13,7 @@ DECLARE
     registres_2 record;
     res text := '';
     registre_trobat int := 0;
+    registre_trobat_1 int := 0;
 BEGIN
     --mirem si el pacient donat existeix
     sql1 := 'select * from pacients where idpacient=' || id_pacient;
@@ -32,7 +34,17 @@ BEGIN
         THEN
             sql1 := 'select * from analitiques where idpacient=' || id_pacient || 'order by dataanalitica desc limit 1';   
         ELSE
-            sql1 := 'select * from analitiques where idanalitica=' || id_analitica;
+            sql1 := 'select * from analitiques where idanalitica=' || id_analitica || 'and idpacient=' || id_pacient;
+            registre_trobat_1 := 0;
+            FOR selected_row_2 in EXECUTE(sql1)
+            LOOP
+                registre_trobat_1 := 1;
+            END LOOP;
+            IF registre_trobat_1 = 0
+            THEN
+                raise notice 'analitica: % no es del pacient: %',id_analitica,id_pacient;
+                return '1';
+            END IF;
         END IF;
     END IF;
     
@@ -57,7 +69,7 @@ BEGIN
                 JOIN catalegproves on provestecnica.idprova = catalegproves.idprova
                 WHERE analitiques.idpacient = ' || registres.idpacient ||
                 'AND catalegproves.idprova =' || registres_1.idprova ||
-                'AND analitiques.idanalitica !=' || registres_1.idanalitica;
+                'AND analitiques.idanalitica !=' || registres_1.idanalitica || 'order by analitiques.dataanalitica desc';
 
             FOR registres_2 in EXECUTE(sql3)
             LOOP
