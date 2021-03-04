@@ -25,3 +25,5 @@ insert into resultats values
 (DEFAULT,4,6,120,current_date)
 (DEFAULT,4,6,90,current_date)
 ;
+
+insert into catalegproves values (1,'meningitis','perillos',NULL,'t');
