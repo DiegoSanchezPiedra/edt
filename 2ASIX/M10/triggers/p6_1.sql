@@ -7,10 +7,10 @@ DECLARE
     id_provatecnica int;
     id_pacient int;
 BEGIN
-    sql1 := 'select * from provestecnica where idprovatenica =' || NEW.idprovatenica;
+    sql1 := 'select * from provestecnica where idprovatecnica =' || NEW.idprovatecnica;
     for reg in EXECUTE(sql1)
     LOOP
-        id_provatecnica := reg.idprovatenica;
+        id_provatecnica := reg.idprovatecnica;
     END LOOP;
 
     sql1 := 'select * from analitiques where idanalitica =' || NEW.idanalitica;
@@ -19,9 +19,11 @@ BEGIN
         id_pacient := reg.idpacient;
     END LOOP;
 
-    IF grau_perill(id_provatecnica,id_pacient,NEW.resultats) = '2' or resultats(id_provatecnica,id_pacient,NEW.resultats) = '3'
+    IF grau_perill(id_provatecnica,id_pacient,NEW.resultats) = '2' or grau_perill(id_provatecnica,id_pacient,NEW.resultats) = '3'
     THEN
         INSERT INTO resultats_patologics SELECT NEW.idresultat , now() , user;
+        RETURN NEW;
+    ELSE
         RETURN NEW;
     END IF;
     RETURN NULL;
@@ -30,6 +32,6 @@ $$
 LANGUAGE 'plpgsql';
 
 
-CREATE TRIGGER in_alarmes 
+CREATE TRIGGER in_evaluar 
 BEFORE INSERT OR UPDATE ON resultats FOR EACH 
-ROW EXECUTE PROCEDURE posar_a_alarmes();
+ROW EXECUTE PROCEDURE evaluar();

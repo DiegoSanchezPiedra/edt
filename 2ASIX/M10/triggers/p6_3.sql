@@ -1,0 +1,8 @@
+CREATE OR REPLACE FUNCTION informe_definitiu()
+RETURNS TRIGGER AS
+$$
+BEGIN
+
+END;
+$$
+LANGUAGE 'plpgsql';
