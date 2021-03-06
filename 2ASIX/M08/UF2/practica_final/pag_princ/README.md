@@ -18,3 +18,7 @@ htpasswd /var/www/pass pere
 vim /var/www/grup
 > alumnes: maria pau pere
 '''
+
+* Activar el l'accés segur: HTTPS
+  https://www.server-world.info/en/note?os=Fedora_31&p=httpd&f=3
+  https://manjaro.site/how-to-enable-ssl-on-apache-fedora-26/
