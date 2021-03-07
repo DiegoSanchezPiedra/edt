@@ -2,7 +2,9 @@
 
 import os
 import sys
-
+import urllib.parse
+import random
+import cgitb; cgitb.enable()
 def get_encoding():
     try:
         lang = os.environ['LANG']
@@ -10,20 +12,13 @@ def get_encoding():
     except:
         encoding = 'UTF-8'
     return encoding
-def encode(cadena=""):
+
+def encode():
     write = sys.stdout.write
-    environ = os.environ
 
     write("Content-Type: text/plain; charset=%s\r\n" % (get_encoding()))
     write("\r\n")
-
-    res=""
-    for i in range(len(cadena)):
-        if cadena[i] == '+':
-            res += ' '
-        else:
-            res += cadena[i]
-    write(res)
-
+    print(random.randint(1,1000))
+    
 if __name__ == '__main__':
-    encode("hola+que+tal")
+    encode()

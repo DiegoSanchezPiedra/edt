@@ -2,7 +2,7 @@
 
 import os
 import sys
-
+import urllib.parse
 def get_encoding():
     try:
         lang = os.environ['LANG']
@@ -10,13 +10,16 @@ def get_encoding():
     except:
         encoding = 'UTF-8'
     return encoding
-def encode(cadena=""):
+
+def decode(cadena=""):
     write = sys.stdout.write
     environ = os.environ
 
     write("Content-Type: text/plain; charset=%s\r\n" % (get_encoding()))
     write("\r\n")
-
+    
+    cadena = urllib.parse.unquote(cadena)
+    
     res=""
     for i in range(len(cadena)):
         if cadena[i] == '+':
@@ -26,4 +29,4 @@ def encode(cadena=""):
     write(res)
 
 if __name__ == '__main__':
-    encode("hola+que+tal")
+    decode("hola+que+tal")
