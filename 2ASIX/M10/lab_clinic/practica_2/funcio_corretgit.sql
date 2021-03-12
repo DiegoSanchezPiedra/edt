@@ -57,7 +57,7 @@ END;
 $$
 LANGUAGE 'plpgsql' VOLATILE;
 
-
+----------------------------------------------------------------------------------------------------------------------------
 sql3 := 'insert into pacients (idpacient,nom,cognoms,dni,data_naix,sexe,adreca,ciutat,c_postal,telefon,email,num_ss,nie,passaport) 
             values (' || res_sql1.idpacient || ',' || quote_nullabe(res_sql1.nom) || ',' || quote_nullabe(res_sql1.cognoms) || ',' || quote_nullable(res_sql1.data_naix) || ',' || quote_nullable(res_sql1.ciutat) ||
              ',' || quote_nullabe(res_sql1.c_postal) || ',' || quote_nullable(res_sql1.telefon) || ',' || quote_nullable(res_sql1.email) || ',' || quote_nullable(res_sql1.num_ss) || ',' || quote_nullable(res_sql1.num_cat) ||
