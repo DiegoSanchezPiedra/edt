@@ -13,8 +13,6 @@ def get_encoding():
 
 def decode(cadena=""):
     write = sys.stdout.write
-    environ = os.environ
-
     write("Content-Type: text/plain; charset=%s\r\n" % (get_encoding()))
     write("\r\n")
     

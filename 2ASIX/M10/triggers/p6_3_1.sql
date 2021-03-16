@@ -9,7 +9,8 @@ DECLARE
     existeix int := 0;
     existeix_analitica int := 0;
 BEGIN
-    IF NOT NEW.idanalitica
+    -- en cas que l'operació sigui un delete anem a buscar el la idanalitica a la taula resultats
+    IF (TG_OP = 'DELETE')
     THEN
         sql3 := 'SELECT * FROM resultats where idresultat=' || OLD.idresultat;
         FOR reg in EXECUTE(sql3)
@@ -20,6 +21,7 @@ BEGIN
         id_analitica := NEW.idanalitica;
     END IF;
 
+    --mirem si hi ha analitiques sense resultats encara
     sql1 := 'SELECT * FROM resultats 
     where idanalitica=' || id_analitica || 'and (resultats = '''' or resultats is NULL)';
     
@@ -29,10 +31,10 @@ BEGIN
     END LOOP;
 
     IF existeix = 1
-    
     THEN
         RETURN NEW;
     ELSE
+        --mirem que no hi hagin resultats de l'analtica a resultats_patologic
         sql2 := 'SELECT * FROM resultats 
         JOIN resultats_patologics 
         on resultats.idresultat=resultat_patologics.idresultat 
@@ -45,6 +47,7 @@ BEGIN
         THEN
             RETURN NEW;
         ELSE
+            -- si no hi ha el 
             INSERT INTO informes SELECT id_analitica , NOW()
         END IF;
     END IF;
@@ -54,7 +57,11 @@ $$
 LANGUAGE 'plpgsql';
 
 CREATE TRIGGER analitica_acabada
-AFTER INSERT ON informes FOR EACH 
+AFTER INSERT OR UPDATE ON informes FOR EACH 
+ROW EXECUTE PROCEDURE acabada();
+
+CREATE TRIGGER analitica_acabada
+AFTER DELETE ON resultat_patologics FOR EACH
 ROW EXECUTE PROCEDURE acabada();
 
 ----------------------PROVES------------------------------

@@ -32,21 +32,11 @@ DECLARE
     existeix int := 0;
 BEGIN
     -- si el pacient donat no existeix
-    sql1 = 'select * from pacients where idpacient=' || idpacient;
-    FOR registres in EXECUTE(sql1)
-    LOOP
-        existeix := 1;
-    END LOOP;
-    IF existeix = 0
-    THEN
-        raise EXCEPTION 'el pacient: % no existeix', idpacient;
-    END IF;
-    --si el idpacient es NULL
     IF idpacient is NULL
     THEN
         return 2;
     ELSE
-        sql1 := 'select * from pacients where idpacient=' || idpacient;
+        sql1 = 'select * from pacients where idpacient=' || idpacient;
         FOR registres in EXECUTE(sql1)
         LOOP
             --si el sexe es NULL
@@ -59,15 +49,17 @@ BEGIN
             THEN
                 return 2;
             END IF;
+            --guardem les dades del pacient
+            naix := registres.data_naix;
+            sexe := registres.sexe;
+            existeix := 1;
         END LOOP;
     END IF;
 
-    -- guardem la data de naix del pacient
-    sql1 := 'select * from pacients where idpacient=' || idpacient;
-    FOR registres in EXECUTE(sql1)
-    LOOP
-        naix := registres.data_naix;
-    END LOOP;
+    IF existeix = 0
+    THEN
+        raise EXCEPTION 'el pacient: % no existeix', idpacient;
+    END IF;
     
     --caulculem l'edat i la guardem
     sql1 := 'select extract (years from age(now(),' || quote_nullable(naix) || '))';
@@ -78,9 +70,10 @@ BEGIN
 
     --calculem el nivell de perill que hi ha i el mostrem
     sql1 := 'select * from provestecnica where idprovatecnica=' || idprovatecnica || 
-    'and sexe = (select sexe from pacients where idpacient=' || idpacient || 
-    ') and (' || edat || '>= edat_inical and ' || edat || '<= edat_final)';
-
+    'and (sexe =' || sexe ||' or sexe = 0) 
+    and (' || edat || '>= edat_inical and ' || edat || '<= edat_final)';
+    
+    existeix := 0;
     FOR registres in EXECUTE(sql1) 
     LOOP
         minpat := registres.minpat;
@@ -88,7 +81,14 @@ BEGIN
         minpan := registres.minpan;
         maxpan := registres.maxpan;
         resultat_cadena := registres.resultat_cadena;
+        existeix := 1;
     END LOOP;
+    
+    --comprovar que la provatecnica existeix
+    IF existeix = 0
+    THEN
+        return 2;
+    END IF;
 
     IF isnumeric(resultat) = FALSE
     THEN
