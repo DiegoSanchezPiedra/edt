@@ -24,7 +24,7 @@ def decode(cadena=""):
             res += ' '
         else:
             res += cadena[i]
-    write(res)
+    print(res)
 
 if __name__ == '__main__':
     decode("hola+que+tal")
