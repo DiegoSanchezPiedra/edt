@@ -25,8 +25,17 @@ BEGIN
                 id = NEW.idanalitica;
             END IF;
         END IF;
-    END IF; 
+    END IF;
+    
+    INSERT INTO logs (user,data_mod,nom_taula,op_feta,id) VALUES (user,NOW(),TG_TABLE_NAME,TG_OP,id);
 END;
 $$
 LANGUAGE 'plpgsql';
 
+CREATE TRIGGER logs
+AFTER INSERT OR UPDATE OR DELETE ON resultats FOR EACH 
+ROW EXECUTE PROCEDURE insert_log();
+
+CREATE TRIGGER logs
+AFTER INSERT OR UPDATE OR DELETE ON analitiques FOR EACH 
+ROW EXECUTE PROCEDURE insert_log();
