@@ -1,7 +1,8 @@
-/*Christian Manalo Mañibo - isx9565961*/
-DROP DATABASE lab_clinic;
-CREATE DATABASE lab_clinic;
-\c lab_clinic;
+--Diego Sanchez
+--isx2031424
+DROP DATABASE lab_clinic_1;
+CREATE DATABASE lab_clinic_1;
+\c lab_clinic_1;
 
 CREATE TABLE pacients (
   idpacient serial PRIMARY KEY,
@@ -9,7 +10,7 @@ CREATE TABLE pacients (
   cognoms varchar(30) NOT NULL,
   dni varchar(9),
   data_naix date NOT NULL,
-  sexe varchar(1) NOT NULL,
+  sexe int NOT NULL,
   adreca varchar(50) NOT NULL,
   ciutat varchar(30) NOT NULL,
   c_postal varchar(10) NOT NULL,
@@ -45,10 +46,10 @@ CREATE TABLE catalegproves (
 
 CREATE TABLE provestecnica (
   idprovatecnica serial,
-  idprova int ,
+  idprova int,
   sexe int NOT NULL,
   dataprova timestamp NOT NULL ,
-  resultat_numeric boolean NOT NULL DEFAULT true,
+  resultat_numeric boolean NOT NULL,
   minpat float NOT NULL,
   maxpat float NOT NULL,
   minpan float NOT NULL,
@@ -122,8 +123,8 @@ ALTER TABLE provestecnica
 
 /*resultats*/
 ALTER TABLE resultats
-  ADD CONSTRAINT fk_idanalitica FOREIGN KEY (idanalitica) REFERENCES analitiques (idanalitica) ON UPDATE CASCADE,
-  ADD FOREIGN KEY (idprovatecnica) REFERENCES provestecnica (idprovatecnica) ;
+  ADD CONSTRAINT fk_idanalitica FOREIGN KEY (idanalitica) REFERENCES analitiques (idanalitica) ON UPDATE CASCADE;
+  --ADD FOREIGN KEY (idprovatecnica) REFERENCES provestecnica (idprovatecnica) ;
 
 --ALTER TABLE resultats_patologics
 --  ADD CONSTRAINT fk_idresultat FOREIGN KEY (idresultat) REFERENCES resultats (idresultat) ON UPDATE CASCADE;
@@ -135,11 +136,11 @@ ALTER TABLE alarmes
 /* INSERTS*/
 INSERT INTO pacients (idpacient, nom, cognoms, dni, data_naix, sexe, adreca, ciutat, c_postal, telefon, email, num_ss, num_cat, nie, passaport) 
 VALUES 
-(default, 'Diego', 'Sanchez', '12345678A', '1999-01-01', '1', 'C/Urgell 187', 'Barcelona', '08036', '989856565', 'diego@edt.com', NULL, NULL, NULL, NULL),
-(default, 'Mati', 'Vizcano', '12345678B', '1999-01-01', '2', 'C/Urgell 187', 'Barcelona', '08036', '989856563', 'mati@edt.com', NULL, NULL, NULL, NULL),
-(default, 'Javier', 'Moyano', '12345678C', '1999-01-01', '1', 'C/Urgell 187', 'Barcelona', '08036', '989856562', 'javi@edt.com', NULL, NULL, NULL, NULL),
-(default, 'Mark', 'Stanley', '12345678D', '1999-01-01', '1', 'C/Urgell 187', 'Barcelona', '08036', '989856561', 'mark@edt.com', NULL, NULL, NULL, NULL),
-(default, 'Christian', 'Manalo', '12345678F', '1920-01-01', '1', 'C/Urgell 187', 'Barcelona', '08036', '989856568', 'christian@edt.com', NULL, NULL, NULL, NULL);
+(default, 'Diego', 'Sanchez', '12345678A', '1999-01-01', 1, 'C/Urgell 187', 'Barcelona', '08036', '989856565', 'diego@edt.com', NULL, NULL, NULL, NULL),
+(default, 'Mati', 'Vizcano', '12345678B', '1999-01-01', 2, 'C/Urgell 187', 'Barcelona', '08036', '989856563', 'mati@edt.com', NULL, NULL, NULL, NULL),
+(default, 'Javier', 'Moyano', '12345678C', '1999-01-01', 1, 'C/Urgell 187', 'Barcelona', '08036', '989856562', 'javi@edt.com', NULL, NULL, NULL, NULL),
+(default, 'Mark', 'Stanley', '12345678D', '1999-01-01', 1, 'C/Urgell 187', 'Barcelona', '08036', '989856561', 'mark@edt.com', NULL, NULL, NULL, NULL),
+(default, 'Christian', 'Manalo', '12345678F', '1920-01-01', 1, 'C/Urgell 187', 'Barcelona', '08036', '989856568', 'christian@edt.com', NULL, NULL, NULL, NULL);
 
 INSERT INTO doctors (iddoctor, nom, cognoms, especialitat) 
 VALUES 
@@ -157,7 +158,8 @@ VALUES
 INSERT INTO catalegproves (idprova, nom_prova, descripcio,acronim) 
 VALUES 
 (101, 'Glucosa', 'Es una hexosa',NULL),
-(102, 'Cocaina', 'Prueba de cocaina', 'COAC'),
+(102, 'Potasio', 'Potasio','K'),
+(82520, 'Cocaina', 'Prueba de cocaina', 'COAC'),
 (103, 'Colesterol', 'Test colesterol nivell en sangre', 'COL'),
 (104, 'Calcio', 'Prueba de calcio','CA');
 
@@ -174,15 +176,16 @@ VALUES
 (default, 2, 1, CURRENT_TIMESTAMP);
 
 
-INSERT INTO provestecnica (idprovatecnica, idprova, sexe, dataprova, minpat, maxpat, minpan, maxpan,edatInicial,edatFinal) 
+INSERT INTO provestecnica (idprovatecnica, idprova, sexe, dataprova,resultat_numeric, minpat, maxpat, minpan, maxpan,resultat_cadena,edatInicial,edatFinal) 
 VALUES 
-(DEFAULT, 101, 0, CURRENT_TIMESTAMP, '40', '90', '35', '85',0,999),
-(DEFAULT, 101, 1, CURRENT_TIMESTAMP, '20', '80', '35', '85',0,999),
-(DEFAULT, 101, 2, CURRENT_TIMESTAMP, '50', '80', '35', '85',0,999),
-(DEFAULT, 102, 1, CURRENT_TIMESTAMP, '100', '200', '80', '120',0,50),
-(DEFAULT, 102, 2, CURRENT_TIMESTAMP, '400', '500', '380', '540',0,50),
-(DEFAULT, 102, 1, CURRENT_TIMESTAMP, '100', '200', '80', '120',51,100),
-(DEFAULT, 102, 2, CURRENT_TIMESTAMP, '400', '500', '380', '540',51,100)
+(DEFAULT, 101, 0, CURRENT_TIMESTAMP, 'True', '40', '90', '35', '85', 'n',0,999),
+(DEFAULT, 101, 1, CURRENT_TIMESTAMP, 'True','20', '80', '35', '85', 'n',0,999),
+(DEFAULT, 101, 2, CURRENT_TIMESTAMP, 'True','50', '80', '35', '85', 'n',0,999),
+(DEFAULT, 82520, 1, CURRENT_TIMESTAMP, 'False', '0', '0', '0', '0', 'p',0,999),
+(DEFAULT, 102, 1, CURRENT_TIMESTAMP, 'True','100', '200', '80', '120', 'n',0,50),
+(DEFAULT, 102, 2, CURRENT_TIMESTAMP, 'True','400', '500', '380', '540', 'n',0,50),
+(DEFAULT, 102, 1, CURRENT_TIMESTAMP, 'True','100', '200', '80', '120', 'n',51,100),
+(DEFAULT, 102, 2, CURRENT_TIMESTAMP, 'True','400', '500', '380', '540', 'n',51,100)
 ;
 
 

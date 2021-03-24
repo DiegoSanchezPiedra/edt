@@ -1,3 +1,5 @@
+--Diego Sanchez Piedra
+--isx2031424
 CREATE OR REPLACE FUNCTION insert_log()
 RETURNS TRIGGER AS
 $$
