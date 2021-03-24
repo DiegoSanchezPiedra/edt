@@ -3,6 +3,7 @@ RETURNS TRIGGER AS
 $$
 DECLARE
     id int;
+    sentencia text :== '';
 BEGIN
     IF TG_OP = 'DELETE'
     THEN
@@ -15,6 +16,7 @@ BEGIN
                 id = OLD.idanalitica;
             END IF;
         END IF;
+        sentencia := OLD.*;
     ELSE
         IF TG_TABLE_NAME = 'resultats'
         THEN
@@ -25,9 +27,9 @@ BEGIN
                 id = NEW.idanalitica;
             END IF;
         END IF;
+        sentencia := NEW.*;
     END IF;
-    
-    INSERT INTO logs (user,data_mod,nom_taula,op_feta,id) VALUES (user,NOW(),TG_TABLE_NAME,TG_OP,id);
+    INSERT INTO logs (user,data_mod,nom_taula,op_feta,id,sentencia) VALUES (user,NOW(),TG_TABLE_NAME,TG_OP,id,sentencia);
 END;
 $$
 LANGUAGE 'plpgsql';

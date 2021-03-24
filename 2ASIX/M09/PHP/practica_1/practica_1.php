@@ -11,43 +11,31 @@
                 }
             ?>
         </tr>
-        <?php
-            $divisor = 1;
-            for (;$divisor<=10;)
-            {
-                echo "<tr><td>$divisor</td>";
-                $divisor += 1;
-            }
-        ?>
+
         <?php
             $divisor = 1;
             for(;$divisor<=10;)
             {
+                echo "<tr>";
                 $dividendo = 50;
+                echo "<td>$divisor</td>";
                 for(;$dividendo<=60;)
-                {
+                {  
                     $resultat = $dividendo % $divisor;
-                    echo "<td>$resultat</td>";
+                    if($resultat==0)
+                    {
+                        echo "<td align='center'>*</td>";
+                    }
+                    else
+                    {
+                        echo "<td align='center'>-</td>";
+                    }
+
                     $dividendo += 1;
                 }
-                echo "</tr>";
                 $divisor += 1;
             }
+            echo "</tr>";
         ?>
     </table>
 </html>
-<?php
-$divisor = 1;
-for(;$divisor<=10;)
-{
-    $dividendo = 50;
-    for(;$dividendo<=60;)
-    {
-        $resultat = $dividendo % $divisor;
-        echo "$dividendo % $divisor = $resultat<br>";
-        $dividendo += 1;
-    }
-    echo"<br>";
-    $divisor += 1;
-}
-?>
