@@ -7,7 +7,7 @@ DECLARE
     id int;
     sentencia text :== '';
 BEGIN
-    IF TG_OP = 'DELETE'
+    IF TG_OP = 'DELETE' OR TG_OP = 'UPDATE'
     THEN
         IF TG_TABLE_NAME = 'resultats'
         THEN

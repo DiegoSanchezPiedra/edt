@@ -25,7 +25,6 @@ BEGIN
     END LOOP;
     IF existeix = 0
     THEN
-        raise EXCEPTION 'el pacient: % no existeix',NEW.idpacient;
         RETURN NULL;
     END IF;
     --mirem si exsiteix la provatecnica donada
@@ -35,9 +34,8 @@ BEGIN
     LOOP
         existeix := 1;
     END LOOP;
-    IF existeix := 0
+    IF existeix = 0
     THEN
-        raise EXCEPTION 'la provactecnica: % no existeix',NEW.idprovatecnica;
         RETURN NULL;
     END IF;
 
@@ -60,6 +58,6 @@ BEGIN
     RETURN NEW;
 END;
 $$
-LANGUAGE 'plpgsql'
+LANGUAGE 'plpgsql';
 -----------------------------------------------------
 CREATE TRIGGER id_res_patologic BEFORE INSERT OR UPDATE ON resultats FOR EACH ROW PROCEDURE in_res_patologic();
