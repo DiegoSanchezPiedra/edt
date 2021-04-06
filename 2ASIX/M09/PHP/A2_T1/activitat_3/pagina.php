@@ -1,3 +1,5 @@
+<!--Diego Alessandro Sanchez Piedra
+isx2031424-->
 <?php
 $TITLE='Pagina_web';
 $PAGE_TITLE='Diego Web page';

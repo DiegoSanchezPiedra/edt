@@ -1,0 +1,15 @@
+Flotantes
+El siguiente tipo más común de número con el que trabajarás es el flotante. A diferencia de los enteros, que eran simplemente números sin puntos decimales en la mayoría de los casos, un número de tipo float puede ser representado de diferentes maneras. Los valores 3.14, 12.0, 5.87E+10 y 3.56E-5 son flotantes.
+
+PHP convertirá un número automáticamente al tipo float cada vez que estén involucrados decimales o números muy grandes. El tipo float comúnmente puede almacenar números con una magnitud aproximadamente igual a 1.7976931348623E+308. Sin embargo, esto depende de la plataforma.
+
+El valor 1.7976931348623E+308 podría parecer un número muy grande (¡y lo es!) pero los flotantes tienen una precisión máxima de aproximadamente 14 dígitos solamente. Cualquier número con más dígitos que esa cantidad perderá su precisión. Esto significa que puedes almacenar un número muy grande, pero no podrás mantener información sobre su valor exacto. En muchos casos, un flotante solamente es una aproximación.
+
+Existen dos funciones que pueden ser usadas para determinar si el valor con el que estás trabajando es un flotante. Estas funciones son is_float() e is_double(). De hecho, is_double() es solamente un alias de is_float(), así que puedes usar cualquiera de las dos opciones y obtener el mismo resultado.
+
+<?php
+$a = 1.234; 
+$b = 1.2e3; 
+$c = 7E-10;
+$d = 1_234.567;
+?>
