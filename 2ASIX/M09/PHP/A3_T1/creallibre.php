@@ -1,36 +1,31 @@
 <?php
 if(isset($_POST["isbn"]))
 {
-  //Variables de POST definides
+//Variables de POST definides
+    //Podem mostrar tot el contingut de POST a mode de debug
+    $var = "";
  
- 
- 
-        //Podem mostrar tot el contingut de POST a mode de debug
-        $var = "";
- 
-        foreach($_POST as $key => $value)
-                {
-                        $var .= "POST[" . $key . "]= " . $value . "<br>";
-                        //$var = $var . "POST[" . $key . "]= " . $value . "<br>";
- 
-                }
-                        echo($var);
-        }
-  else
-  {
+    foreach($_POST as $key => $value)
+    {
+        $var .= "POST[" . $key . "]= " . $value . "<br>";
+        //$var = $var . "POST[" . $key . "]= " . $value . "<br>";
+    }
+        echo($var);
+}
+else
+{
     //Sense dades del formulari
-  }
+    exit("No hi ha dades rebudes d'aquest formulari")
+}
 
 $servidor = "localhost";
 $userBD = "root";
 $passwdBD = "jupiter";
-  
 // Nom BBDD
 $nomBD = "biblioteca";
   
 $connexio = mysqli_connect($servidor,$userBD,$passwdBD);
   
-
 if (!$connexio)
 {
      exit('No es pot connectar:'. mysqli_error());
