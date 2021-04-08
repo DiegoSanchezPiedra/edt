@@ -19,6 +19,7 @@
 //6) Estudiants no nascuts el 1970, ni el 1980, ni el 1990 (2950)
 > db.students.find({"$nor": [{"birth_year": 1970},{"birth_year": 1980},{"birth_year": 1990}]}).count()
 > db.students.find({"$and": [{"birth_year": {"$ne": 1970}},{"birth_year": {"$ne": 1980}},{"birth_year": {"$ne": 1990}}]}).count()
+> db.students.find({"birth_year": {"$nin": [1970,1980,1990]}}).count()
 
 //7) Estudiants nascuts un any parell (1684)
 > db.students.find({"birth_year": {$mod: [2,0]}}).count()
@@ -27,10 +28,10 @@
 > db.students.find({"$and": [{"birth_year": {$mod: [2,1]}},{"birth_year": {$gt: 1969}},{"birth_year": {$lt: 1980}},{"gender": "M"}]}).count() //en principi està be però em surt un resultat diferent
 
 //9)Estudiants amb un @mail que acabi en .net (47)
-> db.students.find({"email": /.net$/i}).count() //em dona 48 registres
+> db.students.find({"email": /\.net$/i}).count() //em dona 48 registres
 
 //10)Estudiants amb un @mail que acabi en .org (16)
-> db.students.find({"email": /.org$/i}).count()
+> db.students.find({"email": /\.org$/i}).count()
 
 //11)Estudiants amb DNI que comenci i acabi en lletra (244)
 db.students.find({"dni": /^[A-Z].*[A-Z]$/i})
@@ -42,14 +43,16 @@ db.students.find({"$and": [{"$dni": /^[A-Z]/i},{"$dni": /[A-Z]$/i}]}) //no hi ha
 //13)Estudiants amb un nom compost (470)
 > db.students.find({"name": /.* .*/i}).count()
 > db.students.find({"name": / /i}).count()
+> db.students.find({"name": /.+\s.+/}).count()
+> db.students.find({"name": /\s/},{"name": true})
 
 //14)Estudiants amb un nom de més de 13 caràcters (138)
 > db.students.find({"name": /.{13,}/}).count()
 > db.students.find({"$where": "this.name.length >= 13"}).count()
 
-//15)Estudiants amb 2 o més vocals en els seu nom (705)
-> db.students.find({"name": /.*[aeiouàáèéìíòóùú]{2,}.*/i}).count() //no em dona la mateixa quantitat de registres (no se si està be)
-
+//15)Estudiants amb 4 o més vocals en els seu nom (705)
+> db.students.find({"name": /.*[aeiouàáèéìíòóùú]{2,}.*/i}).count() //està be pero per dues vocal seguides
+> b.students.find({"name": /.*[aeiouàáèéìíòóùú].*[aeiouàáèéìíòóùú].*[aeiouàáèéìíòóùú].*[aeiouàáèéìíòóùú].*/i}).count()
 //edx.bios
 //16)Desenvolupadors que hagin fet contribucions en OOP (2)
 > db.bios.find({"contribs": {$all: ['OOP']}}).count()
