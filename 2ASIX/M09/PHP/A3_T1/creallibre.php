@@ -1,4 +1,6 @@
 <?php
+//Diego Sanchez Piedra
+//isx2031424
 if(isset($_POST["isbn"]))
 {
 //Variables de POST definides
@@ -10,12 +12,12 @@ if(isset($_POST["isbn"]))
         $var .= "POST[" . $key . "]= " . $value . "<br>";
         //$var = $var . "POST[" . $key . "]= " . $value . "<br>";
     }
-        echo($var);
+    echo($var);
 }
 else
 {
     //Sense dades del formulari
-    exit("No hi ha dades rebudes d'aquest formulari")
+    exit("No hi ha dades rebudes d'aquest formulari");
 }
 
 $servidor = "localhost";

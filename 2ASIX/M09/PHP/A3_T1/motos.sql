@@ -1,3 +1,5 @@
+--Diego Sanchez Piedra
+--isx2031424
 DROP DATABASE IF EXISTS motos;
 CREATE DATABASE motos;
 use motos;

@@ -226,6 +226,7 @@ C O L L E C T I O N: students
 			])
 			
 3)
+db.students.aggregate([{"$group": {"_id": "$birth_year","num": {"$sum": 1}}},{"$project": {"_id":false,"year":"$_id","students": "$num"}},{"$sort": {"year": -1}}])
 { "year" : 1993, "students" : 97 }
 { "year" : 1992, "students" : 100 }
 { "year" : 1991, "students" : 92 }
@@ -234,6 +235,27 @@ C O L L E C T I O N: students
 { "year" : 1988, "students" : 87 }
 
 4)
+db.students.aggregate([
+   {
+       "$group": {
+           "_id": {"birth_year":"$birth_year","gender":"$gender"},
+           "num": {"$sum":2}
+           }
+       },
+   {
+       "$project": {
+           "_id":false,
+           "year":"$_id.birth_year",
+           "gender":"$_id.gender",
+           "students":"$num"
+           }
+       },
+   {
+       "$sort":{
+           "year":-1
+           }
+       }])
+
 { "year" : 1993, "gender" : "M", "students" : 16 }
 { "year" : 1993, "gender" : "H", "students" : 81 }
 { "year" : 1992, "gender" : "M", "students" : 13 }
@@ -241,6 +263,27 @@ C O L L E C T I O N: students
 { "year" : 1991, "gender" : "M", "students" : 9 }
 
 5)
+db.students.aggregate([
+   {
+       "$group":{
+           "_id": {"year":"$birth_year","gender":"$gender"},
+           "total": {"$sum": 1}
+       }
+   },
+   {
+       "$project":{
+           "_id":false,
+           "year":"$_id.year",
+           "total": "$total"
+       }
+   },
+   {
+       "$sort":{
+           "year": -1
+       }
+   }
+])
+
 {
         "year" : 1993,
         "total" : 97,
@@ -276,6 +319,54 @@ D A T A B A S E: digg | C O L L E C T I O N: stories
 
 D A T A B A S E: edx | C O L L E C T I O N: books
 8) 
+db.books.aggregate([
+   {
+       "$unwind": "$author"
+   },
+   {
+       "$group":{
+           "_id": "$author",
+           "num": {"$sum":1}
+       }
+   },
+   {
+       "$project": {
+           "_id": 0,
+           "author": "$_id",
+           "books": "$num"
+       }
+   },
+   {
+       "$sort":{
+           "books":-1,"author":1
+       }
+   }
+])
+
+db.books.aggregate([
+   {
+       "$unwind": "$author"
+   },
+   {
+       "$group":{
+           "_id": "$author",
+           "num": {"$sum":1}
+       }
+   },
+   {
+       "$project": {
+           "_id": 0,
+           "author": "$_id",
+           "books": "$num"
+       }
+   },
+   {
+       "$sort":{
+           "author":1,"books":-1
+       }
+   }
+])
+
 { "author" : "Andrew Hunt", "books" : 6 }
 { "author" : "David Thomas", "books" : 6 }
 { "author" : "Kent Beck", "books" : 5 }
@@ -299,6 +390,33 @@ D A T A B A S E: edx | C O L L E C T I O N: books
 
 D A T A B A S E: imdb | C O L L E C T I O N: movies 
 9)
+db.movies.aggregate([
+   {
+       "$unwind": "$actors"
+   },
+   {
+       "$group":{
+           "_id":"$actors.name",
+           "movies":{"$sum":1},
+           "catalog": {"$push":"$name"}
+       }
+   },
+   {
+       "$project":{
+           "_id":0,
+           "actor":"$_id",
+           "movies":"$movies",
+           "catalago": "$catalog"
+       }
+   },
+   {
+       "$sort":{
+           "movies":-1
+       }
+   }
+])
+//La llista de cataleg no està ordenada com surt aquí
+
 { "actor" : "Tom Cruise", "movies" : 13, "catalog" : [ "Color of Money, The", "Top Gun", "Rain Man", "Born on the Fourth of July", "Few Good Men, A", "Firm, The", "Jerry Maguire", "Mission: Impossible", "Mission: Impossible II", "Minority Report", "Mission: Impossible III", "War of the Worlds", "Mission: Impossible - Ghost Protocol" ] }
 { "actor" : "Tom Hanks", "movies" : 11, "catalog" : [ "Philadelphia", "Forrest Gump", "Apollo 13", "Toy Story", "Toy Story 2", "Green Mile, The", "Saving Private Ryan", "Catch Me If You Can", "The Polar Express", "The Da Vinci Code", "Toy Story 3" ] }
 { "actor" : "Harrison Ford", "movies" : 10, "catalog" : [ "Star Wars", "Star Wars: Episode V - The Empire Strikes Back", "Raiders of the Lost Ark", "Star Wars: Episode VI - Return of the Jedi", "Indiana Jones and the Temple of Doom", "Indiana Jones and the Last Crusade", "Fugitive, The", "Air Force One", "What Lies Beneath", "Indiana Jones and the Kingdom of the Crystal Skull" ] }
@@ -321,7 +439,69 @@ D A T A B A S E: imdb | C O L L E C T I O N: movies
 { "actor" : "Morgan Freeman", "movies" : 7, "catalog" : [ "Driving Miss Daisy", "Glory", "Robin Hood: Prince of Thieves", "Unforgiven", "Deep Impact", "Bruce Almighty", "Million Dollar Baby" ] }
 
 10)
+db.movies.aggregate([
+   {
+       "$unwind": "$actors"
+   },
+   {
+       "$group":{
+           "_id":"$actors.name",
+           "movies": {"$push":"$$ROOT"},
+           "nmovies": {"$sum":1},
+           "lyear": {"$max":"$year"},
+           "fyear": {"$min":"$year"},
+           "tduration": {"$sum":"$runtime"},
+           "lmovies": {"$push": "$name"}
+       }
+   },
+   {
+       "$project":{
+           "nmovies":"$nmovies",
+           "lyear":"$lyear",
+           "fyear": "$fyear",
+           "tduration":"$tduration",
+           "lmovies":"$lmovies"
+       }
+   },
+   {
+       "$sort":{
+           "nmovies":-1
+       }
+   }
+]).pretty()
 
+db.movies.aggregate([
+   {
+       "$unwind": "$actors"
+   },
+   {
+       "$group":{
+           "_id":"$actors.name",
+           "actor": {"$push":"$$ROOT"},
+           "nmovies": {"$sum":1},
+           "lyear": {"$max":"$year"},
+           "fyear": {"$min":"$year"},
+           "tduration": {"$sum":"$runtime"},
+           "lmovies": {"$push": {"name":"$name","year":"$year"}}
+       }
+   },
+   {
+       "$project":{
+           "nmovies":"$nmovies",
+           "lyear":"$lyear",
+           "fyear": "$fyear",
+           "tduration":"$tduration",
+           "lmovies":"$lmovies"
+       }
+   },
+   {
+       "$sort":{
+           "nmovies":-1
+       }
+   }
+]).pretty()
+
+//falta ordenar i posar el format del array be (movie (year))
 "_id" : "Tom Cruise",
     "nmovies" : 13.0,
     "lyear" : 2011,
