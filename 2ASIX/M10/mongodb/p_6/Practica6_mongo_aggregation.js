@@ -226,7 +226,79 @@ C O L L E C T I O N: students
 			])
 			
 3)
-db.students.aggregate([{"$group": {"_id": "$birth_year","num": {"$sum": 1}}},{"$project": {"_id":false,"year":"$_id","students": "$num"}},{"$sort": {"year": -1}}])
+db.students.aggregate([
+    {
+        "$group": {
+            "_id": "$birth_year",
+            "num": {"$sum": 1}
+        }
+    },
+    {
+        "$project": {
+            "_id":false,
+            "year":"$_id",
+            "students": "$num"
+        }
+    },
+    {
+        "$sort": {
+            "year": -1
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        "$match": {
+            "birth_year":{"$gt":1987}
+        }
+    },
+    {
+        "$group": {
+            "_id": "$birth_year",
+            "num": {"$sum": 1}
+        }
+    },
+    {
+        "$project": {
+            "_id":false,
+            "year":"$_id",
+            "students": "$num"
+        }
+    },
+    {
+        "$sort": {
+            "year": -1
+        }
+    }
+])
+
+db.students.aggregate([
+    {
+        "$match": {
+            "birth_year":{"$gte":1988,"$lte":1993}
+        }
+    },
+    {
+        "$group": {
+            "_id": "$birth_year",
+            "num": {"$sum": 1}
+        }
+    },
+    {
+        "$project": {
+            "_id":false,
+            "year":"$_id",
+            "students": "$num"
+        }
+    },
+    {
+        "$sort": {
+            "year": -1
+        }
+    }
+])
+
 { "year" : 1993, "students" : 97 }
 { "year" : 1992, "students" : 100 }
 { "year" : 1991, "students" : 92 }
@@ -236,10 +308,15 @@ db.students.aggregate([{"$group": {"_id": "$birth_year","num": {"$sum": 1}}},{"$
 
 4)
 db.students.aggregate([
+    {
+        "$match":{
+            "birth_year":{"$gt":1990,"$lt":1994}
+        }
+    },
    {
        "$group": {
            "_id": {"birth_year":"$birth_year","gender":"$gender"},
-           "num": {"$sum":2}
+           "num": {"$sum":1}
            }
        },
    {
@@ -264,16 +341,21 @@ db.students.aggregate([
 
 5)
 db.students.aggregate([
+    {
+        "$match":{
+            "birth_year":{"$gt":1991,"$lt":1994}
+        }
+    },
    {
        "$group":{
-           "_id": {"year":"$birth_year","gender":"$gender"},
+           "_id": {"year":"$birth_year"},
            "total": {"$sum": 1}
        }
    },
    {
        "$project":{
            "_id":false,
-           "year":"$_id.year",
+           "year":"$_id",
            "total": "$total"
        }
    },
@@ -282,7 +364,59 @@ db.students.aggregate([
            "year": -1
        }
    }
-])
+]).pretty()
+
+db.students.aggregate([
+    {
+        "$match":{
+            "gender":"H"
+        }
+    },
+    {
+        "$group":{
+            "_id": {"year":"$birth_year","gender":"$gender"},
+            "total": {"$sum": 1}
+        }
+    },
+    {
+        "$project":{
+            "_id":false,
+            "year":"$_id.year",
+            "males": "$total"
+        }
+    },
+    {
+        "$sort":{
+            "year": -1
+        }
+    }
+]).pretty()
+
+db.students.aggregate([
+    {
+        "$match":{
+            "gender":"M"
+        }
+    },
+    {
+        "$group":{
+            "_id": {"year":"$birth_year","gender":"$gender"},
+            "total": {"$sum": 1}
+        }
+    },
+    {
+        "$project":{
+            "_id":false,
+            "year":"$_id.year",
+            "females": "$total"
+        }
+    },
+    {
+        "$sort":{
+            "year": -1
+        }
+    }
+]).pretty()
 
 {
         "year" : 1993,
