@@ -228,53 +228,6 @@ C O L L E C T I O N: students
 3)
 db.students.aggregate([
     {
-        "$group": {
-            "_id": "$birth_year",
-            "num": {"$sum": 1}
-        }
-    },
-    {
-        "$project": {
-            "_id":false,
-            "year":"$_id",
-            "students": "$num"
-        }
-    },
-    {
-        "$sort": {
-            "year": -1
-        }
-    }
-])
-
-db.students.aggregate([
-    {
-        "$match": {
-            "birth_year":{"$gt":1987}
-        }
-    },
-    {
-        "$group": {
-            "_id": "$birth_year",
-            "num": {"$sum": 1}
-        }
-    },
-    {
-        "$project": {
-            "_id":false,
-            "year":"$_id",
-            "students": "$num"
-        }
-    },
-    {
-        "$sort": {
-            "year": -1
-        }
-    }
-])
-
-db.students.aggregate([
-    {
         "$match": {
             "birth_year":{"$gte":1988,"$lte":1993}
         }
@@ -349,14 +302,20 @@ db.students.aggregate([
    {
        "$group":{
            "_id": {"year":"$birth_year"},
-           "total": {"$sum": 1}
+           "total": {"$sum": 1},
+           "males": {"$sum":{"$cond":[{"$eq":["$gender","H"]},1,0]}},
+           "females": {"$sum":{"$cond":[{"$eq":["$gender","M"]},1,0]}}
        }
    },
    {
        "$project":{
            "_id":false,
            "year":"$_id",
-           "total": "$total"
+           "total": "$total",
+           "males": "$males",
+           "females": "$females",
+           "malesper": {"$multiply":[{"$divide":["$males","$total"]},100]},
+           "femalesper": {"$multiply":[{"$divide":["$females","$total"]},100]}
        }
    },
    {
@@ -364,58 +323,6 @@ db.students.aggregate([
            "year": -1
        }
    }
-]).pretty()
-
-db.students.aggregate([
-    {
-        "$match":{
-            "gender":"H"
-        }
-    },
-    {
-        "$group":{
-            "_id": {"year":"$birth_year","gender":"$gender"},
-            "total": {"$sum": 1}
-        }
-    },
-    {
-        "$project":{
-            "_id":false,
-            "year":"$_id.year",
-            "males": "$total"
-        }
-    },
-    {
-        "$sort":{
-            "year": -1
-        }
-    }
-]).pretty()
-
-db.students.aggregate([
-    {
-        "$match":{
-            "gender":"M"
-        }
-    },
-    {
-        "$group":{
-            "_id": {"year":"$birth_year","gender":"$gender"},
-            "total": {"$sum": 1}
-        }
-    },
-    {
-        "$project":{
-            "_id":false,
-            "year":"$_id.year",
-            "females": "$total"
-        }
-    },
-    {
-        "$sort":{
-            "year": -1
-        }
-    }
 ]).pretty()
 
 {
@@ -437,6 +344,27 @@ db.students.aggregate([
 
 D A T A B A S E: digg | C O L L E C T I O N: stories
 6)
+db.stories.aggregate([
+    {
+        "$group":{
+            "_id":"$container.name",
+            "posts":{"$sum":1},
+            "diggs":{"$sum":"$diggs"}
+        }
+    },
+    {
+        "$project":{
+            "_id":false,
+            "topic":"$_id",
+            "posts": "$posts",
+            "diggs": "$diggs"
+        }
+    },
+    {
+        "$sort":{"topic":-1}
+    }
+])
+
 { "topic" : "World & Business", "posts" : 1352, "diggs" : 705218 }
 { "topic" : "Technology", "posts" : 950, "diggs" : 538823 }
 { "topic" : "Sports", "posts" : 512, "diggs" : 189717 }
@@ -447,7 +375,28 @@ D A T A B A S E: digg | C O L L E C T I O N: stories
 { "topic" : "Entertainment", "posts" : 907, "diggs" : 573872 }
 
 
-7){ "topic" : "videos", "posts" : 705, "diggs" : 475874 }
+7)
+db.stories.aggregate([
+    {
+        "$group":{
+            "_id":"$media",
+            "posts":{"$sum":1},
+            "diggs":{"$sum":"$diggs"}
+        }
+    },
+    {
+        "$project":{
+            "_id":false,
+            "topic":"$_id",
+            "posts": "$posts",
+            "diggs": "$diggs"
+        }
+    },
+    {
+        "$sort":{"topic":-1}
+    }
+])
+{ "topic" : "videos", "posts" : 705, "diggs" : 475874 }
 { "topic" : "news", "posts" : 5005, "diggs" : 2383442 }
 { "topic" : "images", "posts" : 1193, "diggs" : 1374455 }
 
@@ -495,8 +444,13 @@ db.books.aggregate([
        }
    },
    {
+       "$match": {
+           "books":{"$gte":2}
+       }
+   },
+   {
        "$sort":{
-           "author":1,"books":-1
+           "books":-1
        }
    }
 ])
@@ -525,6 +479,11 @@ db.books.aggregate([
 D A T A B A S E: imdb | C O L L E C T I O N: movies 
 9)
 db.movies.aggregate([
+    {
+        "$sort":{
+            "year":1,"name":1
+        }
+    },
    {
        "$unwind": "$actors"
    },
@@ -549,7 +508,6 @@ db.movies.aggregate([
        }
    }
 ])
-//La llista de cataleg no està ordenada com surt aquí
 
 { "actor" : "Tom Cruise", "movies" : 13, "catalog" : [ "Color of Money, The", "Top Gun", "Rain Man", "Born on the Fourth of July", "Few Good Men, A", "Firm, The", "Jerry Maguire", "Mission: Impossible", "Mission: Impossible II", "Minority Report", "Mission: Impossible III", "War of the Worlds", "Mission: Impossible - Ghost Protocol" ] }
 { "actor" : "Tom Hanks", "movies" : 11, "catalog" : [ "Philadelphia", "Forrest Gump", "Apollo 13", "Toy Story", "Toy Story 2", "Green Mile, The", "Saving Private Ryan", "Catch Me If You Can", "The Polar Express", "The Da Vinci Code", "Toy Story 3" ] }
@@ -574,49 +532,24 @@ db.movies.aggregate([
 
 10)
 db.movies.aggregate([
+    {
+        "$sort":{
+            "year":-1,"name":1
+        }
+    },
    {
        "$unwind": "$actors"
    },
    {
        "$group":{
            "_id":"$actors.name",
-           "movies": {"$push":"$$ROOT"},
+           //"actor": {"$push":"$$ROOT"},
            "nmovies": {"$sum":1},
            "lyear": {"$max":"$year"},
            "fyear": {"$min":"$year"},
            "tduration": {"$sum":"$runtime"},
-           "lmovies": {"$push": "$name"}
-       }
-   },
-   {
-       "$project":{
-           "nmovies":"$nmovies",
-           "lyear":"$lyear",
-           "fyear": "$fyear",
-           "tduration":"$tduration",
-           "lmovies":"$lmovies"
-       }
-   },
-   {
-       "$sort":{
-           "nmovies":-1
-       }
-   }
-]).pretty()
-
-db.movies.aggregate([
-   {
-       "$unwind": "$actors"
-   },
-   {
-       "$group":{
-           "_id":"$actors.name",
-           "actor": {"$push":"$$ROOT"},
-           "nmovies": {"$sum":1},
-           "lyear": {"$max":"$year"},
-           "fyear": {"$min":"$year"},
-           "tduration": {"$sum":"$runtime"},
-           "lmovies": {"$push": {"name":"$name","year":"$year"}}
+           //"lmovies": {"$push": {"name":"$name","year":"$year"}},
+           "lmovies": {"$push":{"$concat":["$name"," (",{"$substr":["$year",0,-1]},")"]}}
        }
    },
    {
@@ -658,6 +591,36 @@ db.movies.aggregate([
     ]
 
 11)
+db.movies.aggregate([
+    {
+        "$sort":{
+            "year":1,"name":1
+        }
+    },
+   {
+       "$unwind": "$directors"
+   },
+   {
+       "$group":{
+           "_id":"$directors.name",
+           "movies":{"$sum":1},
+           "catalog": {"$push":"$name"}
+       }
+   },
+   {
+       "$project":{
+           "_id":0,
+           "director":"$_id",
+           "movies":"$movies",
+           "catalago": "$catalog"
+       }
+   },
+   {
+       "$sort":{
+           "movies":-1
+       }
+   }
+])
 
 { "director" : "Steven Spielberg", "movies" : 14, "catalog" : [ "Jaws", "Raiders of the Lost Ark", "E.T. the Extra-Terrestrial", "Indiana Jones and the Temple of Doom", "Indiana Jones and the Last Crusade", "Jurassic Park", "Schindler's List", "Lost World: Jurassic Park, The", "Saving Private Ryan", "Minority Report", "Catch Me If You Can", "Indiana Jones and the Kingdom of the Crystal Skull", "War of the Worlds", "Lincoln" ] }
 { "director" : "William Wyler", "movies" : 9, "catalog" : [ "Jezebel", "Westerner, The", "Mrs. Miniver", "Best Years of Our Lives, The", "Heiress, The", "Roman Holiday", "Big Country, The", "Ben-Hur", "Funny Girl" ] }
@@ -681,6 +644,42 @@ db.movies.aggregate([
 { "director" : "Fred Zinnemann", "movies" : 4, "catalog" : [ "High Noon", "From Here to Eternity", "Man for All Seasons, A", "Julia" ] }
 
 12)
+db.movies.aggregate([
+    {
+        "$sort":{
+            "year":-1,"name":1
+        }
+    },
+   {
+       "$unwind": "$directors"
+   },
+   {
+       "$group":{
+           "_id":"$directors.name",
+           //"director": {"$push":"$$ROOT"},
+           "nmovies": {"$sum":1},
+           "lyear": {"$max":"$year"},
+           "fyear": {"$min":"$year"},
+           "tduration": {"$sum":"$runtime"},
+           //"lmovies": {"$push": {"name":"$name","year":"$year"}},
+           "lmovies": {"$push":{"$concat":["$name"," (",{"$substr":["$year",0,-1]},")"]}}
+       }
+   },
+   {
+       "$project":{
+           "nmovies":"$nmovies",
+           "lyear":"$lyear",
+           "fyear": "$fyear",
+           "tduration":"$tduration",
+           "lmovies":"$lmovies"
+       }
+   },
+   {
+       "$sort":{
+           "nmovies":-1
+       }
+   }
+]).pretty()
 
 {
     "_id" : "Steven Spielberg",
@@ -705,5 +704,3 @@ db.movies.aggregate([
         "Jaws (1975)"
     ]
 }
-
-
