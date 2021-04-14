@@ -704,3 +704,7 @@ db.movies.aggregate([
         "Jaws (1975)"
     ]
 }
+
+db.article.aggregate([
+    { $limit : 5 }
+ ]);
